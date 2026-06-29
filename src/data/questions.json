@@ -1,0 +1,279 @@
+{
+  "values": [
+    {
+      "id": "val_1",
+      "layer": "values",
+      "axes": ["liberty_vs_security"],
+      "text": "כשיש מתח בין חופש אישי לבין ביטחון הציבור, עדיף להעדיף את...",
+      "scaleMin": "ביטחון הציבור",
+      "scaleMax": "חופש אישי"
+    },
+    {
+      "id": "val_2",
+      "layer": "values",
+      "axes": ["equality_vs_free_market"],
+      "text": "המדינה צריכה לדאוג לצמצום פערים כלכליים, גם אם זה מגביל את החופש הכלכלי",
+      "scaleMin": "שוק חופשי",
+      "scaleMax": "צמצום פערים"
+    },
+    {
+      "id": "val_3",
+      "layer": "values",
+      "axes": ["authority_vs_checks"],
+      "text": "ממשלה חזקה צריכה יכולת לפעול במהירות, גם אם זה אומר פחות ביקורת ופיקוח",
+      "scaleMin": "איזונים ובלמים",
+      "scaleMax": "ממשלה חזקה"
+    },
+    {
+      "id": "val_4",
+      "layer": "values",
+      "axes": ["individual_vs_state"],
+      "text": "האחריות לרווחת האזרח מוטלת בעיקר על...",
+      "scaleMin": "המדינה",
+      "scaleMax": "הפרט עצמו"
+    },
+    {
+      "id": "val_5",
+      "layer": "values",
+      "axes": ["tradition_vs_liberalism"],
+      "text": "חשוב לשמר את אופייה היהודי של המדינה, גם אם זה מגביל חירויות אישיות",
+      "scaleMin": "חירויות אישיות",
+      "scaleMax": "אופי יהודי"
+    },
+    {
+      "id": "val_6",
+      "layer": "values",
+      "axes": ["liberty_vs_security", "authority_vs_checks"],
+      "text": "לגורמי הביטחון צריך לתת יותר סמכויות, גם במחיר של פגיעה בפרטיות",
+      "scaleMin": "פרטיות",
+      "scaleMax": "סמכויות ביטחון"
+    },
+    {
+      "id": "val_7",
+      "layer": "values",
+      "axes": ["equality_vs_free_market", "individual_vs_state"],
+      "text": "מי שעובד קשה צריך להרוויח הרבה יותר ממי שלא עובד, גם אם זה יוצר פערים",
+      "scaleMin": "רשת ביטחון שווה",
+      "scaleMax": "תגמול לפי מאמץ"
+    },
+    {
+      "id": "val_8",
+      "layer": "values",
+      "axes": ["tradition_vs_liberalism", "authority_vs_checks"],
+      "text": "המנהיגות הדתית צריכה להשפיע על חקיקה בנושאים של נישואין, שבת וכשרות",
+      "scaleMin": "הפרדת דת ומדינה",
+      "scaleMax": "השפעה דתית על חקיקה"
+    }
+  ],
+  "policy": [
+    {
+      "id": "pol_1",
+      "layer": "policy",
+      "axes": ["security"],
+      "text": "ישראל צריכה לשאוף להסכם מדיני עם הפלסטינים, גם במחיר של ויתורים טריטוריאליים",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_2",
+      "layer": "policy",
+      "axes": ["security"],
+      "text": "יש להרחיב את הנוכחות הצבאית ביהודה ושומרון כדי לשמור על ביטחון",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_3",
+      "layer": "policy",
+      "axes": ["economy"],
+      "text": "יש להוריד מיסים על עסקים כדי לעודד צמיחה כלכלית",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_4",
+      "layer": "policy",
+      "axes": ["economy", "cost_of_living"],
+      "text": "יש להגביר את הפיקוח הממשלתי על מחירי מוצרים בסיסיים",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_5",
+      "layer": "policy",
+      "axes": ["cost_of_living"],
+      "text": "המדינה צריכה לבנות דיור ציבורי בהיקף גדול כדי להוריד מחירי דירות",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_6",
+      "layer": "policy",
+      "axes": ["rule_of_law"],
+      "text": "לבית המשפט העליון צריכה להיות סמכות לפסול חוקים של הכנסת",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_7",
+      "layer": "policy",
+      "axes": ["rule_of_law"],
+      "text": "יש לחזק את עצמאות הייעוץ המשפטי לממשלה",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_8",
+      "layer": "policy",
+      "axes": ["religion_state"],
+      "text": "תחבורה ציבורית צריכה לפעול בשבת",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_9",
+      "layer": "policy",
+      "axes": ["religion_state"],
+      "text": "צריך לאפשר נישואין אזרחיים בישראל",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_10",
+      "layer": "policy",
+      "axes": ["education"],
+      "text": "יש ללמד את כל התלמידים בישראל תוכנית ליבה אחידה כולל מתמטיקה, אנגלית ומדעים",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_11",
+      "layer": "policy",
+      "axes": ["health"],
+      "text": "יש להגדיל משמעותית את התקציב למערכת הבריאות הציבורית",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_12",
+      "layer": "policy",
+      "axes": ["welfare"],
+      "text": "יש להגדיל את קצבאות הביטוח הלאומי גם אם זה מחייב העלאת מיסים",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_13",
+      "layer": "policy",
+      "axes": ["environment"],
+      "text": "יש להטיל מגבלות חמורות על תעשייה מזהמת גם אם זה פוגע בתעסוקה",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_14",
+      "layer": "policy",
+      "axes": ["settlement"],
+      "text": "יש לעודד התיישבות יהודית ביהודה ושומרון",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_15",
+      "layer": "policy",
+      "axes": ["foreign_relations"],
+      "text": "ישראל צריכה להעדיף קשרים עם ארה\"ב על פני גיוון יחסי החוץ",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_16",
+      "layer": "policy",
+      "axes": ["transport"],
+      "text": "יש להשקיע בתחבורה ציבורית במקום בכבישים חדשים",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_17",
+      "layer": "policy",
+      "axes": ["housing"],
+      "text": "יש לשחרר קרקעות מדינה לבנייה מסיבית גם באזורי ביקוש",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_18",
+      "layer": "policy",
+      "axes": ["welfare", "equality_vs_free_market"],
+      "text": "מי שמסוגל לעבוד ולא עובד לא צריך לקבל קצבאות",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_19",
+      "layer": "policy",
+      "axes": ["education", "religion_state"],
+      "text": "תלמידי ישיבות צריכים ללמוד גם מקצועות ליבה כתנאי למימון ממשלתי",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    },
+    {
+      "id": "pol_20",
+      "layer": "policy",
+      "axes": ["security", "foreign_relations"],
+      "text": "ישראל צריכה להרחיב את הסכמי אברהם גם במחיר ויתורים לפלסטינים",
+      "scaleMin": "לא מסכים כלל",
+      "scaleMax": "מסכים לחלוטין"
+    }
+  ],
+  "leadership": [
+    {
+      "id": "lead_1",
+      "layer": "leadership",
+      "axes": ["ideology_vs_pragmatism"],
+      "text": "עדיף מנהיג שדבק בעקרונותיו על פני מנהיג שמתפשר כדי להשיג תוצאות",
+      "scaleMin": "פרגמטיות",
+      "scaleMax": "עקרונות"
+    },
+    {
+      "id": "lead_2",
+      "layer": "leadership",
+      "axes": ["stability_vs_opposition"],
+      "text": "יציבות שלטונית חשובה יותר מאשר החלפת ממשלה שאיני מרוצה ממנה",
+      "scaleMin": "החלפה",
+      "scaleMax": "יציבות"
+    },
+    {
+      "id": "lead_3",
+      "layer": "leadership",
+      "axes": ["experience_vs_renewal"],
+      "text": "עדיף מנהיג עם ניסיון רב על פני מנהיג חדש עם רעיונות חדשים",
+      "scaleMin": "התחדשות",
+      "scaleMax": "ניסיון"
+    },
+    {
+      "id": "lead_4",
+      "layer": "leadership",
+      "axes": ["ideology_vs_pragmatism", "stability_vs_opposition"],
+      "text": "ממשלת אחדות רחבה עדיפה על ממשלה צרה שמקדמת אג'נדה ברורה",
+      "scaleMin": "אג'נדה ברורה",
+      "scaleMax": "אחדות רחבה"
+    }
+  ],
+  "priorityTopics": [
+    { "id": "security", "label": "ביטחון" },
+    { "id": "economy", "label": "כלכלה" },
+    { "id": "cost_of_living", "label": "יוקר מחיה" },
+    { "id": "housing", "label": "דיור" },
+    { "id": "rule_of_law", "label": "מערכת המשפט" },
+    { "id": "religion_state", "label": "דת ומדינה" },
+    { "id": "education", "label": "חינוך" },
+    { "id": "health", "label": "בריאות" },
+    { "id": "welfare", "label": "רווחה" },
+    { "id": "environment", "label": "סביבה" },
+    { "id": "transport", "label": "תחבורה" },
+    { "id": "settlement", "label": "התיישבות" },
+    { "id": "foreign_relations", "label": "יחסי חוץ" }
+  ]
+}
