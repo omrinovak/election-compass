@@ -10,6 +10,7 @@ interface Question {
   text: string;
   scaleMin: string;
   scaleMax: string;
+  example?: string;
 }
 
 const LAYER_LABELS: Record<string, string> = {
@@ -35,6 +36,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
   const [answers, setAnswers] = useState<Map<string, { value: number; confidence: number }>>(new Map());
   const [selectedValue, setSelectedValue] = useState<number | null>(null);
   const [selectedConfidence, setSelectedConfidence] = useState(0.6);
+  const [showExample, setShowExample] = useState(false);
 
   const question = allQuestions[currentIndex];
   const total = allQuestions.length;
@@ -55,6 +57,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
         const nextExisting = updated.get(allQuestions[currentIndex + 1].id);
         setSelectedValue(nextExisting?.value ?? null);
         setSelectedConfidence(nextExisting?.confidence ?? 0.6);
+        setShowExample(false);
       } else {
         const finalAnswers: Answer[] = [];
         for (const q of allQuestions) {
@@ -75,11 +78,13 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
   }
 
   function skip() {
-    if (currentIndex < total - 1) {
-      setCurrentIndex(currentIndex + 1);
-      const nextExisting = answers.get(allQuestions[currentIndex + 1].id);
+    const nextIndex = currentIndex + 1;
+    if (nextIndex < total) {
+      setCurrentIndex(nextIndex);
+      const nextExisting = answers.get(allQuestions[nextIndex].id);
       setSelectedValue(nextExisting?.value ?? null);
       setSelectedConfidence(nextExisting?.confidence ?? 0.6);
+      setShowExample(false);
     } else {
       const finalAnswers: Answer[] = [];
       for (const q of allQuestions) {
@@ -105,6 +110,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
       const prevExisting = answers.get(allQuestions[prevIndex].id);
       setSelectedValue(prevExisting?.value ?? null);
       setSelectedConfidence(prevExisting?.confidence ?? 0.6);
+      setShowExample(false);
     }
   }
 
@@ -121,6 +127,22 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
       <div className="content">
         <p className="question-text">{question.text}</p>
 
+        {question.example && (
+          <div style={{ marginBottom: 20 }}>
+            <button
+              className="example-toggle"
+              onClick={() => setShowExample(!showExample)}
+            >
+              💡 {showExample ? 'הסתר דוגמה' : 'דוגמה מהחיים'}
+            </button>
+            {showExample && (
+              <div className="example-box">
+                {question.example}
+              </div>
+            )}
+          </div>
+        )}
+
         <div className="scale-labels">
           <span className="scale-label">{question.scaleMin}</span>
           <span className="scale-label scale-label-end">{question.scaleMax}</span>
@@ -131,9 +153,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
             <button
               key={n}
               className={`scale-btn ${displayValue === n ? 'selected' : ''}`}
-              onClick={() => {
-                setSelectedValue(n);
-              }}
+              onClick={() => setSelectedValue(n)}
             >
               {n}
             </button>

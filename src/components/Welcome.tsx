@@ -1,6 +1,6 @@
 import '../App.css';
 
-export default function Welcome({ onStart }: { onStart: () => void }) {
+export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onAdmin: () => void }) {
   return (
     <div className="screen screen-center">
       <div className="welcome-icon">🧭</div>
@@ -18,6 +18,9 @@ export default function Welcome({ onStart }: { onStart: () => void }) {
       <div style={{ width: '100%', maxWidth: 320, marginTop: 24 }}>
         <button className="btn btn-primary" style={{ width: '100%' }} onClick={onStart}>
           בואו נתחיל ←
+        </button>
+        <button className="btn-ghost" style={{ width: '100%', marginTop: 10, fontSize: 12, color: 'var(--text-muted)' }} onClick={onAdmin}>
+          עדכון נתונים
         </button>
       </div>
     </div>

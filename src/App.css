@@ -532,3 +532,35 @@
 .share-btn:active {
   background: var(--surface-dim);
 }
+
+.example-toggle {
+  font-size: 13px;
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 99px;
+  border: 1px solid var(--accent-light);
+  background: var(--accent-light);
+  margin-bottom: 10px;
+  transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.example-toggle:active {
+  opacity: 0.7;
+}
+
+.example-box {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding: 12px 14px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  border-right: 3px solid var(--accent);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
