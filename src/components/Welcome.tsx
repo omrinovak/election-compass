@@ -63,6 +63,33 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
         </p>
       </div>
 
+      <div className="how-it-works">
+        <div className="hiw-title">איך זה עובד?</div>
+        <div className="hiw-steps">
+          <div className="hiw-step">
+            <span className="hiw-num">1</span>
+            <div>
+              <strong>דילמות מהחיים</strong>
+              <span> — כל שאלה היא מצב אמיתי, לא עיקרון מופשט</span>
+            </div>
+          </div>
+          <div className="hiw-step">
+            <span className="hiw-num">2</span>
+            <div>
+              <strong>סולם 1–7</strong>
+              <span> — בחר מיקום בין שני קצוות. 4 = לא בטוח / באמצע</span>
+            </div>
+          </div>
+          <div className="hiw-step">
+            <span className="hiw-num">3</span>
+            <div>
+              <strong>דלג או חזור</strong>
+              <span> — אפשר לדלג על שאלות שאינן רלוונטיות ולחזור אחורה בכל שלב</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <ul className="feature-list">
         <li>
           <span className="feature-check"><CheckIcon /></span>

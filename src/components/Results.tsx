@@ -322,6 +322,18 @@ export default function Results({
           מבוסס על {top?.includedAxes.length} מתוך {(top?.includedAxes.length ?? 0) + (top?.unavailableAxes.length ?? 0)} תחומים
         </p>
 
+        <div className="results-guide">
+          <div className="results-guide-row">
+            <span className="results-guide-score">73%</span>
+            <span className="results-guide-text">= רמת ההתאמה בין עמדותיך לבין עמדות המפלגה בפועל</span>
+          </div>
+          <div className="results-guide-tabs">
+            <span><strong>דירוג</strong> — כל המפלגות לפי ציון</span>
+            <span><strong>פירוט</strong> — למה קיבלה המפלגה הראשונה את הציון שלה, לפי נושא</span>
+            <span><strong>שקיפות</strong> — איך בדיוק חושב הציון</span>
+          </div>
+        </div>
+
         <div className="tab-row">
           {['דירוג', 'פירוט', 'שקיפות'].map((label, i) => (
             <button key={i} className={`tab ${tab === i ? 'active' : ''}`} onClick={() => setTab(i)}>
