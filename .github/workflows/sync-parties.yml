@@ -1,0 +1,77 @@
+name: Weekly party sync
+
+on:
+  schedule:
+    - cron: '0 20 * * 0'  # Every Sunday at 20:00 UTC (23:00 Israel time)
+  workflow_dispatch:        # Allow manual trigger from GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run party sync check
+        id: sync
+        run: |
+          node scripts/sync-parties.js > report.json 2>&1 || true
+          cat report.json
+          echo "report=$(cat report.json | tr -d '\n')" >> $GITHUB_OUTPUT
+
+      - name: Parse report
+        id: parse
+        run: |
+          HAS_CHANGES=$(node -e "const r=require('./report.json'); console.log(r.hasChanges)")
+          echo "has_changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
+
+          NEW=$(node -e "const r=require('./report.json'); console.log((r.newFactions||[]).join(', ') || 'אין')")
+          echo "new_factions=$NEW" >> $GITHUB_OUTPUT
+
+          REMOVED=$(node -e "const r=require('./report.json'); console.log((r.removedParties||[]).join(', ') || 'אין')")
+          echo "removed_parties=$REMOVED" >> $GITHUB_OUTPUT
+
+      - name: Open GitHub Issue if changes found
+        if: steps.parse.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const report = require('./report.json');
+            const newList = report.newFactions.map(n => `- 🆕 \`${n}\``).join('\n') || '- אין';
+            const removedList = report.removedParties.map(n => `- ❌ \`${n}\``).join('\n') || '- אין';
+            const unchangedList = report.unchanged.map(n => `- ✅ ${n}`).join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `עדכון מפלגות נדרש — זוהה שינוי בסיעות הכנסת (${new Date().toLocaleDateString('he-IL')})`,
+              labels: ['parties', 'auto'],
+              body: `## זוהה שינוי בסיעות הכנסת
+
+### מפלגות חדשות שלא קיימות ב-\`parties.json\`
+${newList}
+
+### מפלגות שנעלמו מה-API
+${removedList}
+
+### מפלגות שאומתו — ללא שינוי
+${unchangedList}
+
+---
+
+## פעולה נדרשת
+
+1. פתח את **פאנל הניהול** באתר → https://omrinovak.github.io/election-compass/
+2. לחץ "עדכון נתונים" → סיסמה: \`admin2024\`
+3. עדכן ידנית את הנתונים עבור המפלגות המסומנות
+4. סגור issue זה לאחר העדכון
+
+---
+*נוצר אוטומטית על ידי [Weekly party sync](../actions/workflows/sync-parties.yml) · ${new Date().toISOString()}*`
+            });
