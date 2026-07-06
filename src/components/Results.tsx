@@ -1,7 +1,6 @@
 import { useState, useMemo } from 'react';
 import type { PartyResult } from '../utils/matching';
 import { getAxisLabel } from '../utils/matching';
-import About from './About';
 import questionsData from '../data/questions.json';
 import '../App.css';
 
@@ -291,7 +290,6 @@ export default function Results({
   onRestart: () => void;
 }) {
   const [tab, setTab] = useState(0);
-  const [showAbout, setShowAbout] = useState(false);
   const top = results[0];
 
   const axisDilemmas = useMemo(() => {
@@ -318,7 +316,6 @@ export default function Results({
 
   return (
     <div className="screen" style={{ minHeight: 'auto' }}>
-      {showAbout && <About onClose={() => setShowAbout(false)} />}
       <div className="content">
         <h2 className="results-title">התוצאות שלך</h2>
         <p className="results-meta">
@@ -342,18 +339,6 @@ export default function Results({
           <button className="share-btn" onClick={onRestart}>🔄 מחדש</button>
         </div>
 
-        <button
-          onClick={() => setShowAbout(true)}
-          style={{
-            width: '100%',
-            textAlign: 'center',
-            fontSize: 13,
-            color: 'var(--text-muted)',
-            padding: '10px 0 4px',
-          }}
-        >
-          אודות המצפן · מתודולוגיה ומקורות
-        </button>
       </div>
     </div>
   );

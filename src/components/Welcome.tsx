@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import About from './About';
 import '../App.css';
 
 const CompassIcon = () => (
@@ -23,8 +25,12 @@ const ClockIcon = () => (
 );
 
 export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onAdmin: () => void }) {
+  const [showAbout, setShowAbout] = useState(false);
+
   return (
     <div className="screen screen-center">
+      {showAbout && <About onClose={() => setShowAbout(false)} />}
+
       <div className="welcome-logo">
         <CompassIcon />
       </div>
@@ -60,26 +66,44 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
         </button>
         <button
           className="btn-ghost"
-          style={{ width: '100%', marginTop: 10, fontSize: 12, color: 'var(--text-muted)' }}
+          style={{ width: '100%', marginTop: 10, fontSize: 13, color: 'var(--text-muted)' }}
+          onClick={() => setShowAbout(true)}
+        >
+          אודות המצפן · מתודולוגיה ומקורות
+        </button>
+        <button
+          className="btn-ghost"
+          style={{ width: '100%', marginTop: 4, fontSize: 11, color: 'var(--text-muted)' }}
           onClick={onAdmin}
         >
           עדכון נתונים
         </button>
       </div>
 
-      <p style={{
+      <div style={{
         fontSize: 11,
         color: 'var(--text-muted)',
         textAlign: 'center',
         maxWidth: 300,
-        lineHeight: 1.6,
+        lineHeight: 1.8,
         marginTop: 20,
         padding: '12px 0',
         borderTop: '1px solid var(--border)',
         width: '100%',
       }}>
-        מבוסס על נתונים עד יולי 2026 · הכלי אינו מחליף קריאה עצמאית של מצעי המפלגות
-      </p>
+        <div>מבוסס על נתונים עד יולי 2026 · הכלי אינו מחליף קריאה עצמאית של מצעי המפלגות</div>
+        <div style={{ marginTop: 6 }}>
+          נוצר על ידי{' '}
+          <a
+            href="https://linkedin.com/in/omri-novak-460053414"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 600 }}
+          >
+            עומרי נובק
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
