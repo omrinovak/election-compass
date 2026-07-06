@@ -15,6 +15,8 @@ const PARTY_EMOJI: Record<string, string> = {
   yahadut_hatorah: '⬛',
   israel_beiteinu: '🔹',
   hademokratim: '🌹',
+  beyahad: '🟣',
+  hazionyut_hadatit: '🟧',
   otzma_yehudit: '🔥',
   hadash_taal: '🔴',
   raam: '🟢',
