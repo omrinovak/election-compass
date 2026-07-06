@@ -19,15 +19,7 @@ const LAYER_LABELS: Record<string, string> = {
   leadership: 'סגנון הנהגה',
 };
 
-// 5 labeled options mapping to 1-7 internal scale
-// value 4 = neutral, 7 = fully agree with scaleMax, 1 = fully agree with scaleMin
-const SCALE_OPTIONS = [
-  { value: 7, label: 'מסכים בחוזקה' },
-  { value: 5, label: 'מסכים' },
-  { value: 4, label: 'ניטרלי' },
-  { value: 3, label: 'לא מסכים' },
-  { value: 1, label: 'לא מסכים בחוזקה' },
-];
+const SCALE_VALUES = [1, 2, 3, 4, 5, 6, 7];
 
 const LightbulbIcon = () => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -160,26 +152,23 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
 
       {/* Answers */}
       <div className="q-content">
-        <div className="q-options">
-          {SCALE_OPTIONS.map((opt) => {
-            const isSelected = displayValue === opt.value;
-            return (
+        <div className="q-scale-wrap">
+          <div className="q-scale-row">
+            {SCALE_VALUES.map((n) => (
               <button
-                key={opt.value}
-                className={`q-option ${isSelected ? 'q-option--selected' : ''}`}
-                onClick={() => setSelectedValue(opt.value)}
+                key={n}
+                className={`q-scale-btn ${displayValue === n ? 'q-scale-btn--selected' : ''}`}
+                onClick={() => setSelectedValue(n)}
+                aria-label={`${n} מתוך 7`}
               >
-                <span className="q-option-label">{opt.label}</span>
-                <span className={`q-radio ${isSelected ? 'q-radio--selected' : ''}`}>
-                  {isSelected && (
-                    <svg width="10" height="10" viewBox="0 0 10 10">
-                      <circle cx="5" cy="5" r="3.5" fill="white"/>
-                    </svg>
-                  )}
-                </span>
+                {n}
               </button>
-            );
-          })}
+            ))}
+          </div>
+          <div className="q-scale-poles">
+            <span className="q-scale-pole-max">{question.scaleMax}</span>
+            <span className="q-scale-pole-min">{question.scaleMin}</span>
+          </div>
         </div>
 
         {question.example && (
