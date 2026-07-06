@@ -19,11 +19,28 @@ const LAYER_LABELS: Record<string, string> = {
   leadership: 'סגנון הנהגה',
 };
 
-const CONFIDENCE_OPTIONS = [
-  { value: 0.3, label: 'לא בטוח' },
-  { value: 0.6, label: 'נוטה לכיוון הזה' },
-  { value: 1.0, label: 'בטוח מאוד' },
+// 5 labeled options mapping to 1-7 internal scale
+// value 4 = neutral, 7 = fully agree with scaleMax, 1 = fully agree with scaleMin
+const SCALE_OPTIONS = [
+  { value: 7, label: 'מסכים בחוזקה' },
+  { value: 5, label: 'מסכים' },
+  { value: 4, label: 'ניטרלי' },
+  { value: 3, label: 'לא מסכים' },
+  { value: 1, label: 'לא מסכים בחוזקה' },
 ];
+
+const LightbulbIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+    <path d="M7 1a4 4 0 0 1 2.5 7.1V9.5a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V8.1A4 4 0 0 1 7 1z" stroke="currentColor" strokeWidth="1.3"/>
+    <path d="M5.5 11h3M6 12.5h2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+  </svg>
+);
+
+const ChevronIcon = ({ open }: { open: boolean }) => (
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
+    <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 
 export default function Questionnaire({ onComplete }: { onComplete: (answers: Answer[]) => void }) {
   const allQuestions = useMemo<Question[]>(() => [
@@ -35,7 +52,6 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Map<string, { value: number; confidence: number }>>(new Map());
   const [selectedValue, setSelectedValue] = useState<number | null>(null);
-  const [selectedConfidence, setSelectedConfidence] = useState(0.6);
   const [showExample, setShowExample] = useState(false);
 
   const question = allQuestions[currentIndex];
@@ -44,19 +60,19 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
 
   const existing = answers.get(question.id);
   const displayValue = selectedValue ?? existing?.value ?? null;
-  const displayConf = existing ? existing.confidence : selectedConfidence;
 
   function saveAndAdvance() {
     if (displayValue !== null) {
       const updated = new Map(answers);
-      updated.set(question.id, { value: displayValue, confidence: displayConf });
+      // confidence derived from how extreme the answer is
+      const confidence = displayValue === 4 ? 0.3 : (displayValue === 3 || displayValue === 5) ? 0.6 : 1.0;
+      updated.set(question.id, { value: displayValue, confidence });
       setAnswers(updated);
 
       if (currentIndex < total - 1) {
         setCurrentIndex(currentIndex + 1);
         const nextExisting = updated.get(allQuestions[currentIndex + 1].id);
         setSelectedValue(nextExisting?.value ?? null);
-        setSelectedConfidence(nextExisting?.confidence ?? 0.6);
         setShowExample(false);
       } else {
         const finalAnswers: Answer[] = [];
@@ -83,7 +99,6 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
       setCurrentIndex(nextIndex);
       const nextExisting = answers.get(allQuestions[nextIndex].id);
       setSelectedValue(nextExisting?.value ?? null);
-      setSelectedConfidence(nextExisting?.confidence ?? 0.6);
       setShowExample(false);
     } else {
       const finalAnswers: Answer[] = [];
@@ -109,88 +124,94 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
       setCurrentIndex(prevIndex);
       const prevExisting = answers.get(allQuestions[prevIndex].id);
       setSelectedValue(prevExisting?.value ?? null);
-      setSelectedConfidence(prevExisting?.confidence ?? 0.6);
       setShowExample(false);
     }
   }
 
   return (
-    <div className="screen">
+    <div className="screen q-screen">
+      {/* Top bar */}
       <div className="top-bar">
-        <span className="step-label">{currentIndex + 1} / {total}</span>
+        {currentIndex > 0 ? (
+          <button className="q-back-btn" onClick={goBack} aria-label="חזרה">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M7 4l5 5-5 5" stroke="var(--text-secondary)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        ) : (
+          <span style={{ width: 32 }} />
+        )}
         <div className="progress-bar">
           <div className="progress-fill" style={{ width: `${progress}%` }} />
         </div>
-        <span className="layer-label">{LAYER_LABELS[question.layer]}</span>
+        <span className="step-label">{currentIndex + 1} / {total}</span>
       </div>
 
-      <div className="content">
-        <p className="question-text">{question.text}</p>
+      {/* Hero question header */}
+      <div className={`q-hero q-hero--${question.layer}`}>
+        <span className="q-layer-chip">{LAYER_LABELS[question.layer]}</span>
+        <h2 className="q-question-text">{question.text}</h2>
+        <div className="q-poles">
+          <span className="q-pole q-pole--max">{question.scaleMax}</span>
+          <span className="q-pole-sep">↔</span>
+          <span className="q-pole q-pole--min">{question.scaleMin}</span>
+        </div>
+      </div>
+
+      {/* Answers */}
+      <div className="q-content">
+        <div className="q-options">
+          {SCALE_OPTIONS.map((opt) => {
+            const isSelected = displayValue === opt.value;
+            return (
+              <button
+                key={opt.value}
+                className={`q-option ${isSelected ? 'q-option--selected' : ''}`}
+                onClick={() => setSelectedValue(opt.value)}
+              >
+                <span className="q-option-label">{opt.label}</span>
+                <span className={`q-radio ${isSelected ? 'q-radio--selected' : ''}`}>
+                  {isSelected && (
+                    <svg width="10" height="10" viewBox="0 0 10 10">
+                      <circle cx="5" cy="5" r="3.5" fill="white"/>
+                    </svg>
+                  )}
+                </span>
+              </button>
+            );
+          })}
+        </div>
 
         {question.example && (
-          <div style={{ marginBottom: 20 }}>
+          <div className="q-example-wrap">
             <button
               className="example-toggle"
               onClick={() => setShowExample(!showExample)}
             >
-              💡 {showExample ? 'הסתר דוגמה' : 'דוגמה מהחיים'}
+              <LightbulbIcon />
+              {showExample ? 'הסתר דוגמה' : 'דוגמה מהחיים'}
+              <ChevronIcon open={showExample} />
             </button>
             {showExample && (
-              <div className="example-box">
-                {question.example}
-              </div>
+              <div className="example-box">{question.example}</div>
             )}
           </div>
         )}
 
-        <div className="scale-labels">
-          <span className="scale-label">{question.scaleMin}</span>
-          <span className="scale-label scale-label-end">{question.scaleMax}</span>
-        </div>
-
-        <div className="scale-options">
-          {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-            <button
-              key={n}
-              className={`scale-btn ${displayValue === n ? 'selected' : ''}`}
-              onClick={() => setSelectedValue(n)}
-            >
-              {n}
-            </button>
-          ))}
-        </div>
-
-        <p className="confidence-label">עד כמה אתה בטוח?</p>
-        <div className="confidence-row">
-          {CONFIDENCE_OPTIONS.map((opt) => (
-            <button
-              key={opt.value}
-              className={`conf-btn ${displayConf === opt.value ? 'selected' : ''}`}
-              onClick={() => setSelectedConfidence(opt.value)}
-            >
-              {opt.label}
-            </button>
-          ))}
-        </div>
-
-        <div style={{ marginTop: 'auto', paddingTop: 16 }}>
-          <button className="btn-ghost" onClick={skip} style={{ width: '100%' }}>
-            לא יודע / לא רלוונטי — דלג
-          </button>
-        </div>
+        <button className="q-skip-btn" onClick={skip}>
+          לא יודע / לא רלוונטי — דלג
+        </button>
       </div>
 
+      {/* Bottom action */}
       <div className="bottom-bar">
-        {currentIndex > 0 && (
-          <button className="btn btn-secondary" onClick={goBack}>→ חזרה</button>
-        )}
         <button
           className="btn btn-primary"
           onClick={saveAndAdvance}
-          style={{ opacity: displayValue === null ? 0.5 : 1 }}
+          style={{ opacity: displayValue === null ? 0.45 : 1 }}
           disabled={displayValue === null}
         >
-          {currentIndex < total - 1 ? 'הבא ←' : 'לתעדוף ←'}
+          {currentIndex < total - 1 ? 'הבא' : 'לתוצאות'}
         </button>
       </div>
     </div>
