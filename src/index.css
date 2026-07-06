@@ -1,22 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --bg: #f8f9fa;
+  --bg: #f5f7fc;
   --surface: #ffffff;
-  --surface-dim: #f0f1f3;
-  --text: #1a1a2e;
-  --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
-  --accent: #2563eb;
-  --accent-light: #eff6ff;
-  --accent-dark: #1d4ed8;
+  --surface-dim: #eef1f8;
+  --surface-card: #ffffff;
+
+  --text: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --accent: #3451d1;
+  --accent-hover: #2a42b8;
+  --accent-light: #eef2ff;
+  --accent-mid: #c7d2fe;
+
   --danger: #dc2626;
   --danger-light: #fef2f2;
-  --success: #16a34a;
-  --success-light: #f0fdf4;
+  --success: #059669;
+  --success-light: #ecfdf5;
   --warning: #d97706;
   --warning-light: #fffbeb;
-  --border: #e5e7eb;
-  --radius: 12px;
-  --radius-sm: 8px;
+
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.04);
+  --shadow-accent: 0 4px 14px rgba(52, 81, 209, 0.25);
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+
   color-scheme: light;
 }
 
@@ -32,12 +48,13 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
   direction: rtl;
   min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
 }
 
 #root {

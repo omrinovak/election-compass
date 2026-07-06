@@ -1,25 +1,68 @@
 import '../App.css';
 
+const CompassIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="18" cy="18" r="14" stroke="white" strokeWidth="2" strokeOpacity="0.6"/>
+    <circle cx="18" cy="18" r="2.5" fill="white"/>
+    <path d="M18 6V10M18 26V30M6 18H10M26 18H30" stroke="white" strokeWidth="2" strokeLinecap="round" strokeOpacity="0.5"/>
+    <path d="M22 14L19.5 19.5L14 22L16.5 16.5L22 14Z" fill="white"/>
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 6L5 9L10 3" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const ClockIcon = () => (
+  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" strokeWidth="1.3"/>
+    <path d="M6.5 4V6.5L8 8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+  </svg>
+);
+
 export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onAdmin: () => void }) {
   return (
     <div className="screen screen-center">
-      <div className="welcome-icon">🧭</div>
+      <div className="welcome-logo">
+        <CompassIcon />
+      </div>
       <h1 className="welcome-title">מצפן הבחירות</h1>
       <p className="welcome-subtitle">
         גלה לאיזו מפלגה אתה הכי קרוב — על סמך מה שחשוב לך, לא על סמך סיסמאות
       </p>
-      <div className="time-badge">🕐 5-7 דקות</div>
+      <div className="time-badge">
+        <ClockIcon />
+        5–7 דקות
+      </div>
       <ul className="feature-list">
-        <li><span className="feature-check">✓</span>שאלון ניטרלי — ללא הטיה לכיוון כלשהו</li>
-        <li><span className="feature-check">✓</span>מבוסס על מעשים, לא רק על הצהרות</li>
-        <li><span className="feature-check">✓</span>שקוף — כל ציון ניתן להסבר</li>
-        <li><span className="feature-check">✓</span>לא אוספים מידע אישי</li>
+        <li>
+          <span className="feature-check"><CheckIcon /></span>
+          שאלון ניטרלי — ללא הטיה לכיוון כלשהו
+        </li>
+        <li>
+          <span className="feature-check"><CheckIcon /></span>
+          מבוסס על מעשים, לא רק על הצהרות
+        </li>
+        <li>
+          <span className="feature-check"><CheckIcon /></span>
+          שקוף — כל ציון ניתן להסבר
+        </li>
+        <li>
+          <span className="feature-check"><CheckIcon /></span>
+          לא אוספים מידע אישי
+        </li>
       </ul>
-      <div style={{ width: '100%', maxWidth: 320, marginTop: 24 }}>
+      <div style={{ width: '100%', maxWidth: 300, marginTop: 24 }}>
         <button className="btn btn-primary" style={{ width: '100%' }} onClick={onStart}>
-          בואו נתחיל ←
+          בואו נתחיל
         </button>
-        <button className="btn-ghost" style={{ width: '100%', marginTop: 10, fontSize: 12, color: 'var(--text-muted)' }} onClick={onAdmin}>
+        <button
+          className="btn-ghost"
+          style={{ width: '100%', marginTop: 10, fontSize: 12, color: 'var(--text-muted)' }}
+          onClick={onAdmin}
+        >
           עדכון נתונים
         </button>
       </div>

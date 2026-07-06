@@ -128,6 +128,11 @@ function RankingTab({ results }: { results: PartyResult[] }) {
 
         return (
           <div key={r.id} className={`result-card ${isTop ? 'top-result' : ''}`}>
+            {isTop && (
+              <div className="top-result-badge">
+                ✦ ההתאמה הטובה ביותר שלך
+              </div>
+            )}
             <div className="party-header">
               <span className="party-name">{emoji} {r.name}</span>
               <span className="party-score" style={{ color: isTop ? r.color : 'var(--text-secondary)' }}>
