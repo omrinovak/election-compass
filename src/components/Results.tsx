@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import type { PartyResult } from '../utils/matching';
 import { getAxisLabel } from '../utils/matching';
 import About from './About';
+import questionsData from '../data/questions.json';
 import '../App.css';
 
 function pct(n: number): string {
@@ -78,10 +79,11 @@ function generateSummary(result: PartyResult, rank: number): string {
   }
 }
 
-function AxisChip({ axis, data, className }: {
+function AxisChip({ axis, data, className, dilemma }: {
   axis: string;
   data: { score: number; partyDeclared: number; partyActual: number; userValue: number };
   className: string;
+  dilemma?: string;
 }) {
   const [open, setOpen] = useState(false);
   return (
@@ -97,9 +99,19 @@ function AxisChip({ axis, data, className }: {
         <div style={{
           fontSize: 12, color: 'var(--text-secondary)', background: 'var(--surface)',
           border: '1px solid var(--border)', borderRadius: 8, padding: '10px 12px',
-          marginTop: 4, lineHeight: 1.7, maxWidth: 280,
+          marginTop: 4, lineHeight: 1.7, maxWidth: 300,
         }}>
-          <div style={{ marginBottom: 4 }}>{AXIS_DESC[axis] || ''}</div>
+          <div style={{ marginBottom: 6 }}>{AXIS_DESC[axis] || ''}</div>
+          {dilemma && (
+            <div style={{
+              background: 'var(--surface-dim)', borderRadius: 6, padding: '7px 10px',
+              fontSize: 11, color: 'var(--text-secondary)', marginBottom: 6,
+              borderRight: '2.5px solid var(--accent)', lineHeight: 1.6,
+            }}>
+              <span style={{ fontWeight: 600, color: 'var(--text-muted)', display: 'block', marginBottom: 2 }}>הדילמה שהשפיעה:</span>
+              {dilemma}
+            </div>
+          )}
           <div style={{ display: 'flex', gap: 12, fontSize: 11, color: 'var(--text-muted)' }}>
             <span>עמדתך: {data.userValue.toFixed(1)}</span>
             <span>מצע: {data.partyDeclared.toFixed(1)}</span>
@@ -111,7 +123,7 @@ function AxisChip({ axis, data, className }: {
   );
 }
 
-function RankingTab({ results }: { results: PartyResult[] }) {
+function RankingTab({ results, axisDilemmas }: { results: PartyResult[]; axisDilemmas: Record<string, string> }) {
   const top = results[0];
   return (
     <div>
@@ -156,10 +168,10 @@ function RankingTab({ results }: { results: PartyResult[] }) {
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                   {topAxes.map(([axis, data]) => (
-                    <AxisChip key={axis} axis={axis} data={data} className={data.score >= 0.7 ? 'high' : ''} />
+                    <AxisChip key={axis} axis={axis} data={data} className={data.score >= 0.7 ? 'high' : ''} dilemma={axisDilemmas[axis]} />
                   ))}
                   {bottomAxes.map(([axis, data]) => (
-                    <AxisChip key={axis} axis={axis} data={data} className={data.score < 0.4 ? 'low' : ''} />
+                    <AxisChip key={axis} axis={axis} data={data} className={data.score < 0.4 ? 'low' : ''} dilemma={axisDilemmas[axis]} />
                   ))}
                   {isTop && r.unavailableAxes.slice(0, 2).map((u) => (
                     <span key={u.axis} className="axis-chip na">
@@ -268,77 +280,6 @@ function TransparencyTab({ result, priorities }: { result: PartyResult; prioriti
   );
 }
 
-function VoteSection() {
-  return (
-    <div className="vote-section">
-
-      <div className="vote-hero">
-        <div className="vote-hero-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect x="4" y="8" width="20" height="16" rx="2" stroke="white" strokeWidth="1.8"/>
-            <path d="M9 14l3.5 3.5L19 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M10 8V6a4 4 0 0 1 8 0v2" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
-          </svg>
-        </div>
-        <h3 className="vote-hero-title">עכשיו — לך להצביע</h3>
-        <p className="vote-hero-sub">
-          זכות ההצבעה לא תמיד הייתה מובנת מאליה. אנשים נאבקו עליה במשך דורות.
-          יום הבחירות הוא היום שבו קולך שווה בדיוק לקולו של ראש הממשלה.
-        </p>
-      </div>
-
-      <blockquote className="vote-quote">
-        <p>"דמוקרטיה היא שיטת המשטר הגרועה ביותר — פרט לכל האחרות."</p>
-        <cite>ווינסטון צ'רצ'יל</cite>
-      </blockquote>
-
-      <blockquote className="vote-quote">
-        <p>"מי שלא מצביע לא מוותר על מדיניות — הוא מוותר על השפעה."</p>
-        <cite>רעיון יסוד בתורת הדמוקרטיה</cite>
-      </blockquote>
-
-      <div className="vote-divider" />
-
-      <div className="vote-info-block">
-        <h4 className="vote-info-title">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.5"/>
-            <path d="M8 7v5M8 5v.5" stroke="var(--accent)" strokeWidth="1.8" strokeLinecap="round"/>
-          </svg>
-          על "קולות אבודים" ואחוז החסימה
-        </h4>
-        <p>
-          בישראל, מפלגה שלא עוברת את <strong>אחוז החסימה (3.25%)</strong> מהקולות הכשרים —
-          לא מקבלת אף מנדט. הקולות שהיא קיבלה מתפזרים לשאר המפלגות.
-        </p>
-        <p style={{ marginTop: 8 }}>
-          אם מפלגה שמעניינת אותך נמצאת בסקרים <strong>קרוב לסף</strong>, שווה לבדוק:
-          האם להצביע לה כדי לעבור את הסף, או להצביע לחלופה שקרובה לדעותיך וודאי תיכנס לכנסת.
-          זו החלטה שרק אתה יכול לקבל — אבל חשוב לקבל אותה בצורה מושכלת.
-        </p>
-      </div>
-
-      <div className="vote-info-block">
-        <h4 className="vote-info-title">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2l1.8 3.6L14 6.4l-3 2.9.7 4.1L8 11.4l-3.7 1.95.7-4.1L2 6.4l4.2-.8L8 2z" stroke="var(--accent)" strokeWidth="1.4" strokeLinejoin="round"/>
-          </svg>
-          לא כל המפלגות בשאלון
-        </h4>
-        <p>
-          השאלון כולל את המפלגות הגדולות של הכנסת ה-25, אבל <strong>לא את כולן</strong>.
-          אם מפלגה שחשובה לך לא מופיעה — זה לא אומר שהיא פחות לגיטימית.
-          אנחנו מעודדים מחקר עצמאי: קרא מצעים, צפה בראיונות, בדוק הצבעות — <strong>כל עוד הוא מבוסס על עובדות ונתונים</strong>, לא על תחושות בטן ופרסום.
-        </p>
-      </div>
-
-      <p className="vote-footer">
-        הדמוקרטיה מתקיימת כשאנשים מגיעים לקלפי. <strong>תהיה אחד מהם.</strong>
-      </p>
-
-    </div>
-  );
-}
 
 export default function Results({
   results,
@@ -352,6 +293,19 @@ export default function Results({
   const [tab, setTab] = useState(0);
   const [showAbout, setShowAbout] = useState(false);
   const top = results[0];
+
+  const axisDilemmas = useMemo(() => {
+    const allQ = [...questionsData.values, ...questionsData.policy, ...questionsData.leadership] as Array<{ axes: string[]; example?: string }>;
+    const map: Record<string, string> = {};
+    for (const q of allQ) {
+      if (q.example) {
+        for (const axis of q.axes) {
+          if (!map[axis]) map[axis] = q.example;
+        }
+      }
+    }
+    return map;
+  }, []);
 
   function handleShare() {
     const text = `מצפן הבחירות — התוצאות שלי:\n${results.slice(0, 3).map((r, i) => `${i + 1}. ${r.name}: ${pct(r.overallScore)}`).join('\n')}`;
@@ -379,7 +333,7 @@ export default function Results({
           ))}
         </div>
 
-        {tab === 0 && <RankingTab results={results} />}
+        {tab === 0 && <RankingTab results={results} axisDilemmas={axisDilemmas} />}
         {tab === 1 && top && <DetailTab result={top} />}
         {tab === 2 && top && <TransparencyTab result={top} priorities={priorities} />}
 
@@ -387,8 +341,6 @@ export default function Results({
           <button className="share-btn" onClick={handleShare}>📤 שיתוף</button>
           <button className="share-btn" onClick={onRestart}>🔄 מחדש</button>
         </div>
-
-        <VoteSection />
 
         <button
           onClick={() => setShowAbout(true)}

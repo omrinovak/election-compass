@@ -4,11 +4,12 @@ import Questionnaire from './components/Questionnaire';
 import Priorities from './components/Priorities';
 import Loading from './components/Loading';
 import Results from './components/Results';
+import VotePage from './components/VotePage';
 import Admin from './components/Admin';
 import type { Answer, PartyResult } from './utils/matching';
 import { calculateResults } from './utils/matching';
 
-type Screen = 'welcome' | 'questionnaire' | 'priorities' | 'loading' | 'results' | 'admin';
+type Screen = 'welcome' | 'questionnaire' | 'priorities' | 'loading' | 'vote' | 'results' | 'admin';
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>('welcome');
@@ -27,7 +28,7 @@ export default function App() {
     setTimeout(() => {
       const r = calculateResults(answers, p);
       setResults(r);
-      setScreen('results');
+      setScreen('vote');
     }, 1500);
   }, [answers]);
 
@@ -44,6 +45,7 @@ export default function App() {
       {screen === 'questionnaire' && <Questionnaire onComplete={handleQuestionnaireComplete} />}
       {screen === 'priorities' && <Priorities onComplete={handlePrioritiesComplete} onBack={() => setScreen('questionnaire')} />}
       {screen === 'loading' && <Loading />}
+      {screen === 'vote' && <VotePage onContinue={() => setScreen('results')} />}
       {screen === 'results' && <Results results={results} priorities={priorities} onRestart={handleRestart} />}
       {screen === 'admin' && <Admin onClose={() => setScreen('welcome')} />}
     </>

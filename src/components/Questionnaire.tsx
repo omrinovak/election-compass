@@ -21,16 +21,10 @@ const LAYER_LABELS: Record<string, string> = {
 
 const SCALE_VALUES = [1, 2, 3, 4, 5, 6, 7];
 
-const LightbulbIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-    <path d="M7 1a4 4 0 0 1 2.5 7.1V9.5a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V8.1A4 4 0 0 1 7 1z" stroke="currentColor" strokeWidth="1.3"/>
-    <path d="M5.5 11h3M6 12.5h2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
-  </svg>
-);
-
-const ChevronIcon = ({ open }: { open: boolean }) => (
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
-    <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+const SwapIcon = () => (
+  <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+    <path d="M2 4.5h9M8.5 2l2.5 2.5L8.5 7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M11 8.5H2M4.5 6l-2.5 2.5L4.5 11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
@@ -44,7 +38,8 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Map<string, { value: number; confidence: number }>>(new Map());
   const [selectedValue, setSelectedValue] = useState<number | null>(null);
-  const [showExample, setShowExample] = useState(false);
+  // 'example' = show real-life dilemma (default), 'abstract' = show principle
+  const [mode, setMode] = useState<'example' | 'abstract'>('example');
 
   const question = allQuestions[currentIndex];
   const total = allQuestions.length;
@@ -53,10 +48,14 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
   const existing = answers.get(question.id);
   const displayValue = selectedValue ?? existing?.value ?? null;
 
+  // Decide what to show as the main question text
+  const hasExample = Boolean(question.example);
+  const mainText = (hasExample && mode === 'example') ? question.example! : question.text;
+  const showToggle = hasExample;
+
   function saveAndAdvance() {
     if (displayValue !== null) {
       const updated = new Map(answers);
-      // confidence derived from how extreme the answer is
       const confidence = displayValue === 4 ? 0.3 : (displayValue === 3 || displayValue === 5) ? 0.6 : 1.0;
       updated.set(question.id, { value: displayValue, confidence });
       setAnswers(updated);
@@ -65,7 +64,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
         setCurrentIndex(currentIndex + 1);
         const nextExisting = updated.get(allQuestions[currentIndex + 1].id);
         setSelectedValue(nextExisting?.value ?? null);
-        setShowExample(false);
+        setMode('example');
       } else {
         const finalAnswers: Answer[] = [];
         for (const q of allQuestions) {
@@ -91,7 +90,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
       setCurrentIndex(nextIndex);
       const nextExisting = answers.get(allQuestions[nextIndex].id);
       setSelectedValue(nextExisting?.value ?? null);
-      setShowExample(false);
+      setMode('example');
     } else {
       const finalAnswers: Answer[] = [];
       for (const q of allQuestions) {
@@ -116,7 +115,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
       setCurrentIndex(prevIndex);
       const prevExisting = answers.get(allQuestions[prevIndex].id);
       setSelectedValue(prevExisting?.value ?? null);
-      setShowExample(false);
+      setMode('example');
     }
   }
 
@@ -141,8 +140,24 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
 
       {/* Hero question header */}
       <div className={`q-hero q-hero--${question.layer}`}>
-        <span className="q-layer-chip">{LAYER_LABELS[question.layer]}</span>
-        <h2 className="q-question-text">{question.text}</h2>
+        <div className="q-hero-top">
+          <span className="q-layer-chip">{LAYER_LABELS[question.layer]}</span>
+          {showToggle && (
+            <button
+              className="q-swap-btn"
+              onClick={() => setMode(mode === 'example' ? 'abstract' : 'example')}
+              title={mode === 'example' ? 'הצג כשאלה עקרונית' : 'הצג כדילמה אמיתית'}
+            >
+              <SwapIcon />
+              {mode === 'example' ? 'שאלה עקרונית' : 'דילמה אמיתית'}
+            </button>
+          )}
+        </div>
+        <h2 className="q-question-text">{mainText}</h2>
+        {/* Secondary context: show abstract principle lightly when in example mode */}
+        {hasExample && mode === 'example' && (
+          <p className="q-abstract-hint">{question.text}</p>
+        )}
         <div className="q-poles">
           <span className="q-pole q-pole--min">{question.scaleMin}</span>
           <span className="q-pole-sep">↔</span>
@@ -150,7 +165,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
         </div>
       </div>
 
-      {/* Answers */}
+      {/* Scale */}
       <div className="q-content">
         <div className="q-scale-wrap">
           <div className="q-scale-row">
@@ -170,22 +185,6 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
             <span className="q-scale-pole-max">{question.scaleMax}</span>
           </div>
         </div>
-
-        {question.example && (
-          <div className="q-example-wrap">
-            <button
-              className="example-toggle"
-              onClick={() => setShowExample(!showExample)}
-            >
-              <LightbulbIcon />
-              {showExample ? 'הסתר דוגמה' : 'דוגמה מהחיים'}
-              <ChevronIcon open={showExample} />
-            </button>
-            {showExample && (
-              <div className="example-box">{question.example}</div>
-            )}
-          </div>
-        )}
 
         <button className="q-skip-btn" onClick={skip}>
           לא יודע / לא רלוונטי — דלג
