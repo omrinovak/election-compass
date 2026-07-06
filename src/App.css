@@ -461,6 +461,19 @@
 }
 
 /* Scale 1-7 */
+.q-scale-hint {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+  margin-bottom: 4px;
+}
+
+.q-scale-hint span {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
 .q-scale-wrap {
   display: flex;
   flex-direction: column;

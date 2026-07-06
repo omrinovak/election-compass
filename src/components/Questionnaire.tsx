@@ -168,6 +168,11 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
       {/* Scale */}
       <div className="q-content">
         <div className="q-scale-wrap">
+          <div className="q-scale-hint">
+            <span>1 = קצה אחד</span>
+            <span>4 = באמצע / לא בטוח</span>
+            <span>7 = קצה שני</span>
+          </div>
           <div className="q-scale-row">
             {SCALE_VALUES.map((n) => (
               <button
