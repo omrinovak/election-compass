@@ -9,7 +9,6 @@ function pct(n: number): string {
 
 const PARTY_EMOJI: Record<string, string> = {
   likud: '🔵',
-  yesh_atid: '🟠',
   mahaneh_mamlahti: '🔷',
   shas: '🕍',
   yahadut_hatorah: '⬛',
