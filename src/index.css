@@ -1,19 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --bg: #f5f7fc;
+  --bg: #f0f4ff;
   --surface: #ffffff;
-  --surface-dim: #eef1f8;
+  --surface-dim: #e8eeff;
   --surface-card: #ffffff;
 
-  --text: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text: #0c1445;
+  --text-secondary: #3d4f7c;
+  --text-muted: #8896b3;
 
-  --accent: #3451d1;
-  --accent-hover: #2a42b8;
-  --accent-light: #eef2ff;
-  --accent-mid: #c7d2fe;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #eff6ff;
+  --accent-mid: #bfdbfe;
+
+  --purple: #7c3aed;
+  --purple-light: #f5f3ff;
+  --amber: #d97706;
+  --amber-light: #fffbeb;
 
   --danger: #dc2626;
   --danger-light: #fef2f2;
@@ -22,12 +27,13 @@
   --warning: #d97706;
   --warning-light: #fffbeb;
 
-  --border: #e2e8f0;
-  --border-strong: #cbd5e1;
+  --border: #d1ddf7;
+  --border-strong: #a8bce8;
 
-  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.04);
-  --shadow-accent: 0 4px 14px rgba(52, 81, 209, 0.25);
+  --shadow-sm: 0 1px 4px rgba(12, 20, 69, 0.07), 0 1px 2px rgba(12, 20, 69, 0.04);
+  --shadow-md: 0 4px 16px rgba(12, 20, 69, 0.10), 0 2px 4px rgba(12, 20, 69, 0.05);
+  --shadow-accent: 0 4px 18px rgba(37, 99, 235, 0.32);
+  --shadow-accent-lg: 0 8px 32px rgba(37, 99, 235, 0.40);
 
   --radius: 14px;
   --radius-sm: 10px;
@@ -72,4 +78,25 @@ button {
   border: none;
   background: none;
   color: inherit;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.3), var(--shadow-accent); }
+  50% { box-shadow: 0 0 0 6px rgba(37, 99, 235, 0), var(--shadow-accent); }
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.88); opacity: 0.5; }
+  70% { transform: scale(1.06); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
