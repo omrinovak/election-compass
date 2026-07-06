@@ -144,9 +144,9 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
         <span className="q-layer-chip">{LAYER_LABELS[question.layer]}</span>
         <h2 className="q-question-text">{question.text}</h2>
         <div className="q-poles">
-          <span className="q-pole q-pole--max">{question.scaleMax}</span>
-          <span className="q-pole-sep">↔</span>
           <span className="q-pole q-pole--min">{question.scaleMin}</span>
+          <span className="q-pole-sep">↔</span>
+          <span className="q-pole q-pole--max">{question.scaleMax}</span>
         </div>
       </div>
 
@@ -166,8 +166,8 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
             ))}
           </div>
           <div className="q-scale-poles">
-            <span className="q-scale-pole-max">{question.scaleMax}</span>
             <span className="q-scale-pole-min">{question.scaleMin}</span>
+            <span className="q-scale-pole-max">{question.scaleMax}</span>
           </div>
         </div>
 

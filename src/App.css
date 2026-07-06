@@ -368,11 +368,11 @@
   line-height: 1.3;
 }
 
-.q-scale-pole-max {
+.q-scale-pole-min {
   text-align: right;
 }
 
-.q-scale-pole-min {
+.q-scale-pole-max {
   text-align: left;
 }
 
