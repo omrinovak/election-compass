@@ -66,6 +66,20 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
           עדכון נתונים
         </button>
       </div>
+
+      <p style={{
+        fontSize: 11,
+        color: 'var(--text-muted)',
+        textAlign: 'center',
+        maxWidth: 300,
+        lineHeight: 1.6,
+        marginTop: 20,
+        padding: '12px 0',
+        borderTop: '1px solid var(--border)',
+        width: '100%',
+      }}>
+        מבוסס על נתונים עד יולי 2026 · הכלי אינו מחליף קריאה עצמאית של מצעי המפלגות
+      </p>
     </div>
   );
 }
