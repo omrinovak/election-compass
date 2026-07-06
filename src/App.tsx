@@ -29,6 +29,13 @@ export default function App() {
       const r = calculateResults(answers, p);
       setResults(r);
       setScreen('vote');
+      if (r.length > 0 && typeof window !== 'undefined' && (window as any).umami) {
+        (window as any).umami.track('quiz_completed', {
+          top_party: r[0].id,
+          top_score: Math.round(r[0].overallScore * 100),
+          answers_count: answers.length,
+        });
+      }
     }, 1500);
   }, [answers]);
 
