@@ -268,6 +268,78 @@ function TransparencyTab({ result, priorities }: { result: PartyResult; prioriti
   );
 }
 
+function VoteSection() {
+  return (
+    <div className="vote-section">
+
+      <div className="vote-hero">
+        <div className="vote-hero-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="4" y="8" width="20" height="16" rx="2" stroke="white" strokeWidth="1.8"/>
+            <path d="M9 14l3.5 3.5L19 11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M10 8V6a4 4 0 0 1 8 0v2" stroke="white" strokeWidth="1.8" strokeLinecap="round"/>
+          </svg>
+        </div>
+        <h3 className="vote-hero-title">עכשיו — לך להצביע</h3>
+        <p className="vote-hero-sub">
+          זכות ההצבעה לא תמיד הייתה מובנת מאליה. אנשים נאבקו עליה במשך דורות.
+          יום הבחירות הוא היום שבו קולך שווה בדיוק לקולו של ראש הממשלה.
+        </p>
+      </div>
+
+      <blockquote className="vote-quote">
+        <p>"דמוקרטיה היא שיטת המשטר הגרועה ביותר — פרט לכל האחרות."</p>
+        <cite>ווינסטון צ'רצ'יל</cite>
+      </blockquote>
+
+      <blockquote className="vote-quote">
+        <p>"מי שלא מצביע לא מוותר על מדיניות — הוא מוותר על השפעה."</p>
+        <cite>רעיון יסוד בתורת הדמוקרטיה</cite>
+      </blockquote>
+
+      <div className="vote-divider" />
+
+      <div className="vote-info-block">
+        <h4 className="vote-info-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="7" stroke="var(--accent)" strokeWidth="1.5"/>
+            <path d="M8 7v5M8 5v.5" stroke="var(--accent)" strokeWidth="1.8" strokeLinecap="round"/>
+          </svg>
+          על "קולות אבודים" ואחוז החסימה
+        </h4>
+        <p>
+          בישראל, מפלגה שלא עוברת את <strong>אחוז החסימה (3.25%)</strong> מהקולות הכשרים —
+          לא מקבלת אף מנדט. הקולות שהיא קיבלה מתפזרים לשאר המפלגות.
+        </p>
+        <p style={{ marginTop: 8 }}>
+          אם מפלגה שמעניינת אותך נמצאת בסקרים <strong>קרוב לסף</strong>, שווה לבדוק:
+          האם להצביע לה כדי לעבור את הסף, או להצביע לחלופה שקרובה לדעותיך וודאי תיכנס לכנסת.
+          זו החלטה שרק אתה יכול לקבל — אבל חשוב לקבל אותה בצורה מושכלת.
+        </p>
+      </div>
+
+      <div className="vote-info-block">
+        <h4 className="vote-info-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 2l1.8 3.6L14 6.4l-3 2.9.7 4.1L8 11.4l-3.7 1.95.7-4.1L2 6.4l4.2-.8L8 2z" stroke="var(--accent)" strokeWidth="1.4" strokeLinejoin="round"/>
+          </svg>
+          לא כל המפלגות בשאלון
+        </h4>
+        <p>
+          השאלון כולל את המפלגות הגדולות של הכנסת ה-25, אבל <strong>לא את כולן</strong>.
+          אם מפלגה שחשובה לך לא מופיעה — זה לא אומר שהיא פחות לגיטימית.
+          אנחנו מעודדים מחקר עצמאי: קרא מצעים, צפה בראיונות, בדוק הצבעות — <strong>כל עוד הוא מבוסס על עובדות ונתונים</strong>, לא על תחושות בטן ופרסום.
+        </p>
+      </div>
+
+      <p className="vote-footer">
+        הדמוקרטיה מתקיימת כשאנשים מגיעים לקלפי. <strong>תהיה אחד מהם.</strong>
+      </p>
+
+    </div>
+  );
+}
+
 export default function Results({
   results,
   priorities,
@@ -315,6 +387,8 @@ export default function Results({
           <button className="share-btn" onClick={handleShare}>📤 שיתוף</button>
           <button className="share-btn" onClick={onRestart}>🔄 מחדש</button>
         </div>
+
+        <VoteSection />
 
         <button
           onClick={() => setShowAbout(true)}
