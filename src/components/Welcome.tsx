@@ -42,6 +42,24 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
         <ClockIcon />
         5–7 דקות
       </div>
+      <div className="welcome-story">
+        <p>
+          שלום, אני{' '}
+          <a
+            href="https://linkedin.com/in/omri-novak-460053414"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="welcome-story-link"
+          >
+            עומרי נובק
+          </a>
+          . השאלון הזה נולד מתוך שיחה בשמירה בסבב המילואים האחרון עם חבר טוב מהצוות שלי. שמתי לב לתופעה רחבה שבה רבים מבני דורינו מרגישים אבודים מבחינת ייצוג פוליטי — הם יודעים מה הם חושבים ויש להם דעות, אבל מרוב רעש ושטויות של פוליטיקאים לא ברור מי אומר מה.
+        </p>
+        <p style={{ marginTop: 10 }}>
+          מטרת השאלון היא לעזור לכל אחד ואחת להרגיש שקולם נשמע ויש מי שייצג אותם.
+        </p>
+      </div>
+
       <ul className="feature-list">
         <li>
           <span className="feature-check"><CheckIcon /></span>

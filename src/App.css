@@ -187,6 +187,35 @@
   font-weight: 600;
 }
 
+/* ── Welcome story block ── */
+.welcome-story {
+  width: 100%;
+  max-width: 300px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+  text-align: right;
+}
+
+.welcome-story p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.welcome-story-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.welcome-story-link:hover {
+  text-decoration: underline;
+}
+
 .feature-list {
   list-style: none;
   text-align: right;
