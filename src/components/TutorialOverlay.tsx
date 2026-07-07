@@ -89,7 +89,7 @@ export default function TutorialOverlay({ onDone }: { onDone: () => void }) {
       {/* ── Dark overlay — 4 strips framing the spotlight ── */}
       {rect && (() => {
         const { T, L, B, R } = padRect(rect, PAD);
-        const bg: React.CSSProperties = { background: 'rgba(0,0,0,0.65)', position: 'fixed', zIndex: 201, transition: 'all 0.3s ease' };
+        const bg: React.CSSProperties = { background: 'rgba(0,0,0,0.82)', position: 'fixed', zIndex: 201, transition: 'all 0.3s ease' };
         return <>
           <div style={{ ...bg, top: 0, left: 0, right: 0, height: T }} />
           <div style={{ ...bg, top: B, left: 0, right: 0, bottom: 0 }} />
@@ -205,7 +205,7 @@ export default function TutorialOverlay({ onDone }: { onDone: () => void }) {
             ))}
           </div>
           <span className="tut-tooltip-next">
-            {step < STEPS.length - 1 ? 'לחץ להמשיך ←' : 'מתחילים! →'}
+            {step < STEPS.length - 1 ? 'לחץ להמשיך →' : 'מתחילים! →'}
           </span>
         </div>
       </div>

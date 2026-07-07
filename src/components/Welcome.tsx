@@ -42,9 +42,16 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
         <ClockIcon />
         5–7 דקות
       </div>
+
+      <div style={{ width: '100%', maxWidth: 300, marginTop: 20 }}>
+        <button className="btn btn-primary" style={{ width: '100%' }} onClick={onStart}>
+          בואו נתחיל
+        </button>
+      </div>
+
       <div className="welcome-story">
         <p>
-          שלום! אני{' '}
+          נולד מתוך שיחת מילואים — רבים מבני דורינו יודעים מה הם חושבים, אבל מרוב רעש פוליטי לא ברור מי באמת מייצג אותם. המצפן עוזר לגלות.{' '}
           <a
             href="https://linkedin.com/in/omri-novak-460053414"
             target="_blank"
@@ -53,13 +60,6 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
           >
             עומרי נובק
           </a>
-          {' '}בן 23 מתל אביב. השאלון הזה נולד מתוך שיחה בסבב המילואים האחרון עם חבר טוב מהצוות שלי.
-        </p>
-        <p style={{ marginTop: 10 }}>
-          שמתי לב לתופעה רחבה, רבים מבני דורינו מרגישים אבודים מבחינת ייצוג פוליטי — הם יודעים מה הם חושבים ויש להם דעות, אבל מרוב רעש ושטויות של פוליטיקאים לא ברור מי אומר מה.
-        </p>
-        <p style={{ marginTop: 10 }}>
-          מטרת השאלון היא לעזור לכל אחד ואחת להרגיש שקולם נשמע ויש מי שייצג אותם.
         </p>
       </div>
 

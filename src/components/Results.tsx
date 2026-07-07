@@ -124,17 +124,21 @@ function AxisChip({ axis, data, className, dilemma }: {
 
 function RankingTab({ results, axisDilemmas }: { results: PartyResult[]; axisDilemmas: Record<string, string> }) {
   const top = results[0];
+  const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
+
   return (
     <div>
       {results.map((r, i) => {
         const isTop = i === 0;
         const showDetail = i < 3;
-        const topAxes = Object.entries(r.axisScores)
-          .sort(([, a], [, b]) => b.score - a.score)
-          .slice(0, 4);
-        const bottomAxes = Object.entries(r.axisScores)
-          .sort(([, a], [, b]) => a.score - b.score)
-          .slice(0, 2);
+        const allChips = [
+          ...Object.entries(r.axisScores).sort(([, a], [, b]) => b.score - a.score).slice(0, 4)
+            .map(([axis, data]) => ({ axis, data, cls: data.score >= 0.7 ? 'high' : '' })),
+          ...Object.entries(r.axisScores).sort(([, a], [, b]) => a.score - b.score).slice(0, 2)
+            .map(([axis, data]) => ({ axis, data, cls: data.score < 0.4 ? 'low' : '' })),
+        ];
+        const isExpanded = expandedCards.has(r.id);
+        const visibleChips = isExpanded ? allChips : allChips.slice(0, 3);
         const emoji = PARTY_EMOJI[r.id] ?? '⚪';
 
         return (
@@ -166,17 +170,34 @@ function RankingTab({ results, axisDilemmas }: { results: PartyResult[]; axisDil
                   {generateSummary(r, i)}
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                  {topAxes.map(([axis, data]) => (
-                    <AxisChip key={axis} axis={axis} data={data} className={data.score >= 0.7 ? 'high' : ''} dilemma={axisDilemmas[axis]} />
+                  {visibleChips.map(({ axis, data, cls }) => (
+                    <AxisChip key={axis} axis={axis} data={data} className={cls} dilemma={axisDilemmas[axis]} />
                   ))}
-                  {bottomAxes.map(([axis, data]) => (
-                    <AxisChip key={axis} axis={axis} data={data} className={data.score < 0.4 ? 'low' : ''} dilemma={axisDilemmas[axis]} />
-                  ))}
-                  {isTop && r.unavailableAxes.slice(0, 2).map((u) => (
-                    <span key={u.axis} className="axis-chip na">
-                      {getAxisLabel(u.axis)} —
-                    </span>
-                  ))}
+                  {!isExpanded && allChips.length > 3 && (
+                    <button
+                      className="axis-chip"
+                      style={{ cursor: 'pointer', opacity: 0.7 }}
+                      onClick={() => setExpandedCards(s => new Set([...s, r.id]))}
+                    >
+                      +{allChips.length - 3} נוספים ▼
+                    </button>
+                  )}
+                  {isExpanded && (
+                    <>
+                      {isTop && r.unavailableAxes.slice(0, 2).map((u) => (
+                        <span key={u.axis} className="axis-chip na">
+                          {getAxisLabel(u.axis)} —
+                        </span>
+                      ))}
+                      <button
+                        className="axis-chip"
+                        style={{ cursor: 'pointer', opacity: 0.7 }}
+                        onClick={() => setExpandedCards(s => { const n = new Set(s); n.delete(r.id); return n; })}
+                      >
+                        פחות ▲
+                      </button>
+                    </>
+                  )}
                 </div>
                 {isTop && r.gaps.map((gap) => (
                   <div key={gap.axis} className="gap-note">
