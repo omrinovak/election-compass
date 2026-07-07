@@ -1619,3 +1619,155 @@
     font-size: 28px;
   }
 }
+
+/* ── Tutorial Overlay ── */
+.tut-container {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  cursor: pointer;
+  user-select: none;
+}
+
+.tut-mock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.tut-topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tut-back-icon {
+  display: flex;
+  align-items: center;
+  width: 32px;
+}
+
+.tut-progress-bar {
+  flex: 1;
+  height: 7px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tut-progress-fill {
+  width: 3%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, #818cf8 60%, var(--accent) 100%);
+  border-radius: 4px;
+}
+
+.tut-step-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tut-hero {
+  border-radius: 0 0 24px 24px;
+}
+
+.tut-hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tut-qtext {
+  font-size: 16px !important;
+}
+
+/* Dark overlay with spotlight hole via clip-path */
+.tut-dim-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 201;
+  background: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+  transition: clip-path 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Colored border around the spotlight area */
+.tut-spotlight-border {
+  position: fixed;
+  z-index: 202;
+  border-radius: 12px;
+  pointer-events: none;
+  transition: top 0.3s cubic-bezier(0.4,0,0.2,1),
+              left 0.3s cubic-bezier(0.4,0,0.2,1),
+              width 0.3s cubic-bezier(0.4,0,0.2,1),
+              height 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Tooltip card */
+.tut-tooltip {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 203;
+  background: var(--surface);
+  border-radius: 20px 20px 0 0;
+  padding: 20px 24px 32px;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+  cursor: pointer;
+}
+
+.tut-tooltip-label {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.tut-tooltip-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.tut-tooltip-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tut-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.tut-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.tut-dot--active {
+  transform: scale(1.3);
+}
+
+.tut-tooltip-next {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}

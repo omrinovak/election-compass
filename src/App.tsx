@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import Welcome from './components/Welcome';
 import Questionnaire from './components/Questionnaire';
+import TutorialOverlay from './components/TutorialOverlay';
 import Priorities from './components/Priorities';
 import Loading from './components/Loading';
 import Results from './components/Results';
@@ -9,7 +10,7 @@ import Admin from './components/Admin';
 import type { Answer, PartyResult } from './utils/matching';
 import { calculateResults } from './utils/matching';
 
-type Screen = 'welcome' | 'questionnaire' | 'priorities' | 'loading' | 'vote' | 'results' | 'admin';
+type Screen = 'welcome' | 'tutorial' | 'questionnaire' | 'priorities' | 'loading' | 'vote' | 'results' | 'admin';
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>('welcome');
@@ -48,7 +49,8 @@ export default function App() {
 
   return (
     <>
-      {screen === 'welcome' && <Welcome onStart={() => setScreen('questionnaire')} onAdmin={() => setScreen('admin')} />}
+      {screen === 'welcome' && <Welcome onStart={() => setScreen('tutorial')} onAdmin={() => setScreen('admin')} />}
+      {screen === 'tutorial' && <TutorialOverlay onDone={() => setScreen('questionnaire')} />}
       {screen === 'questionnaire' && <Questionnaire onComplete={handleQuestionnaireComplete} />}
       {screen === 'priorities' && <Priorities onComplete={handlePrioritiesComplete} onBack={() => setScreen('questionnaire')} />}
       {screen === 'loading' && <Loading />}
