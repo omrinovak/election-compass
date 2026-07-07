@@ -128,7 +128,7 @@ function RankingTab({ results, axisDilemmas }: { results: PartyResult[]; axisDil
 
   return (
     <div>
-      {results.map((r, i) => {
+      {results.slice(0, 6).map((r, i) => {
         const isTop = i === 0;
         const showDetail = i < 3;
         const allChips = [
@@ -326,10 +326,21 @@ export default function Results({
     return map;
   }, []);
 
-  function handleShare() {
-    const text = `מצפן הבחירות — התוצאות שלי:\n${results.slice(0, 3).map((r, i) => `${i + 1}. ${r.name}: ${pct(r.overallScore)}`).join('\n')}`;
+  const QUESTIONNAIRE_URL = 'https://omrinovak.github.io/election-compass/';
+  const LINKEDIN_URL = 'https://linkedin.com/in/omri-novak-460053414';
+
+  function handleShareQuestionnaire() {
     if (navigator.share) {
-      navigator.share({ title: 'מצפן הבחירות', text });
+      navigator.share({ title: 'מצפן הבחירות', url: QUESTIONNAIRE_URL });
+    } else {
+      navigator.clipboard.writeText(QUESTIONNAIRE_URL);
+    }
+  }
+
+  function handleShareResults() {
+    const text = `מצפן הבחירות — התוצאות שלי:\n${results.slice(0, 3).map((r, i) => `${i + 1}. ${r.name}: ${pct(r.overallScore)}`).join('\n')}\n${QUESTIONNAIRE_URL}`;
+    if (navigator.share) {
+      navigator.share({ title: 'מצפן הבחירות — התוצאות שלי', text });
     } else {
       navigator.clipboard.writeText(text);
     }
@@ -368,9 +379,19 @@ export default function Results({
         {tab === 2 && top && <TransparencyTab result={top} priorities={priorities} />}
 
         <div className="share-row">
-          <button className="share-btn" onClick={handleShare}>📤 שיתוף</button>
+          <button className="share-btn" onClick={handleShareResults}>📤 שתף תוצאות</button>
+          <button className="share-btn" onClick={handleShareQuestionnaire}>🔗 שתף שאלון</button>
           <button className="share-btn" onClick={onRestart}>🔄 מחדש</button>
         </div>
+
+        <a
+          href={LINKEDIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="feedback-btn"
+        >
+          💬 השאר ביקורת או התייחסות
+        </a>
 
       </div>
     </div>
