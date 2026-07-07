@@ -50,19 +50,19 @@ export default function TutorialOverlay({ onDone }: { onDone: () => void }) {
   const questionRef = useRef<HTMLHeadingElement>(null);
   const polesRef    = useRef<HTMLDivElement>(null);
 
-  const refMap: Record<Target, React.RefObject<HTMLElement | null>> = {
+  const refMap = useRef<Record<Target, React.RefObject<HTMLElement | null>>>({
     counter:  counterRef,
     toggle:   toggleRef,
     question: questionRef,
     poles:    polesRef,
-  };
+  });
 
   const measure = useCallback((target: Target) => {
-    const el = (refMap as any)[target].current as HTMLElement | null;
+    const el = refMap.current[target].current as HTMLElement | null;
     if (!el) return;
     const r = el.getBoundingClientRect();
     setRect({ top: r.top, left: r.left, width: r.width, height: r.height });
-  }, []); // refs are stable across renders
+  }, []);
 
   useEffect(() => {
     // small delay so layout settles before measuring
@@ -89,7 +89,6 @@ export default function TutorialOverlay({ onDone }: { onDone: () => void }) {
       {/* ── Dark overlay — 4 strips framing the spotlight ── */}
       {rect && (() => {
         const { T, L, B, R } = padRect(rect, PAD);
-        const dim = 'tut-dim-strip';
         const bg: React.CSSProperties = { background: 'rgba(0,0,0,0.65)', position: 'fixed', zIndex: 201, transition: 'all 0.3s ease' };
         return <>
           <div style={{ ...bg, top: 0, left: 0, right: 0, height: T }} />
