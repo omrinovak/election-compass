@@ -1,0 +1,814 @@
+[
+  {
+    "id": "reasonableness_law_2023",
+    "knesset": 25,
+    "date": "2023-07-24",
+    "title": "חוק עילת הסבירות — קריאה שלישית",
+    "description": "תיקון לחוק יסוד: השפיטה שביטל סמכות בית המשפט העליון לבטל החלטות ממשלה בעילת חוסר סבירות. כל 64 ח\"כי הקואליציה הצביעו בעד.",
+    "source": "הצבעת מליאה",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "rule_of_law",        "pole": "min" },
+      { "axis": "authority_vs_checks", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "judicial_committee_reform_2023",
+    "knesset": 25,
+    "date": "2023-04-25",
+    "title": "הצעת חוק ועדת מינוי השופטים — קריאה ראשונה",
+    "description": "הצעה לשנות את הרכב ועדת מינוי שופטים כך שלקואליציה תהיה שליטה ברורה. הוקפאה לאחר מחאות, אך הצבעת קריאה ראשונה עברה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "rule_of_law",        "pole": "min" },
+      { "axis": "authority_vs_checks", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "minister_with_conviction_2022",
+    "knesset": 25,
+    "date": "2022-12-29",
+    "title": "חוק שר שהורשע — תיקון חוק יסוד: הממשלה",
+    "description": "תיקון שאפשר למי שהורשע בעבירות שאינן כוללות קלון לשמש שר. כונה 'חוק דרעי'.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "rule_of_law",        "pole": "min" },
+      { "axis": "authority_vs_checks", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "opposition_judicial_reversal_2024",
+    "knesset": 25,
+    "date": "2024-03-12",
+    "title": "הצעת אופוזיציה: ביטול תיקוני הרפורמה המשפטית",
+    "description": "הצעה אופוזיציונית לבטל את שינויי הרפורמה המשפטית. הוכשלה על ידי הקואליציה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "rule_of_law",        "pole": "max" },
+      { "axis": "authority_vs_checks", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "investigation_committee_oct7_2024",
+    "knesset": 25,
+    "date": "2024-02-26",
+    "title": "הצעת ועדת חקירה ממלכתית — 7 באוקטובר",
+    "description": "האופוזיציה הגישה הצעה להקמת ועדת חקירה ממלכתית לכשלי 7 באוקטובר. הקואליציה הכשילה — נתניהו ראה בכך איום אישי.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "authority_vs_checks", "pole": "min" },
+      { "axis": "rule_of_law",        "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "haredi_draft_exemption_2024",
+    "knesset": 25,
+    "date": "2024-02-04",
+    "title": "חוק גיוס חרדים — דחיית חובת הגיוס",
+    "description": "הצעת קואליציה לדחות ולצמצם את חובת גיוס בני הישיבות. בג\"ץ פסל לאחר מכן את המודל.",
+    "source": "הצבעת מליאה",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "religion_state",          "pole": "min" },
+      { "axis": "equality_vs_free_market",  "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "lieberman_compulsory_draft_2023",
+    "knesset": 25,
+    "date": "2023-06-14",
+    "title": "הצעת ישראל ביתנו: גיוס חובה לחרדים",
+    "description": "הצעת חוק פרטית של ישראל ביתנו לחייב גיוס מלא של בני ישיבות. הוכשלה על ידי הקואליציה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "religion_state",          "pole": "max" },
+      { "axis": "equality_vs_free_market",  "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "abstain",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "yeshiva_budget_increase_2023",
+    "knesset": 25,
+    "date": "2023-05-23",
+    "title": "תקציב ישיבות גדולות — הגדלת תקצוב",
+    "description": "הגדלה משמעותית בתקצוב הממשלתי לישיבות גדולות כחלק מהסכמי הקואליציה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "religion_state", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "civil_marriage_bill_2023",
+    "knesset": 25,
+    "date": "2023-09-11",
+    "title": "הצעת נישואים אזרחיים — ישראל ביתנו",
+    "description": "הצעת חוק להכיר בנישואים אזרחיים לכלל האזרחים ללא תלות בהלכה. הוכשלה על ידי המפלגות הדתיות.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "tradition_vs_liberalism", "pole": "min" },
+      { "axis": "religion_state",          "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "lgbtq_adoption_2024",
+    "knesset": 25,
+    "date": "2024-01-15",
+    "title": "הצעה להרחבת זכויות אימוץ לזוגות חד-מיניים",
+    "description": "הצעה להסדיר אימוץ פורמלי לזוגות חד-מיניים. נחסמה בוועדות הקואליציה.",
+    "source": "הצבעת ועדה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "tradition_vs_liberalism", "pole": "min" },
+      { "axis": "individual_vs_state",     "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "gaza_military_authorization_oct2023",
+    "knesset": 25,
+    "date": "2023-10-08",
+    "title": "אישור מבצע צבאי נרחב בעזה",
+    "description": "אישור המליאה לפעולה צבאית נרחבת בעזה בעקבות פיגועי 7 באוקטובר.",
+    "source": "הצבעת מליאה",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "security",          "pole": "min" },
+      { "axis": "foreign_relations", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "against", "raam": "abstain",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "national_guard_bengvir_2023",
+    "knesset": 25,
+    "date": "2023-03-28",
+    "title": "כינון המשמר הלאומי — הצעת בן גביר",
+    "description": "כח משמר לאומי תחת שליטת שר הביטחון הפנים בן גביר. אושר בממשלה ועבר תקציב ראשוני.",
+    "source": "הצבעת ממשלה ומליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "liberty_vs_security", "pole": "min" },
+      { "axis": "authority_vs_checks", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "hostage_deal_support_2024",
+    "knesset": 25,
+    "date": "2024-06-17",
+    "title": "הצבעת אמון להסכם חטופים — הצעת גנץ",
+    "description": "הצעת המחנה הממלכתי לחייב את הממשלה לקדם עסקת חטופים. בן גביר וסמוטריץ' הצביעו נגד.",
+    "source": "הצבעת מליאה",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "security",              "pole": "max" },
+      { "axis": "ideology_vs_pragmatism", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "abstain",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "rafah_operation_2024",
+    "knesset": 25,
+    "date": "2024-05-06",
+    "title": "פעולה צבאית ברפיח — עמדת הממשלה",
+    "description": "בן גביר וסמוטריץ' לחצו לפעולה מיידית. גנץ עזב הקבינט על רקע היעדר תכנית 'יום שאחרי'.",
+    "source": "הצבעת ממשלה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "security",          "pole": "min" },
+      { "axis": "foreign_relations", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "for",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "settlement_regularization_2024",
+    "knesset": 25,
+    "date": "2024-02-12",
+    "title": "חוק הסדרת ההתנחלות — קריאה שנייה",
+    "description": "חוק שהסדיר מאחזים בלתי חוקיים ביהודה ושומרון בדיעבד, בניגוד לעמדת בג\"ץ.",
+    "source": "הצבעת מליאה",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "settlement",        "pole": "max" },
+      { "axis": "foreign_relations", "pole": "min" },
+      { "axis": "rule_of_law",       "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "smotrich_sovereignty_2024",
+    "knesset": 25,
+    "date": "2024-04-28",
+    "title": "הצהרת ריבונות ביהודה ושומרון — הציונות הדתית",
+    "description": "הצעת הציונות הדתית להכיר רשמית בריבונות ישראל על שטחי C. נחסמה בלחץ ארה\"ב.",
+    "source": "הצבעת ועדה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "settlement",        "pole": "max" },
+      { "axis": "foreign_relations", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "abstain", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "anti_two_state_declaration_2024",
+    "knesset": 25,
+    "date": "2024-07-18",
+    "title": "הצהרת הכנסת נגד מדינה פלסטינית",
+    "description": "הכנסת אישרה הצהרה המתנגדת להקמת מדינה פלסטינית. עברה ברוב הקואליציה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "settlement",        "pole": "max" },
+      { "axis": "foreign_relations", "pole": "min" },
+      { "axis": "security",          "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "abstain",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "hademokratim_two_state_2024",
+    "knesset": 25,
+    "date": "2024-09-16",
+    "title": "עמדת הדמוקרטים: פתרון שתי המדינות",
+    "description": "הדמוקרטים (לפיד) הגישו הצעה לאמץ עקרון שתי המדינות כמדיניות ממשלה לאחר המלחמה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "foreign_relations", "pole": "max" },
+      { "axis": "settlement",        "pole": "min" },
+      { "axis": "security",          "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "abstain",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "budget_2023_welfare_cuts",
+    "knesset": 25,
+    "date": "2023-05-23",
+    "title": "תקציב המדינה 2023–2024 — קיצוצים בשירותים חברתיים",
+    "description": "התקציב כלל קיצוצים ברווחה, בריאות וחינוך כלליים, לצד הגדלת תקצוב דתי וביטחוני.",
+    "source": "הצבעת מליאה",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "welfare",   "pole": "min" },
+      { "axis": "health",    "pole": "min" },
+      { "axis": "education", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "minimum_wage_labor_2023",
+    "knesset": 25,
+    "date": "2023-10-23",
+    "title": "הצעת חוק שכר מינימום — העבודה",
+    "description": "הצעת סיעת העבודה להעלות שכר מינימום ל-7,000 ש\"ח ולהצמידו לשכר הממוצע. נדחתה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "welfare",               "pole": "max" },
+      { "axis": "equality_vs_free_market", "pole": "max" },
+      { "axis": "cost_of_living",          "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "abstain",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "affordable_housing_2023",
+    "knesset": 25,
+    "date": "2023-11-06",
+    "title": "הצעת דיור בר-השגה — המחנה הממלכתי",
+    "description": "הצעה להגביל רווחי יזמים בפרויקטי דיור ציבורי ולהגדיל מלאי השכרה ממשלתית. הוכשלה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "housing",               "pole": "max" },
+      { "axis": "equality_vs_free_market", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "economic_privatization_lieberman_2023",
+    "knesset": 25,
+    "date": "2023-07-10",
+    "title": "הצעת הפחתת מס וצמצום בירוקרטיה — ישראל ביתנו",
+    "description": "חבילת הצעות להפחתת מס, הפחתת רגולציה, והגברת תחרות בשוק.",
+    "source": "הצבעות ועדה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "equality_vs_free_market", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "abstain", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "abstain",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "against", "raam": "abstain",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "arab_five_year_plan_cancelled_2023",
+    "knesset": 25,
+    "date": "2023-03-15",
+    "title": "ביטול תכנית החומש לחברה הערבית",
+    "description": "הקואליציה ביטלה וצמצמה תקציבי התכנית החומשית לפיתוח תשתיות בחברה הערבית.",
+    "source": "החלטת ממשלה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "equality_vs_free_market", "pole": "min" },
+      { "axis": "welfare",                 "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "raam_unrecognized_villages_2023",
+    "knesset": 25,
+    "date": "2023-04-03",
+    "title": "הצעת רע\"מ: הכרה בכפרים בלתי מוכרים בנגב",
+    "description": "הצעת רע\"מ לפתח מסלול להכרה בכפרים בדואים בלתי מוכרים ולעצור הריסות בתים. נדחתה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "individual_vs_state",  "pole": "max" },
+      { "axis": "liberty_vs_security",  "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "abstain",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "home_demolitions_stop_2023",
+    "knesset": 25,
+    "date": "2023-05-09",
+    "title": "הצעת עצירת הריסות בתים בנגב ובגליל",
+    "description": "הצעה של חד\"ש ורע\"מ לעצור מדיניות הריסות בתים בלא היתר בישובים ערבים. הוכשלה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "liberty_vs_security", "pole": "max" },
+      { "axis": "individual_vs_state", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "abstain",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "hadash_ceasefire_2024",
+    "knesset": 25,
+    "date": "2024-03-25",
+    "title": "הצעת הפסקת אש מיידית — חד\"ש-תע\"ל",
+    "description": "הצעת חד\"ש-תע\"ל לדרוש הפסקת אש מיידית בעזה ושחרור כלל העצורים הפלסטינים. נדחתה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "security",          "pole": "max" },
+      { "axis": "foreign_relations", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "administrative_detention_2023",
+    "knesset": 25,
+    "date": "2023-08-28",
+    "title": "הרחבת מעצר מנהלי לאזרחים — הצעת בן גביר",
+    "description": "הצעת עוצמה יהודית להרחיב שימוש במעצר מנהלי ולאפשר גירוש מורשעים בגין טרור.",
+    "source": "הצבעת ממשלה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "liberty_vs_security", "pole": "min" },
+      { "axis": "individual_vs_state", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "abstain",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "climate_renewable_2023",
+    "knesset": 25,
+    "date": "2023-06-26",
+    "title": "הצעת יעדי אנרגיה מתחדשת 2030",
+    "description": "הצעת חוק להצבת יעדים מחייבים לאנרגיה מתחדשת (80% עד 2030). הקואליציה הצביעה נגד.",
+    "source": "הצבעת מליאה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "environment", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "public_transport_cancelled_2024",
+    "knesset": 25,
+    "date": "2024-04-08",
+    "title": "ביטול חינמיות תחבורה ציבורית",
+    "description": "ביטול ניסוי תחבורה ציבורית חינמית של ממשלת בנט-לפיד, חזרה לתעריפים מלאים.",
+    "source": "החלטת ממשלה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "transport",             "pole": "min" },
+      { "axis": "equality_vs_free_market", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "mahaneh_postwar_plan_2024",
+    "knesset": 25,
+    "date": "2024-05-27",
+    "title": "תכנית ה'יום שאחרי' — המחנה הממלכתי",
+    "description": "גנץ הציג תכנית שדרשה יעדים אסטרטגיים ברורים לאחר המלחמה, כולל מסלול לפתרון מדיני.",
+    "source": "עמדה רשמית",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "foreign_relations",     "pole": "max" },
+      { "axis": "ideology_vs_pragmatism", "pole": "min" },
+      { "axis": "security",              "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "abstain",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "no_confidence_2024",
+    "knesset": 25,
+    "date": "2024-08-12",
+    "title": "הצעות אי-אמון בממשלת נתניהו",
+    "description": "האופוזיציה הגישה שורה של הצעות אי-אמון על רקע ניהול המלחמה וכישלון 7 באוקטובר.",
+    "source": "הצבעת מליאה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "stability_vs_opposition", "pole": "min" },
+      { "axis": "experience_vs_renewal",   "pole": "min" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "hadash_workers_rights_2023",
+    "knesset": 25,
+    "date": "2023-09-04",
+    "title": "חבילת זכויות עובדים — חד\"ש",
+    "description": "חד\"ש הציגה חבילת הצעות לחיזוק זכויות עובדים: ייצוג ועדי עובדים, הגנה על מתארגנים.",
+    "source": "הצבעת מליאה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "welfare",               "pole": "max" },
+      { "axis": "equality_vs_free_market", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "abstain",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "raam_arab_education_2024",
+    "knesset": 25,
+    "date": "2024-01-22",
+    "title": "הצעת רע\"מ: תקציב חינוך ערבי",
+    "description": "רע\"מ דרשה הגדלת תקציב מערכת החינוך הערבית. ממשלת הליכוד קיצצה בתקציב זה.",
+    "source": "הצבעת ועדת כספים",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "education",             "pole": "max" },
+      { "axis": "equality_vs_free_market", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "cost_of_living_package_2023",
+    "knesset": 25,
+    "date": "2023-10-30",
+    "title": "חבילת יוקר המחייה — האופוזיציה המאוחדת",
+    "description": "האופוזיציה הציגה 12 הצעות: הפחתת מע\"מ על מוצרי יסוד, מס עושר, פיצוצי ריכוזיות. הקואליציה הכשילה.",
+    "source": "הצבעת מליאה",
+    "weight": 1.5,
+    "axes": [
+      { "axis": "cost_of_living",          "pole": "max" },
+      { "axis": "equality_vs_free_market",  "pole": "max" }
+    ],
+    "factions": {
+      "likud": "against", "shas": "against", "yahadut_hatorah": "against",
+      "hazionyut_hadatit": "against", "otzma_yehudit": "against",
+      "mahaneh_mamlahti": "for", "israel_beiteinu": "for",
+      "hademokratim": "for", "hadash_taal": "for", "raam": "for",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "health_budget_cuts_2023",
+    "knesset": 25,
+    "date": "2023-05-23",
+    "title": "קיצוץ תקציב בריאות 2023",
+    "description": "התקציב כלל קיצוץ של כ-2 מיליארד ש\"ח בבריאות הציבורית.",
+    "source": "הצבעת מליאה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "health", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "beyahad_policy_welfare",
+    "knesset": 25,
+    "date": "2025-01-01",
+    "title": "עמדת ביחד: מדינת רווחה וזכויות אזרח",
+    "description": "מצע ביחד תומך ברשת ביטחון סוציאלית מורחבת, שכר מינימום גבוה, חינוך ציבורי חזק ושוויון ללא אפליה.",
+    "source": "מצע מפלגה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "welfare",               "pole": "max" },
+      { "axis": "equality_vs_free_market", "pole": "max" },
+      { "axis": "tradition_vs_liberalism", "pole": "min" },
+      { "axis": "religion_state",          "pole": "max" }
+    ],
+    "factions": {
+      "beyahad": "for",
+      "likud": "absent", "shas": "absent", "yahadut_hatorah": "absent",
+      "hazionyut_hadatit": "absent", "otzma_yehudit": "absent",
+      "mahaneh_mamlahti": "absent", "israel_beiteinu": "absent",
+      "hademokratim": "absent", "hadash_taal": "absent",
+      "raam": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "beyahad_policy_security",
+    "knesset": 25,
+    "date": "2025-01-01",
+    "title": "עמדת ביחד: ביטחון דרך הסדר מדיני",
+    "description": "ביחד תומכת בפתרון שתי מדינות, הפסקת הרחבת ההתנחלויות, ובחינת הסכמי שלום אזוריים.",
+    "source": "מצע מפלגה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "settlement",        "pole": "min" },
+      { "axis": "foreign_relations", "pole": "max" },
+      { "axis": "security",          "pole": "max" }
+    ],
+    "factions": {
+      "beyahad": "for",
+      "likud": "absent", "shas": "absent", "yahadut_hatorah": "absent",
+      "hazionyut_hadatit": "absent", "otzma_yehudit": "absent",
+      "mahaneh_mamlahti": "absent", "israel_beiteinu": "absent",
+      "hademokratim": "absent", "hadash_taal": "absent",
+      "raam": "absent", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "yashar_policy_rule_of_law",
+    "knesset": 25,
+    "date": "2025-01-01",
+    "title": "עמדת ישר: שלטון חוק ואנטי-שחיתות",
+    "description": "ישר מציבה חיזוק שלטון החוק, עצמאות מערכת המשפט ומאבק בשחיתות כערכי יסוד. מתנגדת לרפורמה המשפטית.",
+    "source": "מצע מפלגה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "rule_of_law",        "pole": "max" },
+      { "axis": "authority_vs_checks", "pole": "min" }
+    ],
+    "factions": {
+      "yisrael_yashar": "for",
+      "likud": "absent", "shas": "absent", "yahadut_hatorah": "absent",
+      "hazionyut_hadatit": "absent", "otzma_yehudit": "absent",
+      "mahaneh_mamlahti": "absent", "israel_beiteinu": "absent",
+      "hademokratim": "absent", "hadash_taal": "absent",
+      "raam": "absent", "beyahad": "absent"
+    }
+  },
+  {
+    "id": "yashar_policy_social",
+    "knesset": 25,
+    "date": "2025-01-01",
+    "title": "עמדת ישר: חברה ליברלית ושוויון הזדמנויות",
+    "description": "ישר תומכת בחינוך ציבורי שוויוני, בריאות לכלל ושוויון מגדרי. מתנגדת לכפייה דתית.",
+    "source": "מצע מפלגה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "education",           "pole": "max" },
+      { "axis": "health",              "pole": "max" },
+      { "axis": "tradition_vs_liberalism", "pole": "min" },
+      { "axis": "religion_state",      "pole": "max" }
+    ],
+    "factions": {
+      "yisrael_yashar": "for",
+      "likud": "absent", "shas": "absent", "yahadut_hatorah": "absent",
+      "hazionyut_hadatit": "absent", "otzma_yehudit": "absent",
+      "mahaneh_mamlahti": "absent", "israel_beiteinu": "absent",
+      "hademokratim": "absent", "hadash_taal": "absent",
+      "raam": "absent", "beyahad": "absent"
+    }
+  },
+  {
+    "id": "yashar_policy_foreign",
+    "knesset": 25,
+    "date": "2025-01-01",
+    "title": "עמדת ישר: ביטחון ומדיניות חוץ זהירה",
+    "description": "ישר תומכת בביטחון ישראל תוך שמירה על ברית עם ארה\"ב ובחינת פתרונות מדיניים.",
+    "source": "מצע מפלגה",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "settlement",        "pole": "min" },
+      { "axis": "foreign_relations", "pole": "max" }
+    ],
+    "factions": {
+      "yisrael_yashar": "for",
+      "likud": "absent", "shas": "absent", "yahadut_hatorah": "absent",
+      "hazionyut_hadatit": "absent", "otzma_yehudit": "absent",
+      "mahaneh_mamlahti": "absent", "israel_beiteinu": "absent",
+      "hademokratim": "absent", "hadash_taal": "absent",
+      "raam": "absent", "beyahad": "absent"
+    }
+  }
+]
