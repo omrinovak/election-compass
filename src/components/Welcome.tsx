@@ -43,12 +43,6 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
         5–7 דקות
       </div>
 
-      <div style={{ width: '100%', maxWidth: 300, marginTop: 20 }}>
-        <button className="btn btn-primary" style={{ width: '100%' }} onClick={onStart}>
-          בואו נתחיל
-        </button>
-      </div>
-
       <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 16, textAlign: 'center' }}>
         השאלון מנוסח בלשון זכר אך פונה לנשים וגברים כאחד
       </p>
