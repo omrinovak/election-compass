@@ -67,7 +67,7 @@ ${unchangedList}
 
 ## פעולה נדרשת
 
-1. פתח את **פאנל הניהול** באתר → https://omrinovak.github.io/election-compass/
+1. פתח את **פאנל הניהול** באתר → https://matzpen-bchirot.vercel.app/
 2. לחץ "עדכון נתונים" → סיסמה: \`admin2024\`
 3. עדכן ידנית את הנתונים עבור המפלגות המסומנות
 4. סגור issue זה לאחר העדכון

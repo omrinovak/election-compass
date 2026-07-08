@@ -1,0 +1,4 @@
+{
+  "name": "matzpen-bchirot",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

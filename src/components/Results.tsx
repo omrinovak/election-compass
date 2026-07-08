@@ -326,7 +326,7 @@ export default function Results({
     return map;
   }, []);
 
-  const QUESTIONNAIRE_URL = 'https://omrinovak.github.io/election-compass/';
+  const QUESTIONNAIRE_URL = 'https://matzpen-bchirot.vercel.app/';
   const LINKEDIN_URL = 'https://linkedin.com/in/omri-novak-460053414';
 
   function handleShareQuestionnaire() {
