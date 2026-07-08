@@ -432,6 +432,7 @@
   font-size: 21px;
   font-weight: 700;
   line-height: 1.5;
+  white-space: pre-line;
   letter-spacing: -0.025em;
   color: var(--text);
   margin-bottom: 14px;
