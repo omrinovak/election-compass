@@ -346,12 +346,31 @@ export default function Results({
     }
   }
 
+  const noData = !top || top.includedAxes.length === 0;
+
+  if (noData) {
+    return (
+      <div className="screen screen-center">
+        <div className="content" style={{ textAlign: 'center', maxWidth: 320 }}>
+          <p style={{ fontSize: 40, marginBottom: 16 }}>🤔</p>
+          <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 10 }}>לא ענית על שאלות</h2>
+          <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 24 }}>
+            כדי לחשב התאמה למפלגות, צריך לענות על לפחות שאלה אחת.
+          </p>
+          <button className="btn btn-primary" style={{ width: '100%' }} onClick={onRestart}>
+            חזרה לתחילת השאלון
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="screen" style={{ minHeight: 'auto' }}>
       <div className="content">
         <h2 className="results-title">התוצאות שלך</h2>
         <p className="results-meta">
-          מבוסס על {top?.includedAxes.length} מתוך {(top?.includedAxes.length ?? 0) + (top?.unavailableAxes.length ?? 0)} תחומים
+          מבוסס על {top.includedAxes.length} מתוך {top.includedAxes.length + top.unavailableAxes.length} תחומים
         </p>
 
         <div className="results-guide">
