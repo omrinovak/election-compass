@@ -22,10 +22,15 @@ const IGNORE_LIST = [
 ];
 
 // Map from Knesset API faction name → our parties.json id
+// NOTE: 'יש עתיד' maps to 'beyahad' because Yesh Atid MKs merged into the
+// "ביחד" (Bennett+Lapid) electoral list ahead of the 2026 election — the
+// Knesset faction itself hasn't been formally renamed, but for our purposes
+// their sitting votes should count toward the successor party. Re-check this
+// mapping each cycle; if Yesh Atid MKs ever revert or split, update here.
 const KNOWN_MAPPING = {
   'הליכוד': 'likud',
-  'יש עתיד': 'yesh_atid',
-  'המחנה הממלכתי': 'mahaneh_mamlahti',
+  'יש עתיד': 'beyahad',
+  'כחול לבן - המחנה הממלכתי': 'mahaneh_mamlahti',
   'התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ"ל': 'shas',
   'יהדות התורה': 'yahadut_hatorah',
   'ישראל ביתנו': 'israel_beiteinu',

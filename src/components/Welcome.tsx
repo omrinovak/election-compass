@@ -144,7 +144,7 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
         borderTop: '1px solid var(--border)',
         width: '100%',
       }}>
-        <div>מבוסס על נתונים עד יולי 2026 · הכלי אינו מחליף קריאה עצמאית של מצעי המפלגות</div>
+        <div>מבוסס על נתונים עד אוגוסט 2026 · הכלי אינו מחליף קריאה עצמאית של מצעי המפלגות</div>
         <div style={{ marginTop: 6 }}>
           נוצר על ידי{' '}
           <a

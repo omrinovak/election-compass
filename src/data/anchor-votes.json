@@ -810,5 +810,67 @@
       "hademokratim": "absent", "hadash_taal": "absent",
       "raam": "absent", "beyahad": "absent"
     }
+  },
+  {
+    "id": "basic_law_torah_study_2026",
+    "knesset": 25,
+    "date": "2026-07-13",
+    "title": "חוק-יסוד: לימוד תורה — קריאה שנייה ושלישית",
+    "description": "חוק יסוד המעגן מעמד מיוחד ללומדי תורה. אושר 63 בעד מול 52 נגד; ראש הממשלה נעדר מההצבעה; שני ח\"כי ליכוד (יולי אדלשטיין, דן אילוז) הצביעו נגד; עתירה לבג\"ץ הוגשה מיד לאחר האישור.",
+    "source": "הצבעת מליאה — נמשך ואומת ישירות מ-API הכנסת (OdataV4/ParliamentInfo, VoteID 46248)",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "religion_state",         "pole": "min" },
+      { "axis": "equality_vs_free_market", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "against", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "security_service_arrest_freeze_2026",
+    "knesset": 25,
+    "date": "2026-07-14",
+    "title": "חוק שירות ביטחון (תיקון מס' 28 — הוראת שעה) — הקפאת מעצרי עריקים חרדים",
+    "description": "הקפאת הליכי מעצר, חקירה ואכיפה נגד לומדי תורה המיועדים לשירות, עד 30.11.2026. אושר 58 בעד מול 54 נגד (4 ח\"כי קואליציה הצביעו נגד, בהם שרן השכל שהתפטרה מהממשלה במחאה); ראש הממשלה נעדר מההצבעה.",
+    "source": "הצבעת מליאה — נמשך ואומת ישירות מ-API הכנסת (OdataV4/ParliamentInfo, VoteID 46670)",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "religion_state",         "pole": "min" },
+      { "axis": "equality_vs_free_market", "pole": "min" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "against", "yisrael_yashar": "absent"
+    }
+  },
+  {
+    "id": "beit_tzioni_policy_governance",
+    "knesset": 25,
+    "date": "2026-08-01",
+    "title": "עמדת בית ציוני – המילואימניקים: איזונים ובלמים ושוויון בנטל",
+    "description": "מצע ההשקה כולל שוויון בשירות (חוק גיוס לפני הקמת ממשלה), חיזוק האיזונים והבלמים בין הרשויות, ושיקום יישובי ספר.",
+    "source": "מצע מפלגה (השקת קמפיין, אוגוסט 2026)",
+    "weight": 1.0,
+    "axes": [
+      { "axis": "rule_of_law",            "pole": "max" },
+      { "axis": "authority_vs_checks",    "pole": "min" },
+      { "axis": "religion_state",         "pole": "max" }
+    ],
+    "factions": {
+      "beit_tzioni": "for",
+      "likud": "absent", "shas": "absent", "yahadut_hatorah": "absent",
+      "hazionyut_hadatit": "absent", "otzma_yehudit": "absent",
+      "mahaneh_mamlahti": "absent", "israel_beiteinu": "absent",
+      "hademokratim": "absent", "hadash_taal": "absent",
+      "raam": "absent", "beyahad": "absent", "yisrael_yashar": "absent"
+    }
   }
 ]

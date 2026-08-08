@@ -3,7 +3,7 @@
     "id": "likud",
     "name": "הליכוד",
     "leader": "בנימין נתניהו",
-    "seats": 32,
+    "seats": 25,
     "color": "#1565C0",
     "declared": {
       "liberty_vs_security": 2.5,
@@ -206,7 +206,7 @@
     "id": "shas",
     "name": "ש\"ס",
     "leader": "אריה דרעי",
-    "seats": 11,
+    "seats": 8,
     "color": "#4A148C",
     "declared": {
       "liberty_vs_security": 3,
@@ -233,7 +233,7 @@
     },
     "actual": {
       "liberty_vs_security": 2,
-      "equality_vs_free_market": 2.3,
+      "equality_vs_free_market": 2.2,
       "authority_vs_checks": 6,
       "individual_vs_state": 1.9,
       "tradition_vs_liberalism": 3.8,
@@ -308,7 +308,7 @@
     "id": "yahadut_hatorah",
     "name": "יהדות התורה",
     "leader": "יצחק גולדקנופף",
-    "seats": 7,
+    "seats": 8,
     "color": "#212121",
     "declared": {
       "liberty_vs_security": 3.5,
@@ -335,7 +335,7 @@
     },
     "actual": {
       "liberty_vs_security": 2.2,
-      "equality_vs_free_market": 2.3,
+      "equality_vs_free_market": 2.2,
       "authority_vs_checks": 5.8,
       "individual_vs_state": 1.7,
       "tradition_vs_liberalism": 3.2,
@@ -403,7 +403,7 @@
     "id": "israel_beiteinu",
     "name": "ישראל ביתנו",
     "leader": "אביגדור ליברמן",
-    "seats": 6,
+    "seats": 10,
     "color": "#0D47A1",
     "declared": {
       "liberty_vs_security": 2,
@@ -430,7 +430,7 @@
     },
     "actual": {
       "liberty_vs_security": 4,
-      "equality_vs_free_market": 5.7,
+      "equality_vs_free_market": 5.8,
       "authority_vs_checks": 2.4,
       "individual_vs_state": 5,
       "tradition_vs_liberalism": 4.2,
@@ -498,7 +498,7 @@
     "id": "hademokratim",
     "name": "הדמוקרטים",
     "leader": "יאיר גולן",
-    "seats": 9,
+    "seats": 10,
     "color": "#E53935",
     "declared": {
       "liberty_vs_security": 6,
@@ -593,7 +593,7 @@
     "id": "beyahad",
     "name": "ביחד",
     "leader": "נפתלי בנט ויאיר לפיד",
-    "seats": 22,
+    "seats": 11,
     "color": "#5C6BC0",
     "declared": {
       "liberty_vs_security": 3.5,
@@ -620,7 +620,7 @@
     },
     "actual": {
       "liberty_vs_security": 3.5,
-      "equality_vs_free_market": 5.3,
+      "equality_vs_free_market": 5.8,
       "authority_vs_checks": 2.5,
       "individual_vs_state": 4.5,
       "tradition_vs_liberalism": 3.6,
@@ -628,7 +628,7 @@
       "economy": 4.5,
       "cost_of_living": 5,
       "rule_of_law": 6.5,
-      "religion_state": 5.9,
+      "religion_state": 6.2,
       "education": 5,
       "health": 4.5,
       "welfare": 5,
@@ -695,7 +695,7 @@
     "id": "hazionyut_hadatit",
     "name": "הציונות הדתית",
     "leader": "בצלאל סמוטריץ'",
-    "seats": 9,
+    "seats": 5,
     "color": "#E65100",
     "declared": {
       "liberty_vs_security": 2,
@@ -803,7 +803,7 @@
     "id": "otzma_yehudit",
     "name": "עוצמה יהודית",
     "leader": "איתמר בן גביר",
-    "seats": 6,
+    "seats": 8,
     "color": "#F57F17",
     "declared": {
       "liberty_vs_security": 1.5,
@@ -905,7 +905,7 @@
     "id": "hadash_taal",
     "name": "חד\"ש-תע\"ל",
     "leader": "איימן עודה",
-    "seats": 5,
+    "seats": 3,
     "color": "#C62828",
     "declared": {
       "liberty_vs_security": 6.5,
@@ -1035,7 +1035,7 @@
       "economy": 2.9,
       "cost_of_living": 6.2,
       "rule_of_law": 6,
-      "religion_state": 4.1,
+      "religion_state": 4.5,
       "education": 6.2,
       "health": 6.2,
       "welfare": 6.5,
@@ -1095,7 +1095,7 @@
     "id": "yisrael_yashar",
     "name": "ישר",
     "leader": "גדי איזנקוט",
-    "seats": 5,
+    "seats": 23,
     "color": "#00796B",
     "declared": {
       "liberty_vs_security": 4,
@@ -1178,6 +1178,101 @@
       "coalition_flexibility": {
         "score": 0.6,
         "confidence": 0.45
+      },
+      "execution": {
+        "score": null,
+        "confidence": 0.15
+      }
+    },
+    "gaps": []
+  },
+  {
+    "id": "beit_tzioni",
+    "name": "בית ציוני – המילואימניקים",
+    "leader": "יועז הנדל וחילי טרופר",
+    "seats": 1,
+    "color": "#455A64",
+    "declared": {
+      "liberty_vs_security": 5,
+      "equality_vs_free_market": 4.5,
+      "authority_vs_checks": 2.5,
+      "individual_vs_state": 4.5,
+      "tradition_vs_liberalism": 4.5,
+      "security": 6,
+      "economy": 4.5,
+      "cost_of_living": 5.5,
+      "rule_of_law": 6.5,
+      "religion_state": 5.5,
+      "education": 5,
+      "health": 4.5,
+      "welfare": 5,
+      "environment": 4,
+      "settlement": 4.5,
+      "foreign_relations": 5,
+      "transport": 4,
+      "housing": 4.5,
+      "ideology_vs_pragmatism": 5.5,
+      "stability_vs_opposition": 4.5,
+      "experience_vs_renewal": 3.5
+    },
+    "actual": {
+      "liberty_vs_security": 5,
+      "equality_vs_free_market": 4.8,
+      "authority_vs_checks": 2.1,
+      "individual_vs_state": 4.5,
+      "tradition_vs_liberalism": 4.5,
+      "security": 6,
+      "economy": 4.5,
+      "cost_of_living": 5.5,
+      "rule_of_law": 6.5,
+      "religion_state": 5.9,
+      "education": 5,
+      "health": 4.5,
+      "welfare": 5,
+      "environment": 4,
+      "settlement": 4.5,
+      "foreign_relations": 5,
+      "transport": 4,
+      "housing": 4.5,
+      "ideology_vs_pragmatism": 5.5,
+      "stability_vs_opposition": 4.5,
+      "experience_vs_renewal": 3.5
+    },
+    "confidence": {
+      "liberty_vs_security": 0.35,
+      "equality_vs_free_market": 0.4,
+      "authority_vs_checks": 0.55,
+      "individual_vs_state": 0.3,
+      "tradition_vs_liberalism": 0.3,
+      "security": 0.55,
+      "economy": 0.35,
+      "cost_of_living": 0.5,
+      "rule_of_law": 0.55,
+      "religion_state": 0.5,
+      "education": 0.5,
+      "health": 0.3,
+      "welfare": 0.4,
+      "environment": 0.25,
+      "settlement": 0.45,
+      "foreign_relations": 0.35,
+      "transport": 0.25,
+      "housing": 0.3,
+      "ideology_vs_pragmatism": 0.4,
+      "stability_vs_opposition": 0.4,
+      "experience_vs_renewal": 0.45
+    },
+    "reliability": {
+      "promise_keeping": {
+        "score": null,
+        "confidence": 0.15
+      },
+      "consistency": {
+        "score": 0.6,
+        "confidence": 0.4
+      },
+      "coalition_flexibility": {
+        "score": 0.5,
+        "confidence": 0.4
       },
       "execution": {
         "score": null,

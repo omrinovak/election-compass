@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync-parties": "node scripts/sync-parties.js",
+    "fetch-vote": "node scripts/fetch-knesset-vote.mjs",
+    "update-scores": "node scripts/update-actual-scores.mjs"
   },
   "dependencies": {
     "react": "^19.2.7",
