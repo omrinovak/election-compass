@@ -1119,6 +1119,70 @@
   margin-bottom: 20px;
 }
 
+.share-hero {
+  background: var(--accent-light);
+  border: 1.5px solid var(--accent-mid);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 18px 0;
+  text-align: center;
+}
+
+.share-hero-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+
+.share-hero-btn {
+  width: 100%;
+  font-size: 15px;
+}
+
+.share-hero-fallback {
+  display: flex;
+  gap: 10px;
+}
+
+.share-hero-btn-wa {
+  flex: 1;
+  padding: 15px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: #25d366;
+  color: white;
+  border: none;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.share-hero-btn-wa:hover {
+  background: #20bd5a;
+}
+
+.share-hero-btn-wa:active {
+  transform: scale(0.97);
+}
+
+.share-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: white;
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  z-index: 200;
+  animation: slideUp 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .share-btn {
   flex: 1;
   padding: 12px;

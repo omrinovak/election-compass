@@ -48,6 +48,68 @@ const AXIS_DESC: Record<string, string> = {
   experience_vs_renewal: 'ניסיון ממשלתי מול פנים חדשות ורעיונות חדשים',
 };
 
+const QUESTIONNAIRE_URL = 'https://matzpen-bchirot.vercel.app/';
+
+function trackShare(method: 'native' | 'whatsapp' | 'copy', top: PartyResult) {
+  if (typeof window !== 'undefined' && (window as any).umami) {
+    (window as any).umami.track('share_clicked', {
+      method,
+      top_party: top.id,
+      top_score: Math.round(top.overallScore * 100),
+    });
+  }
+}
+
+function ShareCard({ top }: { top: PartyResult }) {
+  const [toast, setToast] = useState(false);
+  const canNativeShare = typeof navigator !== 'undefined' && !!navigator.share;
+  const score = pct(top.overallScore);
+  const shareText = `המצפן שלי הראה התאמה של ${score} ל-${top.name} — בדוק גם אתה`;
+  const shareBody = `${shareText}\n${QUESTIONNAIRE_URL}`;
+
+  async function handleNativeShare() {
+    try {
+      await navigator.share({ title: 'מצפן הבחירות — התוצאה שלי', text: shareText, url: QUESTIONNAIRE_URL });
+      trackShare('native', top);
+    } catch {
+      // user cancelled the share sheet — nothing to do
+    }
+  }
+
+  async function handleCopy() {
+    await navigator.clipboard.writeText(shareBody);
+    trackShare('copy', top);
+    setToast(true);
+    setTimeout(() => setToast(false), 2200);
+  }
+
+  function handleWhatsApp() {
+    window.open(`https://wa.me/?text=${encodeURIComponent(shareBody)}`, '_blank', 'noopener,noreferrer');
+    trackShare('whatsapp', top);
+  }
+
+  return (
+    <div className="share-hero">
+      <p className="share-hero-text">מצאת את המפלגה שלך? שתף עם חברים</p>
+      {canNativeShare ? (
+        <button className="btn btn-primary share-hero-btn" onClick={handleNativeShare}>
+          📤 שתף את התוצאה שלי
+        </button>
+      ) : (
+        <div className="share-hero-fallback">
+          <button className="btn btn-primary share-hero-btn" onClick={handleCopy}>
+            🔗 העתק קישור לתוצאה
+          </button>
+          <button className="share-hero-btn-wa" onClick={handleWhatsApp}>
+            💬 שיתוף בוואטסאפ
+          </button>
+        </div>
+      )}
+      {toast && <div className="share-toast">✓ הקישור הועתק ללוח</div>}
+    </div>
+  );
+}
+
 function generateSummary(result: PartyResult, rank: number): string {
   const topAxes = Object.entries(result.axisScores)
     .filter(([, d]) => d.score >= 0.72)
@@ -327,25 +389,7 @@ export default function Results({
     return map;
   }, []);
 
-  const QUESTIONNAIRE_URL = 'https://matzpen-bchirot.vercel.app/';
   const LINKEDIN_URL = 'https://linkedin.com/in/omri-novak-460053414';
-
-  function handleShareQuestionnaire() {
-    if (navigator.share) {
-      navigator.share({ title: 'מצפן הבחירות', url: QUESTIONNAIRE_URL });
-    } else {
-      navigator.clipboard.writeText(QUESTIONNAIRE_URL);
-    }
-  }
-
-  function handleShareResults() {
-    const text = `מצפן הבחירות — התוצאות שלי:\n${results.slice(0, 3).map((r, i) => `${i + 1}. ${r.name}: ${pct(r.overallScore)}`).join('\n')}\n${QUESTIONNAIRE_URL}`;
-    if (navigator.share) {
-      navigator.share({ title: 'מצפן הבחירות — התוצאות שלי', text });
-    } else {
-      navigator.clipboard.writeText(text);
-    }
-  }
 
   const noData = !top || top.includedAxes.length === 0;
 
@@ -386,6 +430,8 @@ export default function Results({
           </div>
         </div>
 
+        {top && <ShareCard top={top} />}
+
         <div className="tab-row">
           {['דירוג', 'פירוט', 'שקיפות'].map((label, i) => (
             <button key={i} className={`tab ${tab === i ? 'active' : ''}`} onClick={() => setTab(i)}>
@@ -399,8 +445,6 @@ export default function Results({
         {tab === 2 && top && <TransparencyTab result={top} priorities={priorities} />}
 
         <div className="share-row">
-          <button className="share-btn" onClick={handleShareResults}>📤 שתף תוצאות</button>
-          <button className="share-btn" onClick={handleShareQuestionnaire}>🔗 שתף שאלון</button>
           <button className="share-btn" onClick={onRestart}>🔄 מחדש</button>
         </div>
 
