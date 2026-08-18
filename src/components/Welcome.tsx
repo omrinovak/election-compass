@@ -40,7 +40,7 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
       </p>
       <div className="time-badge">
         <ClockIcon />
-        5–7 דקות
+        10–15 דקות
       </div>
 
       <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 16, textAlign: 'center' }}>
