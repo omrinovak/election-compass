@@ -3,7 +3,7 @@
     "id": "likud",
     "name": "הליכוד",
     "leader": "בנימין נתניהו",
-    "seats": 25,
+    "seats": 24,
     "color": "#1565C0",
     "declared": {
       "liberty_vs_security": 2.5,
@@ -111,7 +111,7 @@
     "id": "mahaneh_mamlahti",
     "name": "המחנה הממלכתי",
     "leader": "בני גנץ",
-    "seats": 12,
+    "seats": 0,
     "color": "#1976D2",
     "declared": {
       "liberty_vs_security": 3.5,
@@ -593,7 +593,7 @@
     "id": "beyahad",
     "name": "ביחד",
     "leader": "נפתלי בנט ויאיר לפיד",
-    "seats": 11,
+    "seats": 12,
     "color": "#5C6BC0",
     "declared": {
       "liberty_vs_security": 3.5,
@@ -621,7 +621,7 @@
     "actual": {
       "liberty_vs_security": 3.5,
       "equality_vs_free_market": 5.8,
-      "authority_vs_checks": 2.5,
+      "authority_vs_checks": 2.1,
       "individual_vs_state": 4.5,
       "tradition_vs_liberalism": 3.6,
       "security": 5.9,
@@ -905,7 +905,7 @@
     "id": "hadash_taal",
     "name": "חד\"ש-תע\"ל",
     "leader": "איימן עודה",
-    "seats": 3,
+    "seats": 4,
     "color": "#C62828",
     "declared": {
       "liberty_vs_security": 6.5,
@@ -1095,7 +1095,7 @@
     "id": "yisrael_yashar",
     "name": "ישר",
     "leader": "גדי איזנקוט",
-    "seats": 23,
+    "seats": 24,
     "color": "#00796B",
     "declared": {
       "liberty_vs_security": 4,

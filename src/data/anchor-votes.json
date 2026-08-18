@@ -852,6 +852,26 @@
     }
   },
   {
+    "id": "attorney_general_powers_split_2026",
+    "knesset": 25,
+    "date": "2026-07-15",
+    "title": "הצעת חוק היועץ המשפטי לממשלה (חוות דעת, ייצוג ופיקוח), התשפ\"ו–2026",
+    "description": "מצמצם את סמכויות היועץ/ת המשפטי/ת לממשלה: חוות דעתה אינה מחייבת את הממשלה, אפשרות לשכור ייצוג משפטי פרטי, ומינוי בכירים (מפכ\"ל, ראש שב\"כ, יועמ\"ש) ללא ועדת איתור/מכרז. אושר 65 בעד מול 51 נגד, כחלק מאותה חבילה קואליציונית של חוקי יולי 2026.",
+    "source": "הצבעת מליאה — נמשך ואומת ישירות מ-API הכנסת (OdataV4/ParliamentInfo, VoteID 46462)",
+    "weight": 2.0,
+    "axes": [
+      { "axis": "rule_of_law",         "pole": "min" },
+      { "axis": "authority_vs_checks", "pole": "max" }
+    ],
+    "factions": {
+      "likud": "for", "shas": "for", "yahadut_hatorah": "for",
+      "hazionyut_hadatit": "for", "otzma_yehudit": "for",
+      "mahaneh_mamlahti": "against", "israel_beiteinu": "against",
+      "hademokratim": "against", "hadash_taal": "against", "raam": "against",
+      "beyahad": "against", "yisrael_yashar": "absent"
+    }
+  },
+  {
     "id": "beit_tzioni_policy_governance",
     "knesset": 25,
     "date": "2026-08-01",
