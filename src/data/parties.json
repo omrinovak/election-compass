@@ -403,7 +403,7 @@
     "id": "israel_beiteinu",
     "name": "ישראל ביתנו",
     "leader": "אביגדור ליברמן",
-    "seats": 10,
+    "seats": 9,
     "color": "#0D47A1",
     "declared": {
       "liberty_vs_security": 2,
@@ -593,7 +593,7 @@
     "id": "beyahad",
     "name": "ביחד",
     "leader": "נפתלי בנט ויאיר לפיד",
-    "seats": 12,
+    "seats": 11,
     "color": "#5C6BC0",
     "declared": {
       "liberty_vs_security": 3.5,
@@ -1190,7 +1190,7 @@
     "id": "beit_tzioni",
     "name": "בית ציוני – המילואימניקים",
     "leader": "יועז הנדל וחילי טרופר",
-    "seats": 1,
+    "seats": 0,
     "color": "#455A64",
     "declared": {
       "liberty_vs_security": 5,
