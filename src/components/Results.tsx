@@ -357,7 +357,7 @@ function TransparencyTab({ result, priorities }: { result: PartyResult; prioriti
         </div>
       )}
       <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 16 }}>
-        methodology v1.0 · data 2026-08 · hybrid algorithm
+        methodology v1.0 · data 2026-09 · hybrid algorithm
       </p>
     </div>
   );
