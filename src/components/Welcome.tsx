@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import About from './About';
+import type { CompareLinkPayload } from '../utils/compareLink';
 import '../App.css';
 
 const CompassIcon = () => (
@@ -24,7 +25,15 @@ const ClockIcon = () => (
   </svg>
 );
 
-export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onAdmin: () => void }) {
+export default function Welcome({
+  onStart,
+  onAdmin,
+  friendProfile,
+}: {
+  onStart: () => void;
+  onAdmin: () => void;
+  friendProfile?: CompareLinkPayload | null;
+}) {
   const [showAbout, setShowAbout] = useState(false);
 
   return (
@@ -38,6 +47,13 @@ export default function Welcome({ onStart, onAdmin }: { onStart: () => void; onA
       <p className="welcome-subtitle">
         גלה לאיזו מפלגה אתה הכי קרוב — על סמך מה שחשוב לך, לא על סמך סיסמאות
       </p>
+
+      {friendProfile && (
+        <div className="friend-compare-banner">
+          🤝 חבר/ה שלח/ה לך בקשה להשוות תוצאות. כדי לראות את ההשוואה, קודם צריך לענות על השאלון (10–15 דקות) — ואז ההשוואה תופיע אוטומטית.
+        </div>
+      )}
+
       <div className="time-badge">
         <ClockIcon />
         10–15 דקות

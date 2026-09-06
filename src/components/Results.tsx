@@ -1,6 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { PartyResult } from '../utils/matching';
-import { getAxisLabel } from '../utils/matching';
+import { getAxisLabel, compareProfiles } from '../utils/matching';
+import type { CompareLinkPayload } from '../utils/compareLink';
+import { encodeCompareProfile } from '../utils/compareLink';
 import questionsData from '../data/questions.json';
 import '../App.css';
 
@@ -106,6 +108,154 @@ function ShareCard({ top }: { top: PartyResult }) {
         </div>
       )}
       {toast && <div className="share-toast">✓ הקישור הועתק ללוח</div>}
+    </div>
+  );
+}
+
+function CompareWithFriend({
+  top,
+  axisProfile,
+  promptText = 'רוצה להשוות תוצאות עם חבר/ה?',
+  buttonText = '🤝 השווה עם חבר',
+}: {
+  top: PartyResult;
+  axisProfile: Record<string, number>;
+  promptText?: string;
+  buttonText?: string;
+}) {
+  const [confirming, setConfirming] = useState(false);
+  const [link, setLink] = useState<string | null>(null);
+  const [toast, setToast] = useState(false);
+  const canNativeShare = typeof navigator !== 'undefined' && !!navigator.share;
+
+  function handleConfirm() {
+    const url = `${QUESTIONNAIRE_URL}?cmp=${encodeCompareProfile(axisProfile, top.id, top.overallScore)}`;
+    setLink(url);
+    setConfirming(false);
+    if (typeof window !== 'undefined' && (window as any).umami) {
+      (window as any).umami.track('compare_link_created', { top_party: top.id });
+    }
+  }
+
+  const shareText = `אני ${top.name} (${pct(top.overallScore)} התאמה). בוא נבדוק כמה אנחנו פוליטית תואמים`;
+
+  async function handleNativeShare(url: string) {
+    try {
+      await navigator.share({ title: 'השוואת מצפן הבחירות', text: shareText, url });
+    } catch {
+      // user cancelled the share sheet — nothing to do
+    }
+  }
+
+  async function handleCopy(url: string) {
+    await navigator.clipboard.writeText(`${shareText} — ${url}`);
+    setToast(true);
+    setTimeout(() => setToast(false), 2200);
+  }
+
+  function handleWhatsApp(url: string) {
+    window.open(`https://wa.me/?text=${encodeURIComponent(`${shareText} — ${url}`)}`, '_blank', 'noopener,noreferrer');
+  }
+
+  return (
+    <div className="compare-friend-box">
+      {!confirming && !link && (
+        <>
+          <p className="share-hero-text">{promptText}</p>
+          <button className="btn btn-secondary compare-friend-btn" onClick={() => setConfirming(true)}>
+            {buttonText}
+          </button>
+        </>
+      )}
+
+      {confirming && (
+        <div className="compare-confirm">
+          <p>משתפים קישור אישי עם חבר/ה. הם יראו את ההשוואה ביניכם רק אחרי שגם הם יענו על השאלון בעצמם. להמשיך?</p>
+          <div className="compare-confirm-actions">
+            <button className="btn btn-primary" onClick={handleConfirm}>כן, שתפו</button>
+            <button className="btn btn-secondary" onClick={() => setConfirming(false)}>ביטול</button>
+          </div>
+        </div>
+      )}
+
+      {link && (
+        canNativeShare ? (
+          <button className="btn btn-primary share-hero-btn" onClick={() => handleNativeShare(link)}>
+            📤 שתפו את קישור ההשוואה
+          </button>
+        ) : (
+          <div className="share-hero-fallback">
+            <button className="btn btn-primary share-hero-btn" onClick={() => handleCopy(link)}>
+              🔗 העתק קישור השוואה
+            </button>
+            <button className="share-hero-btn-wa" onClick={() => handleWhatsApp(link)}>
+              💬 שיתוף בוואטסאפ
+            </button>
+          </div>
+        )
+      )}
+
+      {toast && <div className="share-toast">✓ הקישור הועתק ללוח</div>}
+    </div>
+  );
+}
+
+function CompareResultCard({
+  top,
+  axisProfile,
+  friendProfile,
+}: {
+  top: PartyResult;
+  axisProfile: Record<string, number>;
+  friendProfile: CompareLinkPayload;
+}) {
+  const { compatibility, perAxis, sharedAxes } = useMemo(
+    () => compareProfiles(axisProfile, friendProfile.ax),
+    [axisProfile, friendProfile]
+  );
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).umami) {
+      (window as any).umami.track('compare_result_viewed', { compatibility: Math.round(compatibility * 100) });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (sharedAxes.length === 0) {
+    return (
+      <div className="compare-result-card">
+        <div className="compare-result-title">🤝 השוואה עם חבר/ה</div>
+        <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+          אין מספיק נתונים משותפים להשוואה בין התשובות שלכם.
+        </p>
+      </div>
+    );
+  }
+
+  const sorted = Object.entries(perAxis).sort(([, a], [, b]) => b - a);
+  const mostAgree = sorted[0];
+  const mostDisagree = sorted[sorted.length - 1];
+
+  return (
+    <div className="compare-result-card">
+      <div className="compare-result-title">🤝 ההשוואה שלכם</div>
+      <div className="compare-result-score">{pct(compatibility)} התאמה</div>
+      {mostAgree && (
+        <div className="compare-result-row">
+          <strong>הכי מסכימים:</strong> {getAxisLabel(mostAgree[0])} ({pct(mostAgree[1])})
+        </div>
+      )}
+      {mostDisagree && mostDisagree[0] !== mostAgree?.[0] && (
+        <div className="compare-result-row">
+          <strong>הכי חלוקים:</strong> {getAxisLabel(mostDisagree[0])} ({pct(mostDisagree[1])})
+        </div>
+      )}
+      <CompareWithFriend
+        top={top}
+        axisProfile={axisProfile}
+        promptText="שלחו גם אתם השוואה הלאה"
+        buttonText="🤝 שלחו השוואה לחבר/ה נוסף/ת"
+      />
     </div>
   );
 }
@@ -368,10 +518,14 @@ export default function Results({
   results,
   priorities,
   onRestart,
+  axisProfile,
+  friendProfile,
 }: {
   results: PartyResult[];
   priorities: string[];
   onRestart: () => void;
+  axisProfile: Record<string, number>;
+  friendProfile: CompareLinkPayload | null;
 }) {
   const [tab, setTab] = useState(0);
   const top = results[0];
@@ -429,6 +583,11 @@ export default function Results({
             <span><strong>שקיפות</strong> — איך בדיוק חושב הציון</span>
           </div>
         </div>
+
+        {top && friendProfile && (
+          <CompareResultCard top={top} axisProfile={axisProfile} friendProfile={friendProfile} />
+        )}
+        {top && !friendProfile && <CompareWithFriend top={top} axisProfile={axisProfile} />}
 
         {top && <ShareCard top={top} />}
 

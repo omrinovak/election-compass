@@ -53,6 +53,34 @@ export function getAxisLabel(axis: string): string {
   return AXIS_LABELS[axis] || axis;
 }
 
+export function getAxisProfile(answers: Answer[], priorities: string[]): Record<string, number> {
+  const profile = buildUserProfile(answers, priorities);
+  const result: Record<string, number> = {};
+  for (const axis of Object.keys(profile)) {
+    if (profile[axis].count > 0) result[axis] = Math.round(profile[axis].value * 10) / 10;
+  }
+  return result;
+}
+
+export function compareProfiles(
+  a: Record<string, number>,
+  b: Record<string, number>
+): { compatibility: number; perAxis: Record<string, number>; sharedAxes: string[] } {
+  const shared = Object.keys(a).filter((axis) => axis in b);
+  const perAxis: Record<string, number> = {};
+  let sum = 0;
+  for (const axis of shared) {
+    const sim = axisSimilarity(a[axis], b[axis]);
+    perAxis[axis] = sim;
+    sum += sim;
+  }
+  return {
+    compatibility: shared.length > 0 ? sum / shared.length : 0,
+    perAxis,
+    sharedAxes: shared,
+  };
+}
+
 function buildUserProfile(answers: Answer[], priorities: string[]): Record<string, { value: number; weight: number; count: number }> {
   const profile: Record<string, { value: number; weight: number; count: number }> = {};
 
