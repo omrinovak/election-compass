@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "sync-parties": "node scripts/sync-parties.js",
     "fetch-vote": "node scripts/fetch-knesset-vote.mjs",
-    "update-scores": "node scripts/update-actual-scores.mjs"
+    "update-scores": "node scripts/update-actual-scores.mjs",
+    "outreach-status": "node scripts/outreach-status.mjs"
   },
   "dependencies": {
     "react": "^19.2.7",
