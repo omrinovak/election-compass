@@ -105,6 +105,60 @@
         "actual": 2.5,
         "description": "מדיניות פעילה לצמצום סמכויות מערכת המשפט, מעבר למצע המוצהר"
       }
+    ],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "בנימין נתניהו",
+        "declared": {
+          "security": 6.5,
+          "foreign_relations": 5.5,
+          "authority_vs_checks": 5,
+          "rule_of_law": 3,
+          "religion_state": 3.5,
+          "ideology_vs_pragmatism": 5,
+          "stability_vs_opposition": 6.5,
+          "experience_vs_renewal": 6.5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.6,
+          "foreign_relations": 0.5,
+          "authority_vs_checks": 0.4,
+          "rule_of_law": 0.4,
+          "religion_state": 0.4,
+          "ideology_vs_pragmatism": 0.45,
+          "stability_vs_opposition": 0.55,
+          "experience_vs_renewal": 0.5
+        },
+        "sources": {
+          "security": "CBS 60 Minutes, 10.5.2026 + ערוץ 14 \"הפטריוטים\", 30.8.2026",
+          "foreign_relations": "CBS 60 Minutes, 10.5.2026",
+          "authority_vs_checks": "ערוץ 14 \"הפטריוטים\", 30.8.2026",
+          "rule_of_law": "ערוץ 14 \"הפטריוטים\", 30.8.2026",
+          "religion_state": "ערוץ 14 \"הפטריוטים\", 30.8.2026",
+          "ideology_vs_pragmatism": "ערוץ 14 \"הפטריוטים\", 30.8.2026 (איחוד המפלגות)",
+          "stability_vs_opposition": "ערוץ 14 \"הפטריוטים\", 30.8.2026 (\"קיום המדינה עומד בבחירות\")",
+          "experience_vs_renewal": "ערוץ 14 \"הפטריוטים\", 30.8.2026 (רקורד הישגים)"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "He's not the easiest guy to deal with, but that's what makes him great.",
+            "speaker": "דונלד טראמפ, נשיא ארה\"ב",
+            "source": "Times of Israel (תמלול מלא נאום בכנסת)",
+            "date": "2025-10-13",
+            "url": "https://www.timesofisrael.com/full-text-of-trumps-knesset-speech-youve-won-you-cant-beat-the-world-its-time-for-peace/"
+          },
+          "negative": {
+            "quote": "גם היום נתניהו לא החמיץ הזדמנות לשקר ולשסות, ולפגוע בצה\"ל ובשב\"כ",
+            "speaker": "יואב גלנט, שר הביטחון לשעבר (ליכוד)",
+            "source": "ynet",
+            "date": "2026-02-05",
+            "url": "https://www.ynet.co.il/news/article/bylmfwgwwg"
+          }
+        },
+        "notes": "לא אותר מאמר דעה/מסמך עמדה חתום אישית (2025-2026). ריאיון גלי צה\"ל הושמט בשל חשש לעצמאות ההפקה (דיווח הארץ). מקור עיקרי הוא ריאיון בערוץ ידידותי מבחינה פוליטית. 13 מתוך 21 צירים הושמטו."
+      }
     ]
   },
   {
@@ -200,7 +254,58 @@
         "confidence": 0.55
       }
     },
-    "gaps": []
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "בני גנץ",
+        "declared": {
+          "security": 5.5,
+          "foreign_relations": 4.5,
+          "liberty_vs_security": 5.3,
+          "authority_vs_checks": 2.8,
+          "ideology_vs_pragmatism": 5,
+          "stability_vs_opposition": 3.3,
+          "experience_vs_renewal": 2
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.45,
+          "foreign_relations": 0.5,
+          "liberty_vs_security": 0.4,
+          "authority_vs_checks": 0.45,
+          "ideology_vs_pragmatism": 0.45,
+          "stability_vs_opposition": 0.5,
+          "experience_vs_renewal": 0.5
+        },
+        "sources": {
+          "security": "ראיון פודקאסט וואלה (סרי ושלזינגר), 27.8.2026 + מאמר דעה ב-NYT 24.9.2025",
+          "foreign_relations": "מאמר דעה ב-NYT, 24.9.2025 (מאומת דרך Times of Israel ו-Jerusalem Post)",
+          "liberty_vs_security": "ראיון פודקאסט וואלה, 27.8.2026",
+          "authority_vs_checks": "ראיון פודקאסט וואלה, 27.8.2026",
+          "ideology_vs_pragmatism": "מאמר דעה ב-NYT + ראיון וואלה, 27.8.2026",
+          "stability_vs_opposition": "ראיון פודקאסט וואלה, 27.8.2026 (\"חסמתי את נתניהו חמש פעמים\")",
+          "experience_vs_renewal": "ראיון פודקאסט וואלה, 27.8.2026"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "ניסיון הנדסת התודעה האנטי-דמוקרטי של מחנה השינוי נגד גנץ נמשך",
+            "speaker": "ח\"כ פנינה תמנו-שאטה (כחול לבן)",
+            "source": "ynet",
+            "date": "2026-08/09 (תאריך מדויק לא אותר)",
+            "url": "https://www.ynet.co.il/news/elections2026/article/ryshdk0dgl"
+          },
+          "negative": {
+            "quote": "אין עשרות אלפי קולות לשרוף",
+            "speaker": "ח\"כ יאיר גולן, יו\"ר הדמוקרטים",
+            "source": "הארץ",
+            "date": "2026-09-10",
+            "url": "https://www.haaretz.co.il/news/elections/2026-09-10/ty-article/.premium/000001a0-87b8-d9a4-a3a7-9ffa8a9c0000"
+          }
+        },
+        "notes": "WebSearch לא היה זמין רוב הזמן; המחקר נשען על WebFetch ישיר ואימות צולב בין מקורות עצמאיים. ציטוט חיובי מתוך מפלגתו בלבד, לא נמצאה הערכה חיובית ניטרלית. 14 מתוך 21 צירים הושמטו (חינוך, כלכלה, רווחה, דת ומדינה, מערכת המשפט ועוד) בהיעדר עדות אישית מספקת."
+      }
+    ]
   },
   {
     "id": "shas",
@@ -302,6 +407,51 @@
         "actual": 4.5,
         "description": "הבטחות חוזרות לטיפול ביוקר המחיה עם מימוש חלקי בתקופות שלטון"
       }
+    ],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "אריה דרעי",
+        "declared": {
+          "rule_of_law": 1.7,
+          "authority_vs_checks": 6.2,
+          "religion_state": 1.5,
+          "ideology_vs_pragmatism": 6,
+          "stability_vs_opposition": 5.4
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.5,
+          "authority_vs_checks": 0.5,
+          "religion_state": 0.55,
+          "ideology_vs_pragmatism": 0.5,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "rule_of_law": "Times of Israel, 16.7.2026 (\"איננו מכירים בסמכות בית המשפט העליון\")",
+          "authority_vs_checks": "Times of Israel, 16.7.2026 (האשמת רמטכ\"ל בהתערבות בבחירות; עסקת חסינות ממעצר)",
+          "religion_state": "ראיון רדיו קול ברמה, 3.9.2026 + עסקת חוק יסוד לומדי תורה, יולי 2026",
+          "ideology_vs_pragmatism": "ynet, יולי 2026 (התקרבות לאיזנקוט ואז חזרה לנתניהו)",
+          "stability_vs_opposition": "Times of Israel, יוני 2026 (איום מרד מס מול חזרה לתמיכה בנתניהו)"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "אני רואה את ש\"ס כמפלגה שמשרתת, משתלבת... זו מפלגה עם מרכיבים ציוניים רחבים מאוד. יש לו הבנה ביטחונית.",
+            "speaker": "גדי איזנקוט (רמטכ\"ל לשעבר, יו\"ר ישראל ישר)",
+            "source": "כיכר השבת (מצוטט ב-ynet)",
+            "date": "2026-07 (ראשית החודש בקירוב)",
+            "url": "https://www.ynet.co.il/news/article/b1bebqlnml"
+          },
+          "negative": {
+            "quote": "הרמטכ\"ל רק אמר את האמת. בגלל דרעי ואנשיו אין לנו מספיק חיילים. דרעי הוא סכנה לביטחון הלאומי.",
+            "speaker": "יאיר לפיד",
+            "source": "Times of Israel",
+            "date": "2026-07-16",
+            "url": "https://www.timesofisrael.com/deri-accuses-idf-chief-of-election-interference-for-opposing-ban-on-arresting-draft-dodgers/"
+          }
+        },
+        "notes": "לא נמצא מאמר דעה חתום. WebSearch לא היה זמין רוב הזמן; הסתמכות על WebFetch ישיר לעמודי נושא של אתרי חדשות. 16 מתוך 21 צירים הושמטו בהיעדר עדות אישית."
+      }
     ]
   },
   {
@@ -397,7 +547,37 @@
         "confidence": 0.55
       }
     },
-    "gaps": []
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "יצחק גולדקנופף",
+        "declared": {
+          "religion_state": 1.3,
+          "stability_vs_opposition": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.55,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "religion_state": "Times of Israel, 4.1.2026 ו-6.10.2025 (השוואת ענישה חרדים משתמטים ל\"טלאי צהוב\")",
+          "stability_vs_opposition": "Haaretz, 15.10.2024 (\"אין חוק, אין ממשלה\") מול המשך ישיבה בפועל בקואליציה"
+        },
+        "externalViews": {
+          "positive": null,
+          "negative": {
+            "quote": "the dream of every antisemite",
+            "speaker": "יאיר לפיד, יו\"ר האופוזיציה",
+            "source": "Times of Israel",
+            "date": "2026-01-04",
+            "url": "https://www.timesofisrael.com/shas-vows-to-oppose-2026-budget-unless-coalition-passes-haredi-draft-exemption-bill/"
+          }
+        },
+        "notes": "לא אותר ראיון עומק אישי, מאמר דעה חתום, או ציטוט חיובי מאומת אחריו חיפוש נרחב (למעלה מ-15 שאילתות) — כל אלה פערים מוצהרים, לא מולאו בניחוש. 19 מתוך 21 צירים הושמטו."
+      }
+    ]
   },
   {
     "id": "israel_beiteinu",
@@ -492,7 +672,64 @@
         "confidence": 0.55
       }
     },
-    "gaps": []
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "אביגדור ליברמן",
+        "declared": {
+          "security": 6.5,
+          "economy": 6,
+          "rule_of_law": 5.5,
+          "authority_vs_checks": 2.5,
+          "religion_state": 6.5,
+          "foreign_relations": 5.5,
+          "stability_vs_opposition": 2,
+          "experience_vs_renewal": 5.5,
+          "ideology_vs_pragmatism": 4
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.55,
+          "economy": 0.5,
+          "rule_of_law": 0.5,
+          "authority_vs_checks": 0.5,
+          "religion_state": 0.6,
+          "foreign_relations": 0.45,
+          "stability_vs_opposition": 0.6,
+          "experience_vs_renewal": 0.5,
+          "ideology_vs_pragmatism": 0.4
+        },
+        "sources": {
+          "security": "Mako/N12 (גלי צה\"ל), 9.8.2026 + מאמר דעה ב-JPost, 2.3.2025 (תוכנית \"היום שאחרי\" בעזה)",
+          "economy": "ראיון וואלה, 1.8.2026 (\"מגירעון של 144 מיליארד לעודף של 10.6 מיליארד\")",
+          "rule_of_law": "Mako, 17.8.2026 (דרישה לוועדת חקירה ממלכתית) + מאמר דעה ב-JPost, 13.8.2025",
+          "authority_vs_checks": "מאמר דעה ב-JPost, 13.8.2025 (\"הממשלה מבקשת להשתלט על צה\"ל\")",
+          "religion_state": "ראיון וואלה, 1.8.2026 + Mako, 17.8.2026 (גיוס אוניברסלי, ללא פטורים)",
+          "foreign_relations": "מאמר דעה ב-JPost, 2.3.2025 (תוכנית מצרים/סיני)",
+          "stability_vs_opposition": "Mako, 17.8.2026 (\"לא ממשלת מיעוט, לא אהיה בה\")",
+          "experience_vs_renewal": "Mako, 21.8.2026",
+          "ideology_vs_pragmatism": "מאמר דעה ב-JPost, 21.8.2026 (אסטרטגיה: הימנעות מנושאים מפלגים)"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "במערכת הפוליטית יודעים שאם איווט לחץ לך יד ונתן מילה, הדברים יקרו",
+            "speaker": "צחי משה, יועץ פוליטי לשעבר של ליברמן",
+            "source": "כלכליסט",
+            "date": "2021-06-15",
+            "url": "https://www.calcalist.co.il/local_news/article/S17KPlSjd"
+          },
+          "negative": {
+            "quote": "ליברמן לאורך כל דרכו הפוליטית התנהג באכזריות ורוע לב, תוך שנאת אדם על רקע עדתי",
+            "speaker": "ח\"כ יואב בן צור (ש\"ס)",
+            "source": "כלכליסט",
+            "date": "2022-02-14",
+            "url": "https://www.calcalist.co.il/local_news/article/hkwafro1q"
+          }
+        },
+        "notes": "שני הציטוטים החיצוניים מ-2021-2022, לא מ-2025-2026 — חיפוש נרחב אחר מקבילה עדכנית לא צלח, ודווח כפער במפורש. 12 מתוך 21 צירים הושמטו. המקור החזק ביותר הוא מאמר דעה אישי שלו ב-JPost."
+      }
+    ]
   },
   {
     "id": "hademokratim",
@@ -587,12 +824,60 @@
         "confidence": 0.4
       }
     },
-    "gaps": []
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "יאיר גולן",
+        "declared": {
+          "security": 5,
+          "settlement": 2.3,
+          "foreign_relations": 5.2,
+          "authority_vs_checks": 1.4,
+          "rule_of_law": 6.3,
+          "stability_vs_opposition": 1.8
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.55,
+          "settlement": 0.55,
+          "foreign_relations": 0.5,
+          "authority_vs_checks": 0.55,
+          "rule_of_law": 0.5,
+          "stability_vs_opposition": 0.5
+        },
+        "sources": {
+          "security": "כנס הביטחון הלאומי, ynet, 27.7.2026 (\"אהיה שר הביטחון\")",
+          "settlement": "כנס הביטחון הלאומי, ynet, 27.7.2026 + תוכנית מדינית, N12, 29.6.2026 (עצירת סיפוח, פינוי מאחזים)",
+          "foreign_relations": "תוכנית מדינית, N12, 29.6.2026 (ברית עם ארה\"ב, הסכם איראני, קואליציה אזורית)",
+          "authority_vs_checks": "ריאיון אולפן ynet, 13.4.2026 (\"נתניהו נותר כמקבל ההחלטות היחיד. זה מצב מסוכן\")",
+          "rule_of_law": "כנס הביטחון הלאומי, ynet, 27.7.2026 + תוכנית מדינית N12",
+          "stability_vs_opposition": "כאן חדשות (\"לא נשב עם אף מפלגה מהקואליציה הנוכחית\")"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "נלחם למען מדינת ישראל ובבוקר ה-7 באוקטובר הפגין אחריות ואומץ והציל חיים בגבורה",
+            "speaker": "גדי איזנקוט",
+            "source": "ערוץ 14 (C14)",
+            "date": "2026-09-01",
+            "url": "https://www.c14.co.il/article/1686153"
+          },
+          "negative": {
+            "quote": "הבעיה שלי עם יאיר גולן שהוא ממש כאילו עובד מטה ההסברה של הליכוד... הוא מקים מדינה פלסטינית. זה ממש משחק לידיו של נתניהו",
+            "speaker": "אביגדור ליברמן",
+            "source": "ynet",
+            "date": "2026 (תאריך מדויק לא אותר)",
+            "url": "https://www.ynet.co.il/news/article/sjryqmy8zx"
+          }
+        },
+        "notes": "ציון security (5) גבוה משמעותית מציון המפלגה המוצהר (3.5), משקף את הרקע הצבאי האישי שלו. לא אותר מאמר דעה חתום אישית. 15 מתוך 21 צירים הושמטו."
+      }
+    ]
   },
   {
     "id": "beyahad",
     "name": "ביחד",
-    "leader": "נפתלי בנט ויאיר לפיד",
+    "leader": "נפתלי בנט",
     "seats": 14,
     "color": "#5C6BC0",
     "declared": {
@@ -688,6 +973,69 @@
         "declared": 4,
         "actual": 5,
         "description": "בנט הרחיב התנחלויות בממשלתו (2021-22); לפיד מתנגד — מתח פנימי פתוח שיקשה על מדיניות אחידה"
+      }
+    ],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "נפתלי בנט",
+        "declared": {
+          "security": 6,
+          "liberty_vs_security": 2.5,
+          "foreign_relations": 5.5,
+          "settlement": 5.5,
+          "religion_state": 5.5,
+          "rule_of_law": 5.5,
+          "authority_vs_checks": 3,
+          "ideology_vs_pragmatism": 6,
+          "experience_vs_renewal": 2,
+          "stability_vs_opposition": 3.5,
+          "cost_of_living": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.6,
+          "liberty_vs_security": 0.5,
+          "foreign_relations": 0.45,
+          "settlement": 0.5,
+          "religion_state": 0.4,
+          "rule_of_law": 0.45,
+          "authority_vs_checks": 0.4,
+          "ideology_vs_pragmatism": 0.5,
+          "experience_vs_renewal": 0.6,
+          "stability_vs_opposition": 0.4,
+          "cost_of_living": 0.4
+        },
+        "sources": {
+          "security": "N12/Mako, 1.8.2026 + Walla 3.9.2026",
+          "liberty_vs_security": "N12, ראיון 25.7.2026 (קרן מרציאנו)",
+          "foreign_relations": "Walla, תדריך מדיניות 3.9.2026",
+          "settlement": "N12, 25.7.2026 (\"אני לא מוותר על שטח\")",
+          "religion_state": "Zman Israel, 20.4.2026 (תגובת יאיר גולן)",
+          "rule_of_law": "Mako, 25.7/1.8.2026",
+          "authority_vs_checks": "Mako, 25.7/1.8.2026",
+          "ideology_vs_pragmatism": "N12, 25.7.2026, תיאור עצמי",
+          "experience_vs_renewal": "ציבורי: רה\"מ 2021-22",
+          "stability_vs_opposition": "Mako, 1.8.2026",
+          "cost_of_living": "Mako, 1.8.2026 (\"חוק המשרתים\")"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "בנט, וולקאם... נישואים אזרחיים במדינה דמוקרטית ליברלית הם דבר מתבקש",
+            "speaker": "ח\"כ יאיר גולן (יו\"ר הדמוקרטים)",
+            "source": "זמן ישראל",
+            "date": "2026-04-20",
+            "url": "https://www.zman.co.il/live/681395/"
+          },
+          "negative": {
+            "quote": "לא עזבתי את בני גנץ כמספר שתיים כדי להיות מספר שתיים של בנט",
+            "speaker": "גדי איזנקוט",
+            "source": "ערוץ 12, \"פגוש את העיתונות\" (מדווח ב-Mako/N12)",
+            "date": "2026-03-28",
+            "url": "https://www.mako.co.il/news-politics/2026_q1/Article-12887de35b33d91026.htm"
+          }
+        },
+        "notes": "לא אותר מאמר דעה חתום מ-2025-2026. צירים ללא עדות אישית מספקת הושמטו (כלכלה, חינוך, רווחה, בריאות ועוד)."
       }
     ]
   },
@@ -797,6 +1145,63 @@
         "actual": 3,
         "description": "כמות האוצר לא נקט צעדים משמעותיים להורדת יוקר המחיה בתקופת כהונתו"
       }
+    ],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "בצלאל סמוטריץ'",
+        "declared": {
+          "liberty_vs_security": 1.8,
+          "authority_vs_checks": 6.3,
+          "rule_of_law": 1.6,
+          "religion_state": 1.7,
+          "settlement": 7,
+          "foreign_relations": 2,
+          "economy": 5,
+          "ideology_vs_pragmatism": 1.8,
+          "stability_vs_opposition": 5.3
+        },
+        "actual": {},
+        "confidence": {
+          "liberty_vs_security": 0.5,
+          "authority_vs_checks": 0.55,
+          "rule_of_law": 0.5,
+          "religion_state": 0.45,
+          "settlement": 0.6,
+          "foreign_relations": 0.45,
+          "economy": 0.4,
+          "ideology_vs_pragmatism": 0.55,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "liberty_vs_security": "ראיון ערוץ 12 \"פגוש את העיתונות\", 16.2.2025 (מדווח ב-Haaretz)",
+          "authority_vs_checks": "תוכנית \"חוק וצדק\" (עם ח\"כ רוטמן), אוקטובר 2022",
+          "rule_of_law": "תוכנית \"חוק וצדק\", אוקטובר 2022",
+          "religion_state": "\"התוכנית המכרעת\", השילוח, ספטמבר 2017",
+          "settlement": "\"התוכנית המכרעת\", השילוח, ספטמבר 2017",
+          "foreign_relations": "ראיון ערוץ 12, 16.2.2025",
+          "economy": "ynet + ביקורת כלכליסט, 17.11.2024",
+          "ideology_vs_pragmatism": "\"התוכנית המכרעת\" ותוכנית \"חוק וצדק\" גם יחד",
+          "stability_vs_opposition": "רקורד קואליציוני מתועד"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "אני מגבה באופן מלא את יו\"ר המפלגה, השר סמוטריץ', ומתייצב מאחוריו בכל הכוח.",
+            "speaker": "ח\"כ אוהד טל (הציונות הדתית)",
+            "source": "ynet",
+            "date": "2026-09-08",
+            "url": "https://www.ynet.co.il/news/elections2026/article/hytc0wadmx"
+          },
+          "negative": {
+            "quote": "ביקורת מפורטת על אמינות נתוני הצמיחה שהשר מציג (ירידת תחזית צמיחה מ-1.6% ל-0.4%, ירידת השקעות, עלייה באינפלציה)",
+            "speaker": "שלמה טייטלבאום, עיתונאי כלכליסט",
+            "source": "כלכליסט",
+            "date": "2024-11-17",
+            "url": "https://www.calcalist.co.il/local_news/article/s1wps88f1x"
+          }
+        },
+        "notes": "מסמכי העמדה שלו (התוכנית המכרעת, חוק וצדק) הם המקור המשמעותי ביותר, לא ראיונות אקראיים. צירים ללא עדות אישית: יוקר מחיה, חינוך, בריאות, רווחה, סביבה, תחבורה, דיור, פרט מול מדינה, שוויון מול שוק חופשי, מסורת מול ליברליזם, ניסיון מול התחדשות."
+      }
     ]
   },
   {
@@ -899,6 +1304,60 @@
         "actual": 3.5,
         "description": "הבטחות להתמודדות עם יוקר המחיה מול מיקוד במדיניות ביטחון והתיישבות"
       }
+    ],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "איתמר בן גביר",
+        "declared": {
+          "liberty_vs_security": 1.3,
+          "security": 6.8,
+          "authority_vs_checks": 6.8,
+          "rule_of_law": 1.4,
+          "foreign_relations": 1.5,
+          "settlement": 7,
+          "ideology_vs_pragmatism": 1.3,
+          "stability_vs_opposition": 3.8
+        },
+        "actual": {},
+        "confidence": {
+          "liberty_vs_security": 0.6,
+          "security": 0.55,
+          "authority_vs_checks": 0.55,
+          "rule_of_law": 0.55,
+          "foreign_relations": 0.55,
+          "settlement": 0.5,
+          "ideology_vs_pragmatism": 0.55,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "liberty_vs_security": "פודקאסט \"אוקטובר 8\" עם רום ברסלבסקי, 16.8.2026 (Times of Israel)",
+          "security": "ראיון עמית סגל בכנס \"בשבע\", 6.9.2026",
+          "authority_vs_checks": "הקפאת מינויי קצינים בכירים במשטרה, 6.9.2026 (ynet) + מכתב מפכ\"ל",
+          "rule_of_law": "ביקורת על בג\"ץ בנושא ביקורי הצלב האדום",
+          "foreign_relations": "איסורי כניסה למדינות, גינוי בינלאומי, פרשת פלוטילת סומוד",
+          "settlement": "תוכנית \"התנתקות 710\", Times of Israel, 1-3.9.2026",
+          "ideology_vs_pragmatism": "ראיון עמית סגל, 6.9.2026 (\"מדינה פלסטינית זו איום קיומי\")",
+          "stability_vs_opposition": "דפוס עימותים מוסדיים חוזר תוך המשך ישיבה בקואליציה"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "בן גביר הוא שר ללא חת, והיה סנגור ללא חת... בן גביר הוא יהודי עוצמתי",
+            "speaker": "ח\"כ טלי גוטליב (עוצמה יהודית, לשעבר הליכוד)",
+            "source": "ynet",
+            "date": "2026-09-04",
+            "url": "https://www.ynet.co.il/news/elections2026/article/bjiaqbd00ml"
+          },
+          "negative": {
+            "quote": "עיכוב התקציבים אשר יועדו למשטרת ישראל כדין, מוביל, הלכה למעשה ובטווח המיידי, לפגיעה בתפקודה של משטרת ישראל, בשירות לאזרח ובביטחון המדינה והציבור",
+            "speaker": "רב-ניצב דני לוי, מפכ\"ל משטרת ישראל",
+            "source": "ynet",
+            "date": "2026-09-09",
+            "url": "https://www.ynet.co.il/news/article/ry1ere1ygx"
+          }
+        },
+        "notes": "ריאיון פודקאסט \"אוקטובר 8\" מכיל לשון קיצונית מאוד ושימש בעיקר לביסוס ציוני ביטחון/חירות/יחסי חוץ/התיישבות. 13 מתוך 21 צירים הושמטו בהיעדר עדות אישית מספקת."
+      }
     ]
   },
   {
@@ -994,7 +1453,58 @@
         "confidence": 0.1
       }
     },
-    "gaps": []
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "איימן עודה",
+        "declared": {
+          "liberty_vs_security": 6.5,
+          "security": 2,
+          "rule_of_law": 6,
+          "authority_vs_checks": 2,
+          "settlement": 1.5,
+          "stability_vs_opposition": 1.5,
+          "ideology_vs_pragmatism": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "liberty_vs_security": 0.55,
+          "security": 0.55,
+          "rule_of_law": 0.5,
+          "authority_vs_checks": 0.5,
+          "settlement": 0.6,
+          "stability_vs_opposition": 0.55,
+          "ideology_vs_pragmatism": 0.4
+        },
+        "sources": {
+          "liberty_vs_security": "Haaretz, מאמר דעה 14.7.2025 + Times of Israel 14.7.2025",
+          "security": "Haaretz, מאמר דעה 14.7.2025",
+          "rule_of_law": "Times of Israel, 14.7.2025",
+          "authority_vs_checks": "Haaretz, מאמר דעה 14.7.2025",
+          "settlement": "כותרות מאמרי דעה ב-Haaretz (יוני 2026)",
+          "stability_vs_opposition": "כלל המאמרים וההצהרות 2025-2026",
+          "ideology_vs_pragmatism": "שיחה מקומית (ניתוח) + כותרת Haaretz נוב׳ 2023"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "For over a decade, MK Odeh has been a leading advocate for peace, justice, and Jewish-Arab partnership.",
+            "speaker": "הסנאטורים האמריקאים ברני סנדרס, פיטר וולש וכריס ואן הולן",
+            "source": "Times of Israel",
+            "date": "2025-07-14",
+            "url": "https://www.timesofisrael.com/liveblog_entry/a-chilling-message-to-arab-israelis-democratic-senators-blast-effort-to-expel-arab-mk/"
+          },
+          "negative": {
+            "quote": "עודה שוב מוכיח שהוא דובר חמאס בכנסת. מי שמשווה בין החטופים שלנו למחבלים רוצחים שיטוס לעזה איתם.",
+            "speaker": "ח\"כ אביגדור ליברמן",
+            "source": "וואלה חדשות",
+            "date": "2025-01-19",
+            "url": "https://news.walla.co.il/item/3720566"
+          }
+        },
+        "notes": "לא אותר ראיון-ישיבה קלאסי מ-2025-2026; העדות המרכזית היא מאמרי דעה חתומים סדירים ב-Haaretz. ציטוט חיובי חיצוני מגורם אמריקאי, לא ישראלי (חיפוש ממוקד אחר הערכה חיובית ישראלית לא הניב תוצאה מאומתת)."
+      }
+    ]
   },
   {
     "id": "raam",
@@ -1089,7 +1599,46 @@
         "confidence": 0.4
       }
     },
-    "gaps": []
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "מנסור עבאס",
+        "declared": {
+          "ideology_vs_pragmatism": 6.5,
+          "stability_vs_opposition": 5,
+          "security": 4
+        },
+        "actual": {},
+        "confidence": {
+          "ideology_vs_pragmatism": 0.6,
+          "stability_vs_opposition": 0.5,
+          "security": 0.45
+        },
+        "sources": {
+          "ideology_vs_pragmatism": "Mako, 6.12.2025 + N12, 5-6.9.2026",
+          "stability_vs_opposition": "N12, ראיון 5-6.9.2026",
+          "security": "N12, ראיון 5-6.9.2026"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "הם באמת אנשים שאין לי שום חשד לגבי כוונותיהם הטובות",
+            "speaker": "ח\"כ יאיר גולן (יו\"ר הדמוקרטים)",
+            "source": "רדיו א-נאס (מדווח בערוץ 7)",
+            "date": "2026-08-11",
+            "url": "https://www.inn.co.il/news/703762"
+          },
+          "negative": {
+            "quote": "מנסור עבאס הוא אויב מסוכן, זאב בעור של כבש",
+            "speaker": "שר האוצר בצלאל סמוטריץ'",
+            "source": "חדשות 10",
+            "date": "2026-08-26",
+            "url": "https://ch10.co.il/news/1097199/"
+          }
+        },
+        "notes": "לא נמצא מאמר דעה/חיבור מדיניות ארוך-טווח חתום אישית שעמד ברף האימות. religion_state ו-settlement נבדקו אך לא נכללו כי המקור המרכזי (פוסט של עבאס עצמו) לא נפתח/אומת ישירות."
+      }
+    ]
   },
   {
     "id": "yisrael_yashar",
@@ -1184,101 +1733,118 @@
         "confidence": 0.15
       }
     },
-    "gaps": []
-  },
-  {
-    "id": "beit_tzioni",
-    "name": "בית ציוני – המילואימניקים",
-    "leader": "יועז הנדל וחילי טרופר",
-    "seats": 0,
-    "color": "#455A64",
-    "declared": {
-      "liberty_vs_security": 5,
-      "equality_vs_free_market": 4.5,
-      "authority_vs_checks": 2.5,
-      "individual_vs_state": 4.5,
-      "tradition_vs_liberalism": 4.5,
-      "security": 6,
-      "economy": 4.5,
-      "cost_of_living": 5.5,
-      "rule_of_law": 6.5,
-      "religion_state": 5.5,
-      "education": 5,
-      "health": 4.5,
-      "welfare": 5,
-      "environment": 4,
-      "settlement": 4.5,
-      "foreign_relations": 5,
-      "transport": 4,
-      "housing": 4.5,
-      "ideology_vs_pragmatism": 5.5,
-      "stability_vs_opposition": 4.5,
-      "experience_vs_renewal": 3.5
-    },
-    "actual": {
-      "liberty_vs_security": 5,
-      "equality_vs_free_market": 4.8,
-      "authority_vs_checks": 2.1,
-      "individual_vs_state": 4.5,
-      "tradition_vs_liberalism": 4.5,
-      "security": 6,
-      "economy": 4.5,
-      "cost_of_living": 5.5,
-      "rule_of_law": 6.5,
-      "religion_state": 5.9,
-      "education": 5,
-      "health": 4.5,
-      "welfare": 5,
-      "environment": 4,
-      "settlement": 4.5,
-      "foreign_relations": 5,
-      "transport": 4,
-      "housing": 4.5,
-      "ideology_vs_pragmatism": 5.5,
-      "stability_vs_opposition": 4.5,
-      "experience_vs_renewal": 3.5
-    },
-    "confidence": {
-      "liberty_vs_security": 0.35,
-      "equality_vs_free_market": 0.4,
-      "authority_vs_checks": 0.55,
-      "individual_vs_state": 0.3,
-      "tradition_vs_liberalism": 0.3,
-      "security": 0.55,
-      "economy": 0.35,
-      "cost_of_living": 0.5,
-      "rule_of_law": 0.55,
-      "religion_state": 0.5,
-      "education": 0.5,
-      "health": 0.3,
-      "welfare": 0.4,
-      "environment": 0.25,
-      "settlement": 0.45,
-      "foreign_relations": 0.35,
-      "transport": 0.25,
-      "housing": 0.3,
-      "ideology_vs_pragmatism": 0.4,
-      "stability_vs_opposition": 0.4,
-      "experience_vs_renewal": 0.45
-    },
-    "reliability": {
-      "promise_keeping": {
-        "score": null,
-        "confidence": 0.15
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "גדי איזנקוט",
+        "declared": {
+          "security": 6.5,
+          "rule_of_law": 6.5,
+          "authority_vs_checks": 2.5,
+          "religion_state": 6,
+          "foreign_relations": 5.5,
+          "settlement": 5,
+          "stability_vs_opposition": 2,
+          "ideology_vs_pragmatism": 5,
+          "experience_vs_renewal": 3.5,
+          "liberty_vs_security": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.6,
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.55,
+          "religion_state": 0.6,
+          "foreign_relations": 0.45,
+          "settlement": 0.5,
+          "stability_vs_opposition": 0.55,
+          "ideology_vs_pragmatism": 0.4,
+          "experience_vs_renewal": 0.4,
+          "liberty_vs_security": 0.4
+        },
+        "sources": {
+          "security": "ראיון מאקו/אולפן שישי, 7.3.2026 (\"המלחמה הצודקת ביותר בעשורים האחרונים\")",
+          "rule_of_law": "ראיון מאקו 7.3.2026; ראיון i24NEWS 11.6.2026 (\"מערכת משפט חזקה, בלתי תלויה\")",
+          "authority_vs_checks": "ראיון מאקו 7.3.2026; יוזמת חוק לתוכנית אסטרטגית ביטחונית מחייבת",
+          "religion_state": "מזכר INSS 2019; ראיון i24NEWS 11.6.2026 (\"אין דף לבן לחרדים\")",
+          "foreign_relations": "מזכר INSS 2019; ראיון i24NEWS 11.6.2026",
+          "settlement": "ראיון ישראל היום, 27.8.2026 (בעד התיישבות בשטחי C, נגד מכרזי E1 עכשיו)",
+          "stability_vs_opposition": "ראיון i24NEWS 11.6.2026 (מיצוב כאלטרנטיבה, סירוב לשבת תחת נתניהו)",
+          "ideology_vs_pragmatism": "ראיון i24NEWS 11.6.2026 (\"תנאי ברזל\" מול נכונות לשתף פעולה עם קשת רחבה)",
+          "experience_vs_renewal": "אתר yasharwitheisenkot.com; ראיון i24NEWS 11.6.2026",
+          "liberty_vs_security": "מזכר INSS 2019 ושלושת הראיונות (מיסגור ביטחוני-צבאי דומיננטי)"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "נפעמתי מיכולתו של גדי, גם בשעות ובימים הכי קשים לאחר נפילת בנו, להמשיך ולעסוק בגורלה של המדינה... [איזנקוט] ראוי לעמוד בראש הממשלה",
+            "speaker": "מתן כהנא (שר לשעבר, חבר לרשימת \"ישר!\")",
+            "source": "נקודה (dott.co.il)",
+            "date": "2026-04-25",
+            "url": "https://www.dott.co.il/1298739-%D7%9E%D7%AA%D7%9F-%D7%9B%D7%94%D7%A0%D7%90-%D7%9E%D7%A6%D7%98%D7%A8%D7%A3-%D7%9C%D7%90%D7%99%D7%96%D7%A0%D7%A7%D7%95%D7%98-%D7%A0%D7%A4%D7%A2%D7%9E%D7%AA%D7%99-%D7%9E%D7%99%D7%9B%D7%95%D7%9C%D7%95%D7%AA%D7%99%D7%95"
+          },
+          "negative": {
+            "quote": "אם זו המשמעות לפיקוד האסטרטגי שאתה מדבר עליו, אני גאה שלא הייתי חלק מזה",
+            "speaker": "תא\"ל (מיל') עופר וינטר, יו\"ר מפלגת \"עמך ישראל\"",
+            "source": "ישראל היום",
+            "date": "2026-08-26",
+            "url": "https://www.israelhayom.co.il/news/politics/article/21286839"
+          }
+        },
+        "notes": "כיסוי עיתונאי עשיר מהצפוי (שלושה ראיונות מדיניים ארוכים ב-2026) ומזכר INSS 2019 שכתב אישית (עם שותף) לפני כניסתו לפוליטיקה. ציטוט חיובי מגיע מבן-ברית פוליטי, לא ניטרלי. 11 מתוך 21 צירים הושמטו."
       },
-      "consistency": {
-        "score": 0.6,
-        "confidence": 0.4
-      },
-      "coalition_flexibility": {
-        "score": 0.5,
-        "confidence": 0.4
-      },
-      "execution": {
-        "score": null,
-        "confidence": 0.15
+      {
+        "position": 6,
+        "name": "חילי טרופר",
+        "declared": {
+          "security": 5.5,
+          "religion_state": 5.5,
+          "settlement": 3,
+          "authority_vs_checks": 5,
+          "rule_of_law": 4,
+          "ideology_vs_pragmatism": 4.5,
+          "stability_vs_opposition": 2.5,
+          "experience_vs_renewal": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.4,
+          "religion_state": 0.5,
+          "settlement": 0.5,
+          "authority_vs_checks": 0.45,
+          "rule_of_law": 0.4,
+          "ideology_vs_pragmatism": 0.45,
+          "stability_vs_opposition": 0.5,
+          "experience_vs_renewal": 0.4
+        },
+        "sources": {
+          "security": "N12, 17.5.2026 (ריאיון ראשון לאחר עזיבת כחול לבן)",
+          "religion_state": "N12, 17.5.2026",
+          "settlement": "ערוץ 7 (ערוץ שבע), 12.7.2026",
+          "authority_vs_checks": "ערוץ 7, 12.7.2026 (\"יותר מדי אקטיביזם שיפוטי\")",
+          "rule_of_law": "ערוץ 7, 12.7.2026, מתון על ידי מיצוב פרו-ממשלת אחדות",
+          "ideology_vs_pragmatism": "N12, 17.5.2026; מאמר דעה במעריב, 27.11.2025",
+          "stability_vs_opposition": "N12, 17.5.2026 (\"נתניהו חייב ללכת הביתה\")",
+          "experience_vs_renewal": "ויקיפדיה עברית (ביוגרפיה)"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "הוא באמת חבר. זה סיפור כואב, אפילו עצוב",
+            "speaker": "בני גנץ, שר הביטחון לשעבר, יו\"ר המחנה הממלכתי (יו\"ר מפלגתו לשעבר של טרופר)",
+            "source": "מעריב",
+            "date": "2026-05-04",
+            "url": "https://www.maariv.co.il/news/politics/article-1317118"
+          },
+          "negative": {
+            "quote": "פרפרזה, מסומנת כך במפורש: ביקורת סרקסטית השואלת מיהו \"הציבור טבוע השנאה\" שטרופר טוען שהוא מתעלה מעליו, ברמז שהרטוריקה שלו על התעלות מעל הפילוג ריקה/לא ספציפית",
+            "speaker": "רוגל אלפר, מבקר טלוויזיה",
+            "source": "הארץ (ביקורת טלוויזיה)",
+            "date": "2026-07-08",
+            "url": "https://www.haaretz.co.il/gallery/television/tv-review/2026-07-08/ty-article/.premium/0000019f-3e06-d269-af9f-3ed74d670000"
+          }
+        },
+        "notes": "הרשימה המשותפת \"בית ציוני\" (טרופר+הנדל) התפרקה ב-6.9.2026. טרופר הצטרף לרשימת איזנקוט \"ישר!\" במקום שישי, לא כמועמד לראשות הממשלה. מוצג כאן כמועמד משנה, לא כמנהיג הרשימה."
       }
-    },
-    "gaps": []
+    ]
   }
 ]

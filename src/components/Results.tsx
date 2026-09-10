@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import type { PartyResult } from '../utils/matching';
+import type { PartyResult, CandidateResult, CandidateExternalView } from '../utils/matching';
 import { getAxisLabel, compareProfiles } from '../utils/matching';
 import type { CompareLinkPayload } from '../utils/compareLink';
 import { encodeCompareProfile } from '../utils/compareLink';
@@ -376,6 +376,9 @@ function RankingTab({ results, axisDilemmas }: { results: PartyResult[]; axisDil
             <div className="score-split">
               <span>ערכים: {pct(r.declaredScore)}</span>
               <span>בפועל: {pct(r.actualScore)}</span>
+              {r.candidateScore !== null && (
+                <span>מועמדים: {pct(r.candidateScore)}</span>
+              )}
             </div>
             {showDetail && (
               <>
@@ -438,6 +441,90 @@ function RankingTab({ results, axisDilemmas }: { results: PartyResult[]; axisDil
   );
 }
 
+function ExternalViewRow({ label, view }: { label: string; view?: CandidateExternalView }) {
+  if (!view) return null;
+  return (
+    <div className="insight" style={{ borderRight: `2.5px solid var(--border)` }}>
+      <strong>{label}</strong> {view.speaker} ({view.source}, {view.date}): "{view.quote}"
+      {view.url && (
+        <>
+          {' '}
+          <a href={view.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12 }}>מקור ↗</a>
+        </>
+      )}
+    </div>
+  );
+}
+
+function CandidateCard({ candidate }: { candidate: CandidateResult }) {
+  return (
+    <div style={{ marginBottom: 16 }}>
+      <h4 style={{ fontSize: 14, fontWeight: 600, marginBottom: 6 }}>
+        #{candidate.position} · {candidate.name}
+      </h4>
+
+      {!candidate.dataAvailable ? (
+        <div className="insight na-match">
+          עדיין אין מספיק מידע אישי על {candidate.name} כדי להעריך אותו/ה בנפרד מהמפלגה: לא ראיונות/ציטוטים שסווגו לפי נושא ולא הצבעות אישיות בכנסת שנותחו.
+        </div>
+      ) : (
+        <>
+          <div className="score-split" style={{ marginBottom: 8 }}>
+            <span>התאמה אישית: {pct(candidate.score)}</span>
+            <span>הצהרות: {candidate.hasDeclaredData ? pct(candidate.declaredScore) : 'אין נתונים עדיין'}</span>
+            <span>הצבעות: {candidate.hasActualData ? pct(candidate.actualScore) : 'אין נתונים עדיין'}</span>
+          </div>
+          {Object.entries(candidate.axisScores)
+            .sort(([, a], [, b]) => b.score - a.score)
+            .map(([axis, data]) => (
+              <div key={axis} className={`insight${data.score < 0.4 ? ' low-match' : ''}`}>
+                {getAxisLabel(axis)}: {pct(data.score)} התאמה אישית
+                {' '}(עמדתו/ה: {data.declared !== null ? data.declared.toFixed(1) : 'אין נתון'}, הצבעות: {data.actual !== null ? data.actual.toFixed(1) : 'אין נתון'}, עמדתך: {data.userValue.toFixed(1)})
+                {data.source && <span style={{ fontSize: 11, color: 'var(--text-muted)' }}> · {data.source}</span>}
+              </div>
+            ))}
+          {candidate.unavailableAxes.length > 0 && (
+            <div className="insight na-match">
+              {candidate.unavailableAxes.length} נושאים נוספים לא נכללו בציון האישי בשל חוסר במידע.
+            </div>
+          )}
+        </>
+      )}
+
+      {candidate.externalViews && (candidate.externalViews.positive || candidate.externalViews.negative) && (
+        <div style={{ marginTop: 8 }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--text-muted)', marginBottom: 4 }}>מה אומרים עליו/ה:</div>
+          <ExternalViewRow label="✓ לחיוב:" view={candidate.externalViews.positive} />
+          <ExternalViewRow label="✗ לשלילה:" view={candidate.externalViews.negative} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function CandidateSection({ result }: { result: PartyResult }) {
+  if (result.candidates.length === 0) return null;
+
+  return (
+    <div style={{ marginTop: 20, paddingTop: 16, borderTop: '1px solid var(--border)' }}>
+      <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 4 }}>
+        🧑‍💼 המועמדים ברשימה
+      </h3>
+      <p style={{ fontSize: 13, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 12 }}>
+        ציוני ההתאמה כאן אישיים, לפי ראיונות וציטוטים של האדם עצמו, ולפי הצבעות אישיות שלו/ה בכנסת
+        במידה ויש כאלה (אז 65% מהמשקל עובר להצבעות, לעומת 35% להצהרות) — כרגע רוב המועמדים נמדדים
+        רק לפי הצהרות, כי הצבעות אישיות טרם נאספו עבורם.
+        {result.hasCandidateData
+          ? ` הציון האישי הזה גם משוקלל לתוך הציון הכולל של ${result.name} למעלה (25% מהציון, במשקל גבוה יותר למי שגבוה יותר ברשימה) — כך שהתמונה כוללת לא רק מצע והצבעות סיעה, אלא גם את האנשים בפועל.`
+          : ` עדיין אין מספיק מידע אישי על מועמד/ת מהרשימה כדי לשקלל אותו לתוך הציון הכולל של ${result.name}, שמבוסס כרגע רק על המצע וההצבעות של הסיעה.`}
+      </p>
+      {result.candidates.map((c) => (
+        <CandidateCard key={c.position} candidate={c} />
+      ))}
+    </div>
+  );
+}
+
 function DetailTab({ result }: { result: PartyResult }) {
   const sorted = Object.entries(result.axisScores).sort(([, a], [, b]) => b.score - a.score);
   const emoji = PARTY_EMOJI[result.id] ?? '⚪';
@@ -471,6 +558,7 @@ function DetailTab({ result }: { result: PartyResult }) {
           {getAxisLabel(u.axis)} — לא נכלל. {u.reason}.
         </div>
       ))}
+      <CandidateSection result={result} />
     </div>
   );
 }
@@ -484,8 +572,18 @@ function TransparencyTab({ result, priorities }: { result: PartyResult; prioriti
         כל מפלגה קיבלה פרופיל דומה — מבוסס על מצעים, הצבעות בכנסת, והחלטות ממשלה.
       </div>
       <div className="insight">
-        ההתאמה חושבה בנפרד: פעם לפי הצהרות (35%), פעם לפי מעשים (65%).
-        הציון הסופי משקלל את שניהם עם דגש על מעשים.
+        ציון המצע של המפלגה חושב בנפרד: פעם לפי הצהרות (35%), פעם לפי מעשים (65%).
+        זהו "ציון המצע" — הצהרות ועד כמה הן מתממשות בפועל בהצבעות הסיעה.
+      </div>
+      <div className="insight">
+        הדירוג הראשי הוא תמיד של המפלגה כמכלול: מצע, פעולות בפועל, והמועמדים עצמם יחד.
+        כשיש מספיק מידע אישי לפחות על מועמד/ת אחד/ת ברשימה (ראיונות, ציטוטים והצבעות אישיות
+        בכנסת — לא הצבעת הסיעה כמקשה אחת), 25% מהציון הכולל נגזר מציוני המועמדים עצמם, במשקל
+        גבוה יותר למי שגבוה יותר ברשימה — והשאר, 75%, מציון המצע. כשאין עדיין מידע אישי מספק
+        על אף מועמד/ת ברשימה, הציון הכולל מבוסס על המצע בלבד.
+        בטאב "פירוט" מוצג גם ציון נפרד לכל מועמד/ת שנחקר/ה ברשימה. אם עוד לא נאסף עליו/ה
+        מספיק מידע, למשל מועמד/ה חדש/ה בפוליטיקה, הציון האישי לא יוצג, כדי לא לתת רושם
+        מדויק כביכול על סמך מעט מדי ראיות.
       </div>
       {priorities.length > 0 && (
         <div className="insight">

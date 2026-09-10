@@ -8,7 +8,7 @@ import Results from './components/Results';
 import VotePage from './components/VotePage';
 import Admin from './components/Admin';
 import type { Answer, PartyResult } from './utils/matching';
-import { calculateResults, getAxisProfile } from './utils/matching';
+import { calculateResultsAndProfile } from './utils/matching';
 import type { CompareLinkPayload } from './utils/compareLink';
 import { decodeCompareProfile } from './utils/compareLink';
 
@@ -38,9 +38,9 @@ export default function App() {
     setPriorities(p);
     setScreen('loading');
     setTimeout(() => {
-      const r = calculateResults(answers, p);
+      const { results: r, axisProfile: ap } = calculateResultsAndProfile(answers, p);
       setResults(r);
-      setAxisProfile(getAxisProfile(answers, p));
+      setAxisProfile(ap);
       setScreen('vote');
       if (r.length > 0 && typeof window !== 'undefined' && (window as any).umami) {
         (window as any).umami.track('quiz_completed', {
