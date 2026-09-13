@@ -158,6 +158,631 @@
           }
         },
         "notes": "לא אותר מאמר דעה/מסמך עמדה חתום אישית (2025-2026). ריאיון גלי צה\"ל הושמט בשל חשש לעצמאות ההפקה (דיווח הארץ). מקור עיקרי הוא ריאיון בערוץ ידידותי מבחינה פוליטית. 13 מתוך 21 צירים הושמטו."
+      },
+      {
+        "position": 2,
+        "name": "אלי כהן",
+        "declared": {
+          "security": 6.5,
+          "foreign_relations": 5.5,
+          "authority_vs_checks": 5.5,
+          "religion_state": 3,
+          "ideology_vs_pragmatism": 5,
+          "stability_vs_opposition": 6
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.55,
+          "foreign_relations": 0.4,
+          "authority_vs_checks": 0.35,
+          "religion_state": 0.35,
+          "ideology_vs_pragmatism": 0.35,
+          "stability_vs_opposition": 0.35
+        },
+        "sources": {
+          "security": "רדיו צפון 104.5FM, 17.8.2026",
+          "foreign_relations": "רדיו צפון 104.5FM, 17.8.2026",
+          "authority_vs_checks": "ריאיון המשך, 28.8.2026",
+          "religion_state": "ריאיון המשך, 28.8.2026",
+          "ideology_vs_pragmatism": "רדיו צפון + ריאיון המשך, 8.2026",
+          "stability_vs_opposition": "רדיו צפון + ריאיון המשך, 8.2026"
+        },
+        "notes": "זכה במקום ראשון בפריימריז הפנימיים (17.8.2026), מקום 2 ברשימה הכוללת. מקורות: docs/candidate-research/likud-eli_cohen.md"
+      },
+      {
+        "position": 3,
+        "name": "אמיר אוחנה",
+        "declared": {
+          "authority_vs_checks": 5.5,
+          "stability_vs_opposition": 6,
+          "foreign_relations": 4.5,
+          "tradition_vs_liberalism": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "authority_vs_checks": 0.4,
+          "stability_vs_opposition": 0.4,
+          "foreign_relations": 0.3,
+          "tradition_vs_liberalism": 0.3
+        },
+        "sources": {
+          "authority_vs_checks": "103FM ריאיון 10.9.2026; כאן 11 עדויות נוספות",
+          "stability_vs_opposition": "103FM ריאיון 10.9.2026",
+          "foreign_relations": "כאן 11, מרץ 2026",
+          "tradition_vs_liberalism": "מעריב, טור דרור רפאל, 12.6.2026 (עדות עקיפה)"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "דווקא ממפלגה ימנית, שנמצאת בגוש עם דתיים וחרדים, צמח פוליטיקאי הומו",
+            "speaker": "דרור רפאל, פרשן",
+            "source": "מעריב",
+            "date": "2026-06-12",
+            "url": "https://www.maariv.co.il/news/opinions/article-1331377"
+          }
+        },
+        "notes": "יו\"ר הכנסת. מקורות: docs/candidate-research/likud-amir_ohana.md"
+      },
+      {
+        "position": 4,
+        "name": "יריב לוין",
+        "declared": {
+          "authority_vs_checks": 7,
+          "rule_of_law": 1.5,
+          "security": 6,
+          "stability_vs_opposition": 6
+        },
+        "actual": {},
+        "confidence": {
+          "authority_vs_checks": 0.65,
+          "rule_of_law": 0.6,
+          "security": 0.35,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "authority_vs_checks": "פודקאסט \"120 ואחת\" ynet 2026; הארץ 7.5.2026",
+          "rule_of_law": "הארץ, 7.5.2026",
+          "security": "פודקאסט \"120 ואחת\", ynet, 2026",
+          "stability_vs_opposition": "פודקאסט \"120 ואחת\", ynet, 2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "לוין מתנהג כמו ראש ארגון מאפיונרי שמנסה לסחוט את מערכת המשפט",
+            "speaker": "יאיר גולן, יו\"ר הדמוקרטים",
+            "source": "ynet",
+            "date": "2026",
+            "url": "https://www.ynet.co.il/news/article/s1k9itfrwx"
+          }
+        },
+        "notes": "שר המשפטים, מוביל הרפורמה המשפטית. מקורות: docs/candidate-research/likud-yariv_levin.md"
+      },
+      {
+        "position": 5,
+        "name": "מירי רגב",
+        "declared": {
+          "security": 6,
+          "stability_vs_opposition": 6.5,
+          "foreign_relations": 4.5,
+          "religion_state": 4
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.45,
+          "stability_vs_opposition": 0.45,
+          "foreign_relations": 0.3,
+          "religion_state": 0.25
+        },
+        "sources": {
+          "security": "ערוץ 7, אולפן מיוחד, 28.7.2026",
+          "stability_vs_opposition": "ערוץ 7, 28.7.2026",
+          "foreign_relations": "ערוץ 7, 28.7.2026",
+          "religion_state": "ערוץ 7, 28.7.2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "במחי החלטה אחת, בנתה השרה רגב את התיק נגד ישראל",
+            "speaker": "נדב תמיר, דיפלומט/פרשן",
+            "source": "זמן ישראל",
+            "date": "2026-04-16",
+            "url": "https://www.zman.co.il/679833/"
+          }
+        },
+        "notes": "שרת התחבורה. מקורות: docs/candidate-research/likud-miri_regev.md"
+      },
+      {
+        "position": 6,
+        "name": "ישראל כ\"ץ",
+        "declared": {
+          "security": 6.5,
+          "settlement": 5.5,
+          "authority_vs_checks": 6,
+          "foreign_relations": 3
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.55,
+          "settlement": 0.35,
+          "authority_vs_checks": 0.4,
+          "foreign_relations": 0.3
+        },
+        "sources": {
+          "security": "ערוץ 14, 2.8.2026",
+          "settlement": "ערוץ 14, 2.8.2026",
+          "authority_vs_checks": "הארץ, 2-3.8.2026 (הדחת אלוף פיקוד המרכז)",
+          "foreign_relations": "ynet, ספטמבר 2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "מגוחך, מקושקש, עילג, צורמני, בטעם רע ועם אפס קלאס",
+            "speaker": "יוסי ורטר, פרשן פוליטי",
+            "source": "הארץ",
+            "date": "2026-08-04",
+            "url": "https://www.haaretz.co.il/news/elections/2026-08-04/ty-article/.highlight/0000019f-c8f2-d312-a3ff-eefb72f90000"
+          }
+        },
+        "notes": "שר הביטחון. מקום זה שריון יו\"ר תנועה. מקורות: docs/candidate-research/likud-israel_katz.md"
+      },
+      {
+        "position": 7,
+        "name": "גדעון סער",
+        "declared": {
+          "foreign_relations": 5.5,
+          "authority_vs_checks": 4.5,
+          "stability_vs_opposition": 6
+        },
+        "actual": {},
+        "confidence": {
+          "foreign_relations": 0.4,
+          "authority_vs_checks": 0.3,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "foreign_relations": "\"פגוש את העיתונות\", N12, 22.8.2026",
+          "authority_vs_checks": "N12, 22.8.2026",
+          "stability_vs_opposition": "N12, 22.8.2026"
+        },
+        "notes": "שר החוץ, הוביל את \"תקווה חדשה\"/\"המחנה הממלכתי\" שהתמזגה לליכוד. מקום זה שריון יו\"ר תנועה. מקורות: docs/candidate-research/likud-gideon_saar.md"
+      },
+      {
+        "position": 8,
+        "name": "אופיר כץ",
+        "declared": {
+          "authority_vs_checks": 6.5,
+          "settlement": 6,
+          "stability_vs_opposition": 6
+        },
+        "actual": {},
+        "confidence": {
+          "authority_vs_checks": 0.5,
+          "settlement": 0.35,
+          "stability_vs_opposition": 0.35
+        },
+        "sources": {
+          "authority_vs_checks": "פודקאסט \"120 ואחת\", ynet, 16.8.2026",
+          "settlement": "פודקאסט \"120 ואחת\", ynet, 16.8.2026",
+          "stability_vs_opposition": "פודקאסט \"120 ואחת\", ynet, 16.8.2026"
+        },
+        "notes": "יו\"ר הקואליציה, יו\"ר סיעת הליכוד. מקורות: docs/candidate-research/likud-ofir_katz.md"
+      },
+      {
+        "position": 9,
+        "name": "טליק גואילי",
+        "declared": {
+          "stability_vs_opposition": 6.5
+        },
+        "actual": {},
+        "confidence": {
+          "stability_vs_opposition": 0.45
+        },
+        "sources": {
+          "stability_vs_opposition": "הצהרה בעקבות שריון, 10.9.2026"
+        },
+        "notes": "מועמדת חדשה, אם סמל רני גואילי ז\"ל שנפל ב-7.10.2023. שריון יו\"ר, המקום הגבוה ביותר מבין המשוריינים החדשים. מקורות: docs/candidate-research/likud-talik_guayly.md"
+      },
+      {
+        "position": 10,
+        "name": "יואב קיש",
+        "declared": {
+          "security": 6,
+          "foreign_relations": 5,
+          "authority_vs_checks": 5.5,
+          "religion_state": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.5,
+          "foreign_relations": 0.4,
+          "authority_vs_checks": 0.45,
+          "religion_state": 0.35
+        },
+        "sources": {
+          "security": "ynet, 1.6.2026",
+          "foreign_relations": "ynet, 1.6.2026",
+          "authority_vs_checks": "וואלה חדשות, 28.5.2026",
+          "religion_state": "וואלה חדשות, 28.5.2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "כיהנתי כשרת חינוך חמש שנים. מעולם לא ערכתי \"ביקורי פתע\"",
+            "speaker": "לימור לבנת, שרת החינוך לשעבר",
+            "source": "ynet",
+            "date": "2025-08-29",
+            "url": "https://www.ynet.co.il/news/article/yokra14492761"
+          }
+        },
+        "notes": "שר החינוך. מקום 10 מפריימריז. מקורות: docs/candidate-research/likud-yoav_kish.md"
+      },
+      {
+        "position": 11,
+        "name": "יעקב ברדוגו",
+        "declared": {
+          "rule_of_law": 1.5,
+          "authority_vs_checks": 6.5,
+          "stability_vs_opposition": 6.5
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.55,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "rule_of_law": "קול ברמה, \"המהדורה המרכזית\", 24.6.2025",
+          "authority_vs_checks": "קול ברמה, 24.6.2025",
+          "stability_vs_opposition": "קול ברמה, 24.6.2025"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "הוא דרש ממני דברים אישיים ואיים עליי \"אם לא תיענה לדרישות...\" - אני לא רוצה לחזור על המילה שהוא השתמש בה",
+            "speaker": "יריב לוין, שר המשפטים",
+            "source": "ynet",
+            "date": "2025-05-06",
+            "url": "https://www.ynet.co.il/news/article/h17wbhpegg"
+          }
+        },
+        "notes": "פרשן פוליטי (ערוץ 14/גלי ישראל), שוריין ע\"י נתניהו; לא נבחר ציבור מכהן קודם לכן. שיריונו עורר מחלוקת חריפה כולל האשמות סחיטה מצד שרים. מקורות: docs/candidate-research/likud-yaakov_bardogo.md"
+      },
+      {
+        "position": 12,
+        "name": "מיקי זוהר",
+        "declared": {
+          "rule_of_law": 2,
+          "authority_vs_checks": 5.5,
+          "foreign_relations": 5.5,
+          "cost_of_living": 4
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.5,
+          "authority_vs_checks": 0.4,
+          "foreign_relations": 0.4,
+          "cost_of_living": 0.4
+        },
+        "sources": {
+          "rule_of_law": "מעריב, 2.7.2026",
+          "authority_vs_checks": "מעריב, 2.7.2026",
+          "foreign_relations": "מעריב, 2.7.2026",
+          "cost_of_living": "מעריב, 2.7.2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "זה טבח וטבחו בנו. זה בדיוק מה שהיה",
+            "speaker": "מרב סבירסקי, תושבת קיבוץ בארי (הוריה נרצחו ואחיה נחטף ונרצח ב-7.10)",
+            "source": "מאקו (N12)",
+            "date": "2026-02-25",
+            "url": "https://www.mako.co.il/news-politics/2026_q1/Article-20efbcb29839c91027.htm"
+          }
+        },
+        "notes": "שר התרבות והספורט. מקום 12 מפריימריז. מקורות: docs/candidate-research/likud-miki_zohar.md"
+      },
+      {
+        "position": 13,
+        "name": "אלמוג כהן",
+        "declared": {
+          "security": 7,
+          "settlement": 6.5,
+          "rule_of_law": 1,
+          "authority_vs_checks": 7
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.6,
+          "settlement": 0.5,
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.55
+        },
+        "sources": {
+          "security": "ערוץ 7, 12.1.2026",
+          "settlement": "ערוץ 7, 12.1.2026",
+          "rule_of_law": "מאקו, 7.7.2026",
+          "authority_vs_checks": "מאקו, 7.7.2026"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "היית הקול המכריע להעברת תקציב, אני לא שוכח את זה",
+            "speaker": "בנימין נתניהו, ראש הממשלה",
+            "source": "זמן ישראל / וואלה שבע דרום",
+            "date": "2026-08-12",
+            "url": "https://www.zman.co.il/live/712295/"
+          }
+        },
+        "notes": "סגן שר במשרד רה\"מ, פרש מ\"עוצמה יהודית\" והצטרף לליכוד באוגוסט 2026. מקורות: docs/candidate-research/likud-almog_cohen.md"
+      },
+      {
+        "position": 14,
+        "name": "עמיחי שיקלי",
+        "declared": {
+          "ideology_vs_pragmatism": 5.5,
+          "religion_state": 5
+        },
+        "actual": {},
+        "confidence": {
+          "ideology_vs_pragmatism": 0.45,
+          "religion_state": 0.4
+        },
+        "sources": {
+          "ideology_vs_pragmatism": "ערוץ 7, 2.5.2026",
+          "religion_state": "ערוץ 7, 2.5.2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "המפלגות הללו מחפשות חותמת כשרות... הכנס הזה הוא סכין בגב היהודים",
+            "speaker": "אריאל מוזיקנט, נשיא הקונגרס היהודי האירופי",
+            "source": "ynet",
+            "date": "2025-03-19",
+            "url": "https://www.ynet.co.il/judaism/article/yokra14301714"
+          }
+        },
+        "notes": "שר התפוצות והמאבק באנטישמיות. מקורות: docs/candidate-research/likud-amichai_shikli.md"
+      },
+      {
+        "position": 15,
+        "name": "אלישע מדן",
+        "declared": {
+          "ideology_vs_pragmatism": 3
+        },
+        "actual": {},
+        "confidence": {
+          "ideology_vs_pragmatism": 0.3
+        },
+        "sources": {
+          "ideology_vs_pragmatism": "ynet, \"אלישע מדן הוא העתיד שלנו\""
+        },
+        "notes": "לוחם מילואים שנפצע קשה (איבד שתי רגליים) בקרב בעזה; שוריין ב-8.9.2026. מועמד חדש ללא רקורד פוליטי. מקורות: docs/candidate-research/likud-elisha_madan.md"
+      },
+      {
+        "position": 16,
+        "name": "דוד פטר",
+        "declared": {
+          "rule_of_law": 2,
+          "authority_vs_checks": 6
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.55
+        },
+        "sources": {
+          "rule_of_law": "ערוץ 7, 19.7.2026",
+          "authority_vs_checks": "ערוץ 7, 19.7.2026"
+        },
+        "notes": "עו\"ד, חוקר בפורום קהלת, שוריין 8.9.2026. מקורות: docs/candidate-research/likud-david_peter.md"
+      },
+      {
+        "position": 17,
+        "name": "משה סעדה",
+        "declared": {
+          "rule_of_law": 2,
+          "authority_vs_checks": 6,
+          "security": 6
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.5,
+          "security": 0.4
+        },
+        "sources": {
+          "rule_of_law": "מעריב 23.11.2025; מאקו 10.6.2026 (חוק מח\"ש)",
+          "authority_vs_checks": "מאקו, 10.6.2026",
+          "security": "מעריב, 23.11.2025"
+        },
+        "notes": "ח\"כ מכהן, יזם \"חוק מח\"ש\". מקורות: docs/candidate-research/likud-moshe_saada.md"
+      },
+      {
+        "position": 18,
+        "name": "חיים כץ",
+        "declared": {
+          "welfare": 6
+        },
+        "actual": {},
+        "confidence": {
+          "welfare": 0.3
+        },
+        "sources": {
+          "welfare": "ישראל היום (לא אומת ישירות, 403), סוכם דרך WebSearch"
+        },
+        "notes": "שר הרווחה והביטחון החברתי. שריון יו\"ר. מקורות: docs/candidate-research/likud-haim_katz.md"
+      },
+      {
+        "position": 19,
+        "name": "דודי אמסלם",
+        "declared": {
+          "religion_state": 2,
+          "security": 6.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.55,
+          "security": 0.45
+        },
+        "sources": {
+          "religion_state": "כיכר השבת, 17.5.2026",
+          "security": "ynet, 31.5.2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "יש אמירות...שרוב הליכודניקים ורוב הימנים פשוט לא מסכימים איתן",
+            "speaker": "אלי אוחנה, פרשן/תומך ליכוד",
+            "source": "סרוגים",
+            "date": "2026-05-18",
+            "url": "https://www.srugim.co.il/1304720-%D7%91%D7%99%D7%A7%D7%95%D7%A8%D7%AA-%D7%9C%D7%99%D7%9B%D7%95%D7%93-%D7%A2%D7%9C-%D7%90%D7%9E%D7%A1%D7%9C%D7%9D"
+          }
+        },
+        "notes": "שר, ח\"כ ותיק. מקורות: docs/candidate-research/likud-dudi_amsalem.md"
+      },
+      {
+        "position": 20,
+        "name": "אתי (חוה) עטיה",
+        "declared": {
+          "welfare": 6
+        },
+        "actual": {},
+        "confidence": {
+          "welfare": 0.4
+        },
+        "sources": {
+          "welfare": "ויקיפדיה עברית (פעילות חקיקתית: מילואימניקים, דפיברילטורים ברכבות, ממ\"דים לקשישים)"
+        },
+        "notes": "יו\"ר הוועדה המיוחדת לעובדים זרים. משבצת שיריון לייצוג נשי, לאחר מאבק ספירה חוזרת מול גילה גמליאל. מקורות: docs/candidate-research/likud-eti_atia.md"
+      },
+      {
+        "position": 21,
+        "name": "בועז ביסמוט",
+        "declared": {
+          "security": 6.5,
+          "foreign_relations": 5.5,
+          "religion_state": 3.5,
+          "authority_vs_checks": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.55,
+          "foreign_relations": 0.4,
+          "religion_state": 0.5,
+          "authority_vs_checks": 0.3
+        },
+        "sources": {
+          "security": "ערוץ 7, 16.6.2025; ערוץ 14, 28.4.2026",
+          "foreign_relations": "ערוץ 7, 16.6.2025",
+          "religion_state": "\"חוק הגיוס\" (תיקון 26) שהוביל כיו\"ר ועדת חוץ וביטחון",
+          "authority_vs_checks": "דיווח עיתונאי על מחלוקת עם צה\"ל, אפריל 2026"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "עיקר חשיבותו של חוק ביסמוט טמון בהיותו נקודת ציון היסטורית, תוך הכרה של ההנהגה החרדית בגיוס בני ישיבות",
+            "speaker": "מיכאל קליינר, פרשן/עיתונאי",
+            "source": "מעריב",
+            "date": "2025-12-19",
+            "url": "https://www.maariv.co.il/news/opinions/article-1263828"
+          },
+          "negative": {
+            "quote": "נעשתה כאן עבודת קומבינה מרשימה רק כדי להכריז על גיוס",
+            "speaker": "שלום ירושלמי, פרשן פוליטי",
+            "source": "זמן ישראל",
+            "date": "2025-11-28",
+            "url": "https://www.zman.co.il/644159/"
+          }
+        },
+        "notes": "עיתונאי בעברו (עורך ישראל היום), יו\"ר ועדת החוץ והביטחון. מקורות: docs/candidate-research/likud-boaz_bismuth.md"
+      },
+      {
+        "position": 22,
+        "name": "דוד ביטן",
+        "declared": {
+          "security": 5.5,
+          "foreign_relations": 3.5,
+          "rule_of_law": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.45,
+          "foreign_relations": 0.4,
+          "rule_of_law": 0.35
+        },
+        "sources": {
+          "security": "103FM (וואלה), 25.5.2026",
+          "foreign_relations": "103FM (וואלה), 25.5.2026",
+          "rule_of_law": "כתב אישום פעיל (שוחד, מרמה והפרת אמונים, עבירות מס/הלבנת הון), 2025-2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "דוד ביטן הוא אופוזיציה על מלא. ליכוד בתחפושת. פייק ליכודניק",
+            "speaker": "שלמה קרעי, שר התקשורת",
+            "source": "כל רגע (kore.co.il)",
+            "date": "2026-02-25",
+            "url": "https://www.kore.co.il/viewArticle/205880"
+          }
+        },
+        "notes": "יו\"ר ועדת הכלכלה, ח\"כ ותיק. מקורות: docs/candidate-research/likud-david_bitan.md"
+      },
+      {
+        "position": 23,
+        "name": "שלמה קרעי",
+        "declared": {
+          "authority_vs_checks": 2,
+          "rule_of_law": 2,
+          "ideology_vs_pragmatism": 6.5,
+          "economy": 3
+        },
+        "actual": {},
+        "confidence": {
+          "authority_vs_checks": 0.6,
+          "rule_of_law": 0.55,
+          "ideology_vs_pragmatism": 0.5,
+          "economy": 0.3
+        },
+        "sources": {
+          "authority_vs_checks": "בג\"ץ 17.6.2026 (ביקורת נשיא העליון); ערוץ 7 11.5.2026",
+          "rule_of_law": "בג\"ץ, 17.6.2026",
+          "ideology_vs_pragmatism": "ערוץ 7, 11.5.2026; העין השביעית, 13.12.2025",
+          "economy": "ערוץ 7, 11.5.2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "מאחר ואנו מדברים על גוף ממלכתי שצריך להיות עצמאי, זיקה בינו לבין השר היא לא בריאה",
+            "speaker": "השופט יצחק עמית, נשיא בית המשפט העליון",
+            "source": "העין השביעית (מדיון בג\"ץ)",
+            "date": "2026-06-17",
+            "url": "https://www.the7eye.org.il/587358"
+          }
+        },
+        "notes": "שר התקשורת, הוביל את חוק השידור/רפורמת התקשורת. מקורות: docs/candidate-research/likud-shlomo_karhi.md"
+      },
+      {
+        "position": 24,
+        "name": "ניר ברקת",
+        "declared": {
+          "cost_of_living": 4.5,
+          "economy": 5,
+          "foreign_relations": 6,
+          "settlement": 5.5,
+          "stability_vs_opposition": 3
+        },
+        "actual": {},
+        "confidence": {
+          "cost_of_living": 0.45,
+          "economy": 0.4,
+          "foreign_relations": 0.5,
+          "settlement": 0.4,
+          "stability_vs_opposition": 0.35
+        },
+        "sources": {
+          "cost_of_living": "מעריב, 29.3.2026; מאקו, פברואר 2026 (\"הסל של המדינה\")",
+          "economy": "מעריב, 29.3.2026",
+          "foreign_relations": "מעריב, 29.3.2026 (הרחבת הסכמי אברהם)",
+          "settlement": "מעריב, 29.3.2026",
+          "stability_vs_opposition": "וואלה, 13.8.2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "ברקת חשב שגילה את אמריקה ויזם את \"מה שטוב לאירופה\", ושוב הוא מתרסק כמו שלומיאל",
+            "speaker": "דרור רפאל, פרשן כלכלי",
+            "source": "מעריב",
+            "date": "2025-01-11",
+            "url": "https://www.maariv.co.il/journalists/article-1162565"
+          }
+        },
+        "notes": "שר הכלכלה והתעשייה, ראש עיריית ירושלים לשעבר. מקורות: docs/candidate-research/likud-nir_barkat.md"
       }
     ]
   },
@@ -451,13 +1076,169 @@
           }
         },
         "notes": "לא נמצא מאמר דעה חתום. WebSearch לא היה זמין רוב הזמן; הסתמכות על WebFetch ישיר לעמודי נושא של אתרי חדשות. 16 מתוך 21 צירים הושמטו בהיעדר עדות אישית."
+      },
+      {
+        "position": 2,
+        "name": "ינון אזולאי",
+        "declared": {
+          "religion_state": 1.3,
+          "authority_vs_checks": 2,
+          "rule_of_law": 2.2,
+          "stability_vs_opposition": 2.8,
+          "ideology_vs_pragmatism": 3.2
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.6,
+          "authority_vs_checks": 0.5,
+          "rule_of_law": 0.45,
+          "stability_vs_opposition": 0.4,
+          "ideology_vs_pragmatism": 0.35
+        },
+        "sources": {
+          "religion_state": "בחדרי חרדים 1.7.2026; ערוץ 7 10.9.2026",
+          "authority_vs_checks": "ערוץ 7, 15.4.2026 (תלונה נגד שופטי בג\"ץ)",
+          "rule_of_law": "ועדת החוץ והביטחון, 1.7.2026",
+          "stability_vs_opposition": "Israel National News, 2026",
+          "ideology_vs_pragmatism": "Israel National News, 2026"
+        },
+        "notes": "\"קפץ\" ממקום 7 למקום 2. מקורות: docs/candidate-research/shas-yinon_azulai.md"
+      },
+      {
+        "position": 3,
+        "name": "מיכאל מלכיאלי",
+        "declared": {
+          "religion_state": 1.3,
+          "authority_vs_checks": 1.8,
+          "rule_of_law": 2,
+          "ideology_vs_pragmatism": 3
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.55,
+          "authority_vs_checks": 0.55,
+          "rule_of_law": 0.5,
+          "ideology_vs_pragmatism": 0.35
+        },
+        "sources": {
+          "religion_state": "כיכר השבת, 3.6.2026; JDN, יולי 2026",
+          "authority_vs_checks": "ערוץ הכנסת, \"עניין אישי\", 17.7.2026",
+          "rule_of_law": "ערוץ הכנסת, 17.7.2026",
+          "ideology_vs_pragmatism": "כיכר השבת, 3.6.2026"
+        },
+        "notes": "שר לשירותי דת לשעבר. מקורות: docs/candidate-research/shas-michael_malkieli.md"
+      },
+      {
+        "position": 4,
+        "name": "יואב בן צור",
+        "declared": {
+          "religion_state": 1.2,
+          "authority_vs_checks": 2.3,
+          "rule_of_law": 2.3,
+          "cost_of_living": 5.3,
+          "welfare": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.6,
+          "authority_vs_checks": 0.45,
+          "rule_of_law": 0.4,
+          "cost_of_living": 0.4,
+          "welfare": 0.3
+        },
+        "sources": {
+          "religion_state": "כיכר השבת, 29.6.2026 ו-13.7.2026",
+          "authority_vs_checks": "Ynet (ביקורת על היועמ\"שית)",
+          "rule_of_law": "Ynet",
+          "cost_of_living": "דבר (davar1.co.il), העלאת שכר מינימום",
+          "welfare": "דיווחים על עצירת סבסוד מעונות מול הצהרות תמיכה בעובדי שכר מינימום"
+        },
+        "notes": "שר העבודה לשעבר, מזכיר מועצת חכמי התורה. מקורות: docs/candidate-research/shas-yoav_bentzur.md"
+      },
+      {
+        "position": 5,
+        "name": "חיים ביטון",
+        "declared": {
+          "religion_state": 1.5,
+          "education": 1.8,
+          "stability_vs_opposition": 2.5,
+          "ideology_vs_pragmatism": 2.8
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.5,
+          "education": 0.45,
+          "stability_vs_opposition": 0.45,
+          "ideology_vs_pragmatism": 0.4
+        },
+        "sources": {
+          "religion_state": "כיכר השבת, 1.9.2026",
+          "education": "TheMarker (תקציב חינוך חרדי ללא ליבה)",
+          "stability_vs_opposition": "כיכר השבת, 1.9.2026",
+          "ideology_vs_pragmatism": "כיכר השבת, 1.9.2026"
+        },
+        "notes": "מנכ\"ל ש\"ס, שר החינוך לשעבר (התפטר 20.7.2025 במשבר חוק הגיוס). נחקר באזהרה בחשד שימוש בכספי ציבור. מקורות: docs/candidate-research/shas-chaim_biton.md"
+      },
+      {
+        "position": 6,
+        "name": "דרור עמוס",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "מצטרף חדש (קצין מילואים לוגיסטיקה, יו\"ר המועצה הדתית בחיפה) ללא רקורד תקשורתי-פוליטי קודם; לא אותר אף ציטוט מדיניות אישי מאומת, ולכן לא נגזר אף ציון ציר (מתחת לסף המשוקלל, כצפוי). מקורות: docs/candidate-research/shas-dror_amos.md"
+      },
+      {
+        "position": 7,
+        "name": "משה אבוטבול",
+        "declared": {
+          "religion_state": 1.6,
+          "ideology_vs_pragmatism": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.5,
+          "ideology_vs_pragmatism": 0.3
+        },
+        "sources": {
+          "religion_state": "ערוץ 7, 24.6.2026",
+          "ideology_vs_pragmatism": "ערוץ 7, 24.6.2026"
+        },
+        "notes": "ח\"כ, סגן שר לשעבר, ראש עיריית בית שמש לשעבר. מקורות: docs/candidate-research/shas-moshe_abutbul.md"
+      },
+      {
+        "position": 8,
+        "name": "אוריאל בוסו",
+        "declared": {
+          "religion_state": 2,
+          "ideology_vs_pragmatism": 4.5,
+          "experience_vs_renewal": 1.5,
+          "stability_vs_opposition": 2.5,
+          "health": 5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.5,
+          "ideology_vs_pragmatism": 0.35,
+          "experience_vs_renewal": 0.6,
+          "stability_vs_opposition": 0.4,
+          "health": 0.4
+        },
+        "sources": {
+          "religion_state": "Israel Hayom, 20.7.2025; Emess.co.il, 3.2.2026",
+          "ideology_vs_pragmatism": "מכתב פרישה, יולי 2025",
+          "experience_vs_renewal": "רקע ציבורי: סגן ראש עיריית פ\"ת, ח\"כ, שר בריאות פעמיים",
+          "stability_vs_opposition": "Israel Hayom, 20.7.2025 (פרישה זמנית וחזרה לממשלה, 28.8.2026)",
+          "health": "Maariv, 1.4.2025 (תקציב בריאות הנפש)"
+        },
+        "notes": "שר הבריאות בשתי כהונות (12.10.2023-20.7.2025, ומ-28.8.2026). מקורות: docs/candidate-research/shas-uriel_busso.md"
       }
     ]
   },
   {
     "id": "yahadut_hatorah",
     "name": "יהדות התורה",
-    "leader": "יצחק גולדקנופף",
+    "leader": "יעקב אשר",
     "seats": 8,
     "color": "#212121",
     "declared": {
@@ -551,6 +1332,27 @@
     "candidates": [
       {
         "position": 1,
+        "name": "יעקב אשר",
+        "declared": {
+          "religion_state": 1.5,
+          "ideology_vs_pragmatism": 5.5,
+          "stability_vs_opposition": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.4,
+          "ideology_vs_pragmatism": 0.45,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "religion_state": "Mako, 6-7.9.2026 (הדחת גפני, קו כללי)",
+          "ideology_vs_pragmatism": "Ynet, ספטמבר 2026 (ביקורת על מפלגות חרדיות פורשות); Mako 6-7.9.2026",
+          "stability_vs_opposition": "Mako, 6-7.9.2026 (\"לא אוטומטית בשום דבר\" ביחס לגוש הליכוד)"
+        },
+        "notes": "מונה ליו\"ר דגל התורה ויו\"ר \"יהדות התורה\" ב-5.9.2026 לאחר הדחת משה גפני (יו\"ר 38 שנה) ואורי מקלב. בפועל מקום 1 ברשימה (לא גולדקנופף) - מיקומי המועמדים עודכנו בהתאם. מקורות: docs/candidate-research/yahadut_hatorah-yaakov_asher.md"
+      },
+      {
+        "position": 2,
         "name": "יצחק גולדקנופף",
         "declared": {
           "religion_state": 1.3,
@@ -576,6 +1378,108 @@
           }
         },
         "notes": "לא אותר ראיון עומק אישי, מאמר דעה חתום, או ציטוט חיובי מאומת אחריו חיפוש נרחב (למעלה מ-15 שאילתות) — כל אלה פערים מוצהרים, לא מולאו בניחוש. 19 מתוך 21 צירים הושמטו."
+      },
+      {
+        "position": 3,
+        "name": "יצחק פינדרוס",
+        "declared": {
+          "liberty_vs_security": 6.5,
+          "authority_vs_checks": 6,
+          "religion_state": 1.5,
+          "stability_vs_opposition": 5
+        },
+        "actual": {},
+        "confidence": {
+          "liberty_vs_security": 0.55,
+          "authority_vs_checks": 0.45,
+          "religion_state": 0.5,
+          "stability_vs_opposition": 0.45
+        },
+        "sources": {
+          "liberty_vs_security": "Ynet, 29.6.2026 (קריאה \"לירות ברגליים\" במפגינה)",
+          "authority_vs_checks": "Ynet, 29.6.2026",
+          "religion_state": "Kikar HaShabbat, 18.5.2026",
+          "stability_vs_opposition": "Kikar HaShabbat, 18.5.2026 (\"כבר לא חלק מגוש נתניהו\")"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "אתה אדם בזוי, אתה מסית, אתה בריון, ויש לך דם על הידיים",
+            "speaker": "נעמה לזימי, חברת כנסת (הדמוקרטים)",
+            "source": "Ynet",
+            "date": "2026-06-29",
+            "url": "https://www.ynet.co.il/news/article/h18tmpyqgx"
+          }
+        },
+        "notes": "מזכ\"ל דגל התורה. מקורות: docs/candidate-research/yahadut_hatorah-yitzhak_pindrus.md"
+      },
+      {
+        "position": 4,
+        "name": "מאיר פרוש",
+        "declared": {
+          "religion_state": 1.2,
+          "rule_of_law": 1.8,
+          "authority_vs_checks": 5.5,
+          "stability_vs_opposition": 5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.6,
+          "rule_of_law": 0.5,
+          "authority_vs_checks": 0.4,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "religion_state": "Zman Yisrael, 16.2.2025; Kikar HaShabbat, 24.6.2026",
+          "rule_of_law": "Ynet (איום חרם צרכנים, ~20.8.2026)",
+          "authority_vs_checks": "Kikar HaShabbat, 24.6.2026",
+          "stability_vs_opposition": "Ynet + Kikar HaShabbat, 2026 (איום חרם, תקיפת הציונות הדתית, ספקנות כלפי נתניהו)"
+        },
+        "notes": "שר ירושלים ומסורת ישראל. מקורות: docs/candidate-research/yahadut_hatorah-meir_porush.md"
+      },
+      {
+        "position": 5,
+        "name": "משה רוזנטל",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "מנהל מינהל החינוך בעיריית בני ברק לשעבר. לא אותר ציטוט מדיניות אישי מאומת (לא להתבלבל עם הבמאי בעל אותו שם). לא נגזר ציון ציר. מקורות: docs/candidate-research/yahadut_hatorah-moshe_rosenthal.md"
+      },
+      {
+        "position": 6,
+        "name": "אליקים שטארק",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "נציג חסידות בעלז ברשימה (לראשונה מאז 1992 שיש גורם שלישי מלבד דגל התורה ואגודת ישראל). \"איש צללים\" - מתווך שנמנע במכוון מראיונות/פרסום. לא נגזר ציון ציר. מקורות: docs/candidate-research/yahadut_hatorah-elyakim_stark.md"
+      },
+      {
+        "position": 7,
+        "name": "יהודה וייספיש",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "מייסד ויו\"ר ארגון \"איחוד בני הישיבות\". לא אותר ציטוט מדיניות אישי מאומת. לא נגזר ציון ציר. מקורות: docs/candidate-research/yahadut_hatorah-yehuda_weisfish.md"
+      },
+      {
+        "position": 8,
+        "name": "יעקב טסלר",
+        "declared": {
+          "religion_state": 1.5,
+          "stability_vs_opposition": 5.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.5,
+          "stability_vs_opposition": 0.45
+        },
+        "sources": {
+          "religion_state": "Ynet; ויקיפדיה (התפטרות מסגן-שר ופרישה מהקואליציה, יולי 2025)",
+          "stability_vs_opposition": "Ynet; ויקיפדיה"
+        },
+        "notes": "נציג חסידות ויז'ניץ, סגן שר התרבות והספורט לשעבר, התפטר ביולי 2025 במחאה על חוק הגיוס. מקורות: docs/candidate-research/yahadut_hatorah-yaakov_tessler.md"
       }
     ]
   },
@@ -728,6 +1632,196 @@
           }
         },
         "notes": "שני הציטוטים החיצוניים מ-2021-2022, לא מ-2025-2026 — חיפוש נרחב אחר מקבילה עדכנית לא צלח, ודווח כפער במפורש. 12 מתוך 21 צירים הושמטו. המקור החזק ביותר הוא מאמר דעה אישי שלו ב-JPost."
+      },
+      {
+        "position": 2,
+        "name": "רפי בן שטרית",
+        "declared": {
+          "rule_of_law": 6.5,
+          "authority_vs_checks": 2,
+          "security": 6,
+          "stability_vs_opposition": 2,
+          "experience_vs_renewal": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.5,
+          "security": 0.35,
+          "stability_vs_opposition": 0.55,
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "rule_of_law": "מעריב (103FM), 17.11.2025; וואלה, 8.6.2026",
+          "authority_vs_checks": "מעריב, 17.11.2025; וואלה, 8.6.2026",
+          "security": "ynet \"120 ואחת\", ספטמבר 2026",
+          "stability_vs_opposition": "ynet, ספטמבר 2026; וואלה, 8.6.2026",
+          "experience_vs_renewal": "רקע: ראש עיריית בית שאן לשעבר"
+        },
+        "notes": "אביו של אלרואי בן שטרית, לוחם שנהרג ב-7.10.2023; ממקימי \"מועצת אוקטובר\". דורש ועדת חקירה ממלכתית. מקורות: docs/candidate-research/israel_beiteinu-rafi_ben_shitrit.md"
+      },
+      {
+        "position": 3,
+        "name": "טליה לנקרי",
+        "declared": {
+          "security": 6.5,
+          "authority_vs_checks": 5,
+          "rule_of_law": 5,
+          "experience_vs_renewal": 3
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.5,
+          "authority_vs_checks": 0.3,
+          "rule_of_law": 0.3,
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "security": "וואלה, 8.7.2026; מגזין לאישה, פברואר 2024 (רקע)",
+          "authority_vs_checks": "וואלה, 8.7.2026",
+          "rule_of_law": "וואלה, 8.7.2026",
+          "experience_vs_renewal": "רקע: אל\"מ (מיל') כ-30 שנות שירות, סגנית ראש חטיבת העורף במל\"ל"
+        },
+        "notes": "הצטרפה לישראל ביתנו ב-8.7.2026. מקורות: docs/candidate-research/israel_beiteinu-talia_lenkri.md"
+      },
+      {
+        "position": 4,
+        "name": "עודד פורר",
+        "declared": {
+          "religion_state": 6,
+          "economy": 5.5,
+          "welfare": 3,
+          "stability_vs_opposition": 3
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.5,
+          "economy": 0.35,
+          "welfare": 0.3,
+          "stability_vs_opposition": 0.3
+        },
+        "sources": {
+          "religion_state": "כיכר השבת, 17.1.2026",
+          "economy": "כיכר השבת, 17.1.2026",
+          "welfare": "הידברות, 20.7.2022 (רקע כשר החקלאות דאז)",
+          "stability_vs_opposition": "כיכר השבת, 17.1.2026"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "ממשלת תל אביב. לקרוא ולא להאמין. מנותקים, נמאסתם",
+            "speaker": "אריה דרעי, שר הפנים לשעבר (ש\"ס)",
+            "source": "טוויטר (מצוטט בהידברות)",
+            "date": "2022-07-20",
+            "url": "https://www.hidabroot.org/article/1171435"
+          }
+        },
+        "notes": "יו\"ר סיעת ישראל ביתנו, ח\"כ מכהן, שר העלייה והקליטה ושר החקלאות לשעבר. מקורות: docs/candidate-research/israel_beiteinu-oded_forer.md"
+      },
+      {
+        "position": 5,
+        "name": "יוליה מלינובסקי",
+        "declared": {
+          "security": 6,
+          "stability_vs_opposition": 2.5,
+          "foreign_relations": 4.5,
+          "ideology_vs_pragmatism": 5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.45,
+          "stability_vs_opposition": 0.4,
+          "foreign_relations": 0.35,
+          "ideology_vs_pragmatism": 0.3
+        },
+        "sources": {
+          "security": "סרוגים, 16.2.2026 (בית דין צבאי בלוד)",
+          "stability_vs_opposition": "סרוגים, 16.2.2026",
+          "foreign_relations": "סרוגים, 16.2.2026 (לחץ אמריקאי על חוק אונר\"א)",
+          "ideology_vs_pragmatism": "וואלה, 9.9.2026"
+        },
+        "notes": "ח\"כ מכהנת מ-2016, עלתה מברית המועצות ב-1998. מקורות: docs/candidate-research/israel_beiteinu-yulia_malinovsky.md"
+      },
+      {
+        "position": 6,
+        "name": "שרון שרעבי",
+        "declared": {
+          "religion_state": 5.5,
+          "rule_of_law": 5,
+          "foreign_relations": 5,
+          "stability_vs_opposition": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.4,
+          "rule_of_law": 0.3,
+          "foreign_relations": 0.3,
+          "stability_vs_opposition": 0.3
+        },
+        "sources": {
+          "religion_state": "סרוגים, 21.5.2026",
+          "rule_of_law": "סרוגים, 21.5.2026",
+          "foreign_relations": "מעריב, 28.8.2025",
+          "stability_vs_opposition": "סרוגים, 21.5.2026"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "שרון אדם נהדר ומיוחד, שפעל רבות למען החטופים ומשפחותיהם",
+            "speaker": "ישראל כהן",
+            "source": "בחדרי חרדים",
+            "date": "2026-05-05",
+            "url": "https://www.bhol.co.il/news/1726545"
+          },
+          "negative": {
+            "quote": "כואב לי שהלך למפלגתו של איווט ליברמן, ששונא את התורה והחרדים",
+            "speaker": "ישראל כהן",
+            "source": "בחדרי חרדים",
+            "date": "2026-05-05",
+            "url": "https://www.bhol.co.il/news/1726545"
+          }
+        },
+        "notes": "אחי יוסי שרעבי (נרצח בשבי) ואלי שרעבי (חטוף ששוחרר); מהמובילים במאבק הציבורי להשבת החטופים. הצטרף למפלגה במאי 2026. מקורות: docs/candidate-research/israel_beiteinu-sharon_sharabi.md"
+      },
+      {
+        "position": 7,
+        "name": "חמד עמאר",
+        "declared": {
+          "security": 6,
+          "foreign_relations": 5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.45,
+          "foreign_relations": 0.35
+        },
+        "sources": {
+          "security": "הודעת מפלגת ישראל ביתנו, 27.5.2026",
+          "foreign_relations": "103FM, 11.12.2024; ynet, 16.7.2025 (מעורבות בסוגיית הדרוזים בסוריה)"
+        },
+        "notes": "ח\"כ דרוזי מכהן, מייסד תנועת הנוער הדרוזית בישראל. מועמד המפלגה המוצהר לשר לביטחון הפנים. מקורות: docs/candidate-research/israel_beiteinu-hamad_amar.md"
+      },
+      {
+        "position": 8,
+        "name": "יבגני סובה",
+        "declared": {
+          "cost_of_living": 6,
+          "rule_of_law": 5.5,
+          "authority_vs_checks": 2.5,
+          "religion_state": 5
+        },
+        "actual": {},
+        "confidence": {
+          "cost_of_living": 0.45,
+          "rule_of_law": 0.4,
+          "authority_vs_checks": 0.35,
+          "religion_state": 0.3
+        },
+        "sources": {
+          "cost_of_living": "ynet, 2026",
+          "rule_of_law": "ynet, 2026",
+          "authority_vs_checks": "ynet, 2026",
+          "religion_state": "ynet, 2026"
+        },
+        "notes": "סגן יו\"ר הכנסת ה-25, ח\"כ מכהן, עלה מאוקראינה ב-1997. מקורות: docs/candidate-research/israel_beiteinu-yevgeny_sova.md"
       }
     ]
   },
@@ -1036,6 +2130,60 @@
           }
         },
         "notes": "לא אותר מאמר דעה חתום מ-2025-2026. צירים ללא עדות אישית מספקת הושמטו (כלכלה, חינוך, רווחה, בריאות ועוד)."
+      },
+      {
+        "position": 2,
+        "name": "יאיר לפיד",
+        "declared": {
+          "rule_of_law": 6.5,
+          "authority_vs_checks": 2.5,
+          "religion_state": 6,
+          "foreign_relations": 5.5,
+          "cost_of_living": 5.5,
+          "economy": 5,
+          "experience_vs_renewal": 2,
+          "ideology_vs_pragmatism": 5.5,
+          "stability_vs_opposition": 3,
+          "settlement": 2.5,
+          "liberty_vs_security": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.5,
+          "religion_state": 0.45,
+          "foreign_relations": 0.4,
+          "cost_of_living": 0.5,
+          "economy": 0.4,
+          "experience_vs_renewal": 0.55,
+          "ideology_vs_pragmatism": 0.45,
+          "stability_vs_opposition": 0.4,
+          "settlement": 0.45,
+          "liberty_vs_security": 0.4
+        },
+        "sources": {
+          "rule_of_law": "Walla News, ראיון \"סרי ושלזינגר\", 20.11.2025",
+          "authority_vs_checks": "Walla News, ראיון \"סרי ושלזינגר\", 20.11.2025",
+          "religion_state": "Walla News, 20.11.2025 (\"בגידה בציונות\" על חוק הגיוס)",
+          "foreign_relations": "נאום עצרת האו\"ם, ספטמבר 2022",
+          "cost_of_living": "Walla Finance, תוכנית כלכלית בת 26 צעדים, 11.3.2025",
+          "economy": "Walla Finance, 11.3.2025",
+          "experience_vs_renewal": "ציבורי: רה\"מ 2022, שר חוץ, שר אוצר",
+          "ideology_vs_pragmatism": "N12/ynet, נובמבר 2025 + הרכבת ממשלת 2021-22",
+          "stability_vs_opposition": "רקורד הנהגת האופוזיציה",
+          "settlement": "נאום עצרת האו\"ם 2022",
+          "liberty_vs_security": "Walla News, 20.11.2025"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "בשתקנותו ופחדנותו החריב יאיר לפיד את מוסד האופוזיציה בישראל. לא נתגעגע",
+            "speaker": "גדעון לוי",
+            "source": "הארץ, טור דעה",
+            "date": "2026-09-03",
+            "url": "https://www.haaretz.co.il/opinions/2026-09-03/ty-article-opinion/.premium/000001a0-6270-d1e6-a7ac-72f75cbc0000"
+          }
+        },
+        "notes": "לא אותר ציטוט חיובי חתום מ-2025-2026 שאומת עצמאית; הושמט לפי כלל אפס-בדיה. עמדת שתי המדינות (נאום או\"ם 2022) מחוץ לחלון המועדף 2025-2026 אך ללא הכחשה או עדכון מאוחר יותר שנמצא במחקר. ריאיונות/הצבעות אישיות נוספות (כלכלה כללית, חינוך, רווחה, בריאות ועוד) לא אותרו ברמת ודאות מספקת והושמטו."
       }
     ]
   },
@@ -1362,8 +2510,8 @@
   },
   {
     "id": "hadash_taal",
-    "name": "חד\"ש-תע\"ל",
-    "leader": "איימן עודה",
+    "name": "הרשימה המשותפת",
+    "leader": "יוסף ג'בארין",
     "seats": 4,
     "color": "#C62828",
     "declared": {
@@ -1456,53 +2604,82 @@
     "gaps": [],
     "candidates": [
       {
-        "position": 1,
-        "name": "איימן עודה",
+        "position": 2,
+        "name": "אחמד טיבי",
         "declared": {
-          "liberty_vs_security": 6.5,
           "security": 2,
-          "rule_of_law": 6,
-          "authority_vs_checks": 2,
           "settlement": 1.5,
+          "liberty_vs_security": 6,
+          "authority_vs_checks": 2,
+          "rule_of_law": 5.5,
+          "foreign_relations": 5.5,
           "stability_vs_opposition": 1.5,
-          "ideology_vs_pragmatism": 3.5
+          "ideology_vs_pragmatism": 3
         },
         "actual": {},
         "confidence": {
-          "liberty_vs_security": 0.55,
-          "security": 0.55,
-          "rule_of_law": 0.5,
-          "authority_vs_checks": 0.5,
-          "settlement": 0.6,
+          "security": 0.5,
+          "settlement": 0.45,
+          "liberty_vs_security": 0.4,
+          "authority_vs_checks": 0.4,
+          "rule_of_law": 0.35,
+          "foreign_relations": 0.35,
           "stability_vs_opposition": 0.55,
-          "ideology_vs_pragmatism": 0.4
+          "ideology_vs_pragmatism": 0.35
         },
         "sources": {
-          "liberty_vs_security": "Haaretz, מאמר דעה 14.7.2025 + Times of Israel 14.7.2025",
-          "security": "Haaretz, מאמר דעה 14.7.2025",
-          "rule_of_law": "Times of Israel, 14.7.2025",
-          "authority_vs_checks": "Haaretz, מאמר דעה 14.7.2025",
-          "settlement": "כותרות מאמרי דעה ב-Haaretz (יוני 2026)",
-          "stability_vs_opposition": "כלל המאמרים וההצהרות 2025-2026",
-          "ideology_vs_pragmatism": "שיחה מקומית (ניתוח) + כותרת Haaretz נוב׳ 2023"
+          "security": "inn.co.il, 14.4.2026",
+          "settlement": "נגזר מ-inn.co.il, 14.4.2026 (התנגדות לכיבוש, קריאה לשלום ישראלי-פלסטיני)",
+          "liberty_vs_security": "ynet, ינואר 2026",
+          "authority_vs_checks": "inn.co.il 14.4.2026; ynet ינואר 2026",
+          "rule_of_law": "ynet, ינואר 2026",
+          "foreign_relations": "inn.co.il, 14.4.2026",
+          "stability_vs_opposition": "מאקו 24.1.2026; דיווח JDN (ביטחון מופחת, עמוד חסום)",
+          "ideology_vs_pragmatism": "מאקו, 24.1.2026"
         },
-        "externalViews": {
-          "positive": {
-            "quote": "For over a decade, MK Odeh has been a leading advocate for peace, justice, and Jewish-Arab partnership.",
-            "speaker": "הסנאטורים האמריקאים ברני סנדרס, פיטר וולש וכריס ואן הולן",
-            "source": "Times of Israel",
-            "date": "2025-07-14",
-            "url": "https://www.timesofisrael.com/liveblog_entry/a-chilling-message-to-arab-israelis-democratic-senators-blast-effort-to-expel-arab-mk/"
-          },
-          "negative": {
-            "quote": "עודה שוב מוכיח שהוא דובר חמאס בכנסת. מי שמשווה בין החטופים שלנו למחבלים רוצחים שיטוס לעזה איתם.",
-            "speaker": "ח\"כ אביגדור ליברמן",
-            "source": "וואלה חדשות",
-            "date": "2025-01-19",
-            "url": "https://news.walla.co.il/item/3720566"
-          }
+        "notes": "מקום 2 בפועל ברשימה המשותפת (חד\"ש-תע\"ל-בל\"ד), אחרי יוסף ג'בארין. איימן עודה פרש מראשות חד\"ש במאי 2026 ואינו מתמודד. הרשימה הוגשה ~8.9.2026 וטרם אושרה סופית. מקורות: docs/candidate-research/hadash_taal-ahmad_tibi.md"
+      },
+      {
+        "position": 3,
+        "name": "סאמי אבו שחאדה",
+        "declared": {
+          "security": 2,
+          "settlement": 1.5,
+          "rule_of_law": 6,
+          "stability_vs_opposition": 1.5,
+          "ideology_vs_pragmatism": 4
         },
-        "notes": "לא אותר ראיון-ישיבה קלאסי מ-2025-2026; העדות המרכזית היא מאמרי דעה חתומים סדירים ב-Haaretz. ציטוט חיובי חיצוני מגורם אמריקאי, לא ישראלי (חיפוש ממוקד אחר הערכה חיובית ישראלית לא הניב תוצאה מאומתת)."
+        "actual": {},
+        "confidence": {
+          "security": 0.5,
+          "settlement": 0.5,
+          "rule_of_law": 0.4,
+          "stability_vs_opposition": 0.5,
+          "ideology_vs_pragmatism": 0.35
+        },
+        "sources": {
+          "security": "ynet, יוני 2026",
+          "settlement": "ynet, יוני 2026",
+          "rule_of_law": "ynet, יוני 2026",
+          "stability_vs_opposition": "ynet יוני 2026; נאום ניצחון בפריימריז בל\"ד, 27.6.2026",
+          "ideology_vs_pragmatism": "ynet, יוני 2026"
+        },
+        "notes": "יו\"ר בל\"ד, מקום 3 ברשימה המשותפת החדשה (חד\"ש-תע\"ל-בל\"ד, ללא רע\"ם). מקורות: docs/candidate-research/hadash_taal-sami_abu_shehadeh.md"
+      },
+      {
+        "position": 4,
+        "name": "ד\"ר פאתן ע'טאס",
+        "declared": {
+          "health": 5.5
+        },
+        "actual": {},
+        "confidence": {
+          "health": 0.25
+        },
+        "sources": {
+          "health": "העין השביעית, 14.6.2016; פרוטוקול ועדת כנסת, 3.7.2018"
+        },
+        "notes": "מועמד חדש (נכנס לרשימה 7.9.2026, החליף את ג'עפר פרח שפרש). לא אותר מידע פוליטי מ-2025-2026 מפיו; העדות היחידה שנמצאה ישנה ומקצועית (פעילותו באגודה למלחמה בסרטן), ולכן רק ציר אחד תועד — מתחת ל-MIN_CANDIDATE_AXES ולא ישוקלל לציון המפלגה, וזה תקין. מקורות: docs/candidate-research/hadash_taal-faten_ghattas.md"
       }
     ]
   },
