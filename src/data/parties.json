@@ -3,7 +3,7 @@
     "id": "likud",
     "name": "הליכוד",
     "leader": "בנימין נתניהו",
-    "seats": 24,
+    "seats": 21,
     "color": "#1565C0",
     "declared": {
       "liberty_vs_security": 2.5,
@@ -936,7 +936,7 @@
     "id": "shas",
     "name": "ש\"ס",
     "leader": "אריה דרעי",
-    "seats": 8,
+    "seats": 7,
     "color": "#4A148C",
     "declared": {
       "liberty_vs_security": 3,
@@ -1965,6 +1965,238 @@
           }
         },
         "notes": "ציון security (5) גבוה משמעותית מציון המפלגה המוצהר (3.5), משקף את הרקע הצבאי האישי שלו. לא אותר מאמר דעה חתום אישית. 15 מתוך 21 צירים הושמטו."
+      },
+      {
+        "position": 2,
+        "name": "נעמה לזימי",
+        "declared": {
+          "rule_of_law": 6.5,
+          "authority_vs_checks": 1.6,
+          "stability_vs_opposition": 1.5,
+          "welfare": 6.8,
+          "equality_vs_free_market": 2.2
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.5,
+          "stability_vs_opposition": 0.55,
+          "welfare": 0.5,
+          "equality_vs_free_market": 0.4
+        },
+        "sources": {
+          "rule_of_law": "כלכליסט, 30.4.2025 (\"מחריבים את הכנסת ומכפיפים לגחמות הממשלה\")",
+          "authority_vs_checks": "כלכליסט, 30.4.2025 — ביקורת על ריכוזיות והכפפת הכנסת לממשלה",
+          "stability_vs_opposition": "הארץ, 13.8.2026 (\"אני לא מתקזזת עם חברי הקואליציה, אפילו לא אומרת להם שלום\")",
+          "welfare": "davar1, 24.6.2026 (\"מדיניות רווחה אוניברסלית, לא מדיניות סעד סקטוריאלית ומושחתת\")",
+          "equality_vs_free_market": "davar1, 24.6.2026 — אותה עדות"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "הפייטרית הדמוקרטית",
+            "speaker": "יסמין לוי (מבקרת טלוויזיה)",
+            "source": "הארץ",
+            "date": "2026-05-31",
+            "url": "https://www.haaretz.co.il/gallery/television/tv-review/2026-05-31/ty-article/.highlight/0000019e-7a5d-d7e1-abdf-ff5f5e330000"
+          },
+          "negative": {
+            "quote": "יכולה להתמודד על ראשות חמאס בעזה... אני לא רואה הבדל בינה לבינם",
+            "speaker": "ניסים ואטורי (סגן יו\"ר הכנסת, הליכוד)",
+            "source": "הארץ",
+            "date": "2026-07-09",
+            "url": "https://www.haaretz.co.il/news/politi/2026-07-09/ty-article/.premium/0000019f-45d0-d913-abff-ddf84ae90000"
+          }
+        },
+        "notes": "זכתה במקום הראשון בפריימריז הפנימיים (20.7.2026); ח\"כית מכהנת ופייבוריטית ברורה, ללא סימן להפעלת מנגנון \"סעיף נרקיס\" של גולן לגביה."
+      },
+      {
+        "position": 3,
+        "name": "גלעד קריב",
+        "declared": {
+          "rule_of_law": 6.5,
+          "authority_vs_checks": 1.8,
+          "religion_state": 6.3,
+          "tradition_vs_liberalism": 6.2,
+          "settlement": 2.2,
+          "stability_vs_opposition": 2
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.5,
+          "religion_state": 0.5,
+          "tradition_vs_liberalism": 0.5,
+          "settlement": 0.4,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "rule_of_law": "ynet, \"זירת הבחירות\" (דיבייט מול רוטמן) — \"עליתם על מערכת המשפט עם D-9\"; 71,023 הסתייגויות נגד שינוי הרכב הוועדה לבחירת שופטים",
+          "authority_vs_checks": "אותה עדות + ביקורת על חריגת המשטרה מסמכותה במצעד הגאווה (אייס, 12.6.2026)",
+          "religion_state": "רקע: יו\"ר התנועה הרפורמית; תמיכה בפינה נוספת בכותל לכל המשפחות",
+          "tradition_vs_liberalism": "אייס, 12.6.2026 — הגנה על חופש הביטוי של צועדי מצעד הגאווה מול המשטרה",
+          "settlement": "ynet, \"זירת הבחירות\" — ביקורת על הסטת כוח צה\"לי להגנה על מאחזים בלתי חוקיים",
+          "stability_vs_opposition": "ynet, \"זירת הבחירות\" — \"הגוש שלנו למד את הלקח מהכישלונות הקודמים\""
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "היינו עדינים מאוד",
+            "speaker": "שמחה רוטמן (ח\"כ, הציונות הדתית)",
+            "source": "ynet",
+            "date": "2026",
+            "url": "https://www.ynet.co.il/news/article/rk4ixkowzl"
+          }
+        },
+        "notes": "רב רפורמי ועו\"ד, יו\"ר התנועה הרפורמית בישראל; מקומו לא הושפע ממנגנוני שינוי פנימיים במפלגה."
+      },
+      {
+        "position": 4,
+        "name": "אפרת רייטן",
+        "declared": {
+          "rule_of_law": 6.7,
+          "authority_vs_checks": 1.7,
+          "welfare": 6.5,
+          "cost_of_living": 4.8,
+          "stability_vs_opposition": 1.6
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.5,
+          "welfare": 0.55,
+          "cost_of_living": 0.35,
+          "stability_vs_opposition": 0.5
+        },
+        "sources": {
+          "rule_of_law": "ynet — \"מהרפורמה של לוין לא יישאר דבר\"; נציגת קואליציה לשעבר בוועדה לבחירת שופטים",
+          "authority_vs_checks": "ynet, \"120 ואחת\" — קריאה להחריף את המאבק הפרלמנטרי, ביקורת על חוק חסינות \"טוטאלית\"",
+          "welfare": "אתר רשמי — הגדלת הבטחת הכנסה לקשישים, זכויות דיור לנפגעות אלימות, תקציב לחיים עצמאיים לנכים",
+          "cost_of_living": "ישראל היום — \"שטויות וקשקוש\" על יוזמות הממשלה (ביטחון מופחת, אימות חלקי)",
+          "stability_vs_opposition": "ynet, \"120 ואחת\" — \"צריך להחריף את המאבק... למתוח את התפקיד שלנו לקצה\""
+        },
+        "notes": "יו\"ר סיעת \"הדמוקרטים\" בכנסת ה-25, עו\"ד; מקומה לא הושפע ממנגנוני שינוי פנימיים."
+      },
+      {
+        "position": 5,
+        "name": "יאיא (יאיר) פינק",
+        "declared": {
+          "religion_state": 5.8,
+          "rule_of_law": 5.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.4,
+          "rule_of_law": 0.3
+        },
+        "sources": {
+          "religion_state": "אתר אישי — \"כן ליהדות ולא לכפייה דתית\"; הצהרה (ביטחון מופחת, אימות חלקי) נגד שיתוף פעולה עם המפלגות החרדיות",
+          "rule_of_law": "אותה הצהרה משולבת (ביטחון נמוך בשל מגבלת אימות המקור)"
+        },
+        "notes": "ציוני-דתי, קצין מילואים לשעבר, מייסד \"דרכנו\" ותנועת שוויון בנטל; קובץ המחקר עם רמת האימות הנמוכה ביותר בקבוצה."
+      },
+      {
+        "position": 6,
+        "name": "גבי לסקי",
+        "declared": {
+          "settlement": 1.6,
+          "tradition_vs_liberalism": 2.3,
+          "authority_vs_checks": 2
+        },
+        "actual": {},
+        "confidence": {
+          "settlement": 0.5,
+          "tradition_vs_liberalism": 0.35,
+          "authority_vs_checks": 0.35
+        },
+        "sources": {
+          "settlement": "ynet — דרישה מגולן לחדול משימוש במונח \"יהודה ושומרון\" ולומר \"הגדה המערבית\"",
+          "tradition_vs_liberalism": "ויקיפדיה (עדות ותיקה, לא מתוארכת) — \"ההגדרה המדויקת של אפרטהייד\"",
+          "authority_vs_checks": "ויקיפדיה (עדות ותיקה) — ביקורת על חקיקה ימנית כ\"סיום דמוקרטיה\""
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "כופר בכך ש'יהודה ושומרון' הוא מושג ימני",
+            "speaker": "יאיר גולן (יו\"ר המפלגה)",
+            "source": "ynet",
+            "date": "2026",
+            "url": "https://www.ynet.co.il/news/article/r11169wfhge"
+          }
+        },
+        "notes": "לשעבר ח\"כית מרצ; מקומה (6) הוא תוצר שריון ייצוג מוסכם-מראש למרצ (מקומות 6, 8, 14) — לא הפעלת \"סעיף נרקיס\" הדיסקרטי, למרות קידום של שתי משבצות מעל דירוגה הגולמי בפריימריז."
+      },
+      {
+        "position": 7,
+        "name": "עמרי רונן",
+        "declared": {
+          "security": 4.8,
+          "rule_of_law": 5.8,
+          "religion_state": 5.5,
+          "stability_vs_opposition": 2.3
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.45,
+          "rule_of_law": 0.45,
+          "religion_state": 0.4,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "security": "הארץ/מאקו, 19.7.2026 — שירות קרבי ב-7 באוקטובר ו-320 ימי מילואים, לצד סירוב \"להוריד את הטון\" נגד הממשלה",
+          "rule_of_law": "ynet — קריאה למנוע \"הפיכה\"; דרישה לוועדת חקירה ממלכתית מיידית",
+          "religion_state": "ynet, 24.7.2026 — המפלגות החרדיות \"צריכות תקופה באופוזיציה\"; תמיכה בשותפות עם רע\"ם",
+          "stability_vs_opposition": "עימותים חזיתיים עם שרי ממשלה וחברי קואליציה"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "הנחיתי את הרמטכ\"ל לוודא שעמרי רונן, שקרא והטיף לסרבנות מטעמים פוליטיים, יסולק מכל מסגרת של שירות בצה\"ל",
+            "speaker": "ישראל כ\"ץ (שר הביטחון)",
+            "source": "הארץ / N12",
+            "date": "2026-07-19",
+            "url": "https://www.haaretz.co.il/news/elections/2026-07-19/ty-article/.premium/0000019f-7a5c-de20-addf-7a5efbec0000"
+          }
+        },
+        "notes": "סבתו נירה נרצחה ב-7 באוקטובר; מקומו (7) ירד ממקום גולמי 6 כתוצאה מבנית משריון מקומות 6 ו-8 למרצ, לא מהפעלה אישית של \"סעיף נרקיס\"."
+      },
+      {
+        "position": 8,
+        "name": "מיכל רוזין",
+        "declared": {
+          "stability_vs_opposition": 2.5,
+          "experience_vs_renewal": 2.2,
+          "welfare": 6
+        },
+        "actual": {},
+        "confidence": {
+          "stability_vs_opposition": 0.45,
+          "experience_vs_renewal": 0.45,
+          "welfare": 0.4
+        },
+        "sources": {
+          "stability_vs_opposition": "ynet, 10.6.2026 — \"נבחרת מנוסה שיודעת לייצר פתרונות פוליטיים ופרלמנטריים\"",
+          "experience_vs_renewal": "הדגשה עצמית של ניסיון פרלמנטרי (4 כהונות); ynet, 10.6.2026",
+          "welfare": "ויקיפדיה — חקיקה בתחומי אלימות מינית ומשפחתית (הגדלת פיצויים, הארכת התיישנות, איזוק אלקטרוני)"
+        },
+        "notes": "לשעבר ח\"כית מרצ (כנסות 19-21, 24); מקומה (8) הוא תוצר שריון ייצוג מפורש למרצ, לא \"סעיף נרקיס\"."
+      },
+      {
+        "position": 9,
+        "name": "משה רדמן אבוטבול",
+        "declared": {
+          "stability_vs_opposition": 1.8,
+          "authority_vs_checks": 2,
+          "rule_of_law": 5.5
+        },
+        "actual": {},
+        "confidence": {
+          "stability_vs_opposition": 0.5,
+          "authority_vs_checks": 0.45,
+          "rule_of_law": 0.35
+        },
+        "sources": {
+          "stability_vs_opposition": "וואלה, 21.11.2025 — טען שחקירתו הייתה \"חקירה פוליטית\"; מוביל מחאה עקבי מאז 2023",
+          "authority_vs_checks": "וואלה, 21.11.2025 — תיאור החקירה כניסיון הפחדה פוליטי",
+          "rule_of_law": "מעריב (תקציר בלבד, ביטחון מופחת) — נתניהו \"בוגד באמון הציבור\""
+        },
+        "notes": "מייסד ויו\"ר תנועת \"עוגן לעתיד\"; מקומו (9) ירד שתי משבצות מדירוגו הגולמי — החריגה המרבית האפשרית תחת \"סעיף נרקיס\"; לא ניתן היה לשלול לחלוטין מעורבות שיקול דעת נוסף של גולן מעבר לשריון ייצוג מרצ הטהור."
       }
     ]
   },
@@ -1972,7 +2204,7 @@
     "id": "beyahad",
     "name": "ביחד",
     "leader": "נפתלי בנט",
-    "seats": 14,
+    "seats": 13,
     "color": "#5C6BC0",
     "declared": {
       "liberty_vs_security": 3.5,
@@ -2184,6 +2416,296 @@
           }
         },
         "notes": "לא אותר ציטוט חיובי חתום מ-2025-2026 שאומת עצמאית; הושמט לפי כלל אפס-בדיה. עמדת שתי המדינות (נאום או\"ם 2022) מחוץ לחלון המועדף 2025-2026 אך ללא הכחשה או עדכון מאוחר יותר שנמצא במחקר. ריאיונות/הצבעות אישיות נוספות (כלכלה כללית, חינוך, רווחה, בריאות ועוד) לא אותרו ברמת ודאות מספקת והושמטו."
+      },
+      {
+        "position": 3,
+        "name": "קרן טרנר",
+        "declared": {
+          "authority_vs_checks": 2.5,
+          "religion_state": 5.5,
+          "experience_vs_renewal": 5,
+          "stability_vs_opposition": 3
+        },
+        "actual": {},
+        "confidence": {
+          "authority_vs_checks": 0.45,
+          "religion_state": 0.35,
+          "experience_vs_renewal": 0.4,
+          "stability_vs_opposition": 0.35
+        },
+        "sources": {
+          "authority_vs_checks": "Ynet 120ואחת (\"שיקולים פוליטיים באמת רמסו את המקצועיות\")",
+          "religion_state": "Ynet 120ואחת (\"מוכר לנו את העתיד\")",
+          "experience_vs_renewal": "רקע ציבורי: מנכ\"לית משרד האוצר (2020) ומשרד התחבורה (2016-2020)",
+          "stability_vs_opposition": "Ynet 120ואחת (\"לא קיבלנו לא ממשל ולא ביטחון\")"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "בפתיחות האמיצה שלך ובכנות שלך את מעניקה כוח ואומץ למאות אלפי נשים וגברים, נערות ונערים, שמתמודדים עם ה'סטיגמה' הזו בשקט",
+            "speaker": "נפתלי בנט (יו\"ר המפלגה)",
+            "source": "Ynet",
+            "date": "2026",
+            "url": "https://www.ynet.co.il/news/article/hjm00g1171fe"
+          }
+        },
+        "notes": "כיסוי תקשורתי ממוקד סביב חשיפה אישית (טיפול תרופתי) ולא ראיונות מדיניות מהותיים; לא נמצא ציטוט חיצוני שלילי מאומת."
+      },
+      {
+        "position": 4,
+        "name": "מירב בן ארי",
+        "declared": {
+          "religion_state": 6,
+          "rule_of_law": 6,
+          "ideology_vs_pragmatism": 3,
+          "stability_vs_opposition": 2.5,
+          "welfare": 5.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.5,
+          "rule_of_law": 0.45,
+          "ideology_vs_pragmatism": 0.4,
+          "stability_vs_opposition": 0.45,
+          "welfare": 0.3
+        },
+        "sources": {
+          "religion_state": "mako, עמדה נגד חוק גיוס עם מפלגות חרדיות בקואליציה",
+          "rule_of_law": "Israel Hayom, 10.4.2026 (ציוץ נגד דרעי: \"משקר בלי למצמץ\")",
+          "ideology_vs_pragmatism": "Ynet, 17.7.2026 (רכזת קואליציה אופוזיציונית הטרוגנית)",
+          "stability_vs_opposition": "שנים כרכזת פרלמנטרית של האופוזיציה",
+          "welfare": "yeshatid.org.il, עמוד מועמדת (מקור מפלגתי, ביטחון מופחת)"
+        },
+        "notes": "לא אותר ציטוט חיצוני מאומת עליה מצד שלישי."
+      },
+      {
+        "position": 5,
+        "name": "לירן אבישר בן חורין",
+        "declared": {
+          "cost_of_living": 6,
+          "economy": 5.5,
+          "religion_state": 5.5
+        },
+        "actual": {},
+        "confidence": {
+          "cost_of_living": 0.45,
+          "economy": 0.4,
+          "religion_state": 0.35
+        },
+        "sources": {
+          "cost_of_living": "Ynet, 7.2026, ויכוח עם ח\"כ צבי סוכות על העלאת מע\"מ והקפאת נקודות זיכוי",
+          "economy": "Globes; Ynet 7.2026 — הובילה רפורמת תחרות בשוק התקשורת כמנכ\"לית משרד התקשורת",
+          "religion_state": "103fm (\"כשהציבור המשרת והעובד ייהנה - הציבור החרדי יצטרף\")"
+        },
+        "notes": "לא אותר ציטוט חיצוני מאומת עליה מצד שלישי."
+      },
+      {
+        "position": 6,
+        "name": "נעם תיבון",
+        "declared": {
+          "rule_of_law": 6,
+          "authority_vs_checks": 2.5,
+          "religion_state": 5.5,
+          "security": 5,
+          "stability_vs_opposition": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.5,
+          "authority_vs_checks": 0.45,
+          "religion_state": 0.4,
+          "security": 0.35,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "rule_of_law": "Ynet, 18.11.2025 (הבטחה להקמת ועדת חקירה ממלכתית \"ביום הראשון\")",
+          "authority_vs_checks": "inn.co.il (\"רה''מ לא מתפקד... וגם משקר\")",
+          "religion_state": "Ynet, 18.11.2025 — התנגדות לחוק הפטור מגיוס",
+          "security": "שילוב: Ynet 18.11.2025 (חיזוק צה\"ל) מול Ynet 4.2025 (קריאה לסיים את המלחמה ולהתפשר עם חמאס)",
+          "stability_vs_opposition": "Ynet, 4.2025 ו-11.2025 — ארגון הפגנות המוניות"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "גיבור שבעה באוקטובר",
+            "speaker": "יאיר לפיד (יו\"ר יש עתיד דאז)",
+            "source": "ynet",
+            "date": "2025-11-18",
+            "url": "https://www.ynet.co.il/news/article/hj6ciq5ewl"
+          },
+          "negative": {
+            "quote": "עוד גנרל קונספציה נוטף רעל, זו הבשורה שלך מר לפיד?",
+            "speaker": "ח\"כ אושר שקלים (הליכוד)",
+            "source": "mako",
+            "date": "2025-11-18",
+            "url": "https://www.mako.co.il/news-politics/2025_q4/Article-ca32fa8f4189a91027.htm"
+          }
+        },
+        "notes": "ציר security משקף מתח אמיתי (חיזוק הצבא מול קריאה לסיים את המלחמה) ולא ממוצע מלאכותי."
+      },
+      {
+        "position": 7,
+        "name": "מיכל הירש נגרי",
+        "declared": {
+          "stability_vs_opposition": 3
+        },
+        "actual": {},
+        "confidence": {
+          "stability_vs_opposition": 0.3
+        },
+        "sources": {
+          "stability_vs_opposition": "הודעת הצטרפות, 16.6.2026 (\"לתקן, לחדש ולהוביל את ישראל קדימה\")"
+        },
+        "notes": "כיסוי תקשורתי מתמקד כמעט כולו בביוגרפיה אישית (אמו של החלל רועי נגרי ז\"ל) ובהודעת ההצטרפות, ולא בעמדות מדיניות; לכן רק ציר אחד תועד."
+      },
+      {
+        "position": 8,
+        "name": "איתן גינזבורג",
+        "declared": {
+          "experience_vs_renewal": 2,
+          "ideology_vs_pragmatism": 3,
+          "stability_vs_opposition": 3
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.55,
+          "ideology_vs_pragmatism": 0.4,
+          "stability_vs_opposition": 0.35
+        },
+        "sources": {
+          "experience_vs_renewal": "רקע ציבורי: ראש עיריית רעננה, ח\"כ, שר תקשורת וסגן יו\"ר הכנסת",
+          "ideology_vs_pragmatism": "Ynet, 5.8.2026 (\"תוכניות עבודה מפורטות... לא ניסוי וטעייה\")",
+          "stability_vs_opposition": "Ynet, 5.8.2026 (\"לממשלה הבאה לא יהיו רגעי חסד\")"
+        },
+        "notes": "כיסוי תקשורתי מרוכז סביב מעבר מפלגתי (מכחול לבן ל\"ביחד\") ולא ראיונות מדיניות מהותיים."
+      },
+      {
+        "position": 9,
+        "name": "מירב כהן",
+        "declared": {
+          "education": 6.5,
+          "religion_state": 6,
+          "security": 5.5,
+          "rule_of_law": 5
+        },
+        "actual": {},
+        "confidence": {
+          "education": 0.6,
+          "religion_state": 0.5,
+          "security": 0.4,
+          "rule_of_law": 0.3
+        },
+        "sources": {
+          "education": "mako, 5.2.2026 — תוכנית \"עתיד לחינוך\" (עם לפיד)",
+          "religion_state": "mako, 5.2.2026 — הפסקת תקצוב מוסדות ללא 100% ליבה",
+          "security": "Arutz 7, 20.10.2025 — ביקורת על ואקום שלטוני בעזה ותפקוד חמאס",
+          "rule_of_law": "Ynet \"120 ואחת\" — אזהרה מפני הסתה שתוביל לרצח, השוואה לרצח עמנואל גרינצווייג"
+        },
+        "notes": "ניסיון פוליטי רב (כ-7 שנים בכנסת, שרה לשעבר) לא תורגם לציון experience_vs_renewal בהיעדר ציטוט ממוקד."
+      },
+      {
+        "position": 10,
+        "name": "יונתן שלו",
+        "declared": {
+          "religion_state": 6,
+          "experience_vs_renewal": 1.5,
+          "stability_vs_opposition": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.55,
+          "experience_vs_renewal": 0.55,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "religion_state": "Ynet, 4.2026 — תקרית בוועדת כנסת נגד ח\"כ יינון עזולאי; Davar, 15.4.2026",
+          "experience_vs_renewal": "רקע: לוחם מילואים ומייסד \"כתף אל כתף\", מועמד הצעיר ביותר במקום ריאלי",
+          "stability_vs_opposition": "Ynet, 4.2026 — עימות ישיר עם ועדת כנסת ופעילות מחאה"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "יונתן ישמש פה למען הדור המיוחד הזה, ולא ירפה עד שיהיה שינוי",
+            "speaker": "נפתלי בנט (יו\"ר המפלגה)",
+            "source": "ice.co.il",
+            "date": "2026-09-06",
+            "url": "https://www.ice.co.il/local-news/news/article/1128826"
+          },
+          "negative": {
+            "quote": "סלחו לי, אבל באיזה עולם סמ\"ר בן 21 נמצא שני מקומות לפני סגן ראש מוסד?",
+            "speaker": "עמית סגל (פרשן פוליטי)",
+            "source": "ice.co.il",
+            "date": "2026-09-06",
+            "url": "https://www.ice.co.il/local-news/news/article/1128806"
+          }
+        },
+        "notes": "ציר הפוליטי מרוכז כמעט כולו בסוגיית השוויון בנטל; מיקומו ברשימה עורר מחלוקת ציבורית ניכרת (מתועד ב-external views) אך לא נוקד כעמדת מדיניות."
+      },
+      {
+        "position": 11,
+        "name": "ברוריה נעים ארמן",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "externalViews": {
+          "positive": {
+            "quote": "מברך על הצטרפותה של ברוריה נעים ארמן למפלגת ביחד! ברוריה היא אשת עשייה אמיתית, מנכ\"לית המפלגה, בעלת ניסיון ניהולי עשיר",
+            "speaker": "ח\"כ סימון דוידסון (יש עתיד)",
+            "source": "X (Twitter)",
+            "date": "2026-08-04",
+            "url": "https://x.com/simondav14/status/2084562886408454342"
+          }
+        },
+        "notes": "מנכ\"לית המפלגה מאז הקמתה; לא אותר אף ציטוט אישי ישיר ממנה (רק דיווחים ביוגרפיים), ולכן לא ניתן ציון בשום ציר, לפי כלל אפס-בדיה."
+      },
+      {
+        "position": 12,
+        "name": "רם בן ברק",
+        "declared": {
+          "authority_vs_checks": 2.5,
+          "stability_vs_opposition": 2.5,
+          "security": 4.5,
+          "foreign_relations": 4
+        },
+        "actual": {},
+        "confidence": {
+          "authority_vs_checks": 0.45,
+          "stability_vs_opposition": 0.4,
+          "security": 0.4,
+          "foreign_relations": 0.35
+        },
+        "sources": {
+          "authority_vs_checks": "mako, 6.9.2026 (\"נעשה את מה שצריך בשביל להעיף את הממשלה הגרועה הזאת\")",
+          "stability_vs_opposition": "mako, 6.9.2026",
+          "security": "Walla, 12.2.2026 — הזדמנות אסטרטגית מול איראן, לצד ביקורת על היעדר יוזמה מדינית בעזה",
+          "foreign_relations": "Walla, 12.2.2026 — ביקורת על כישלון לשלב מהלך מדיני עם הפעולה הצבאית בעזה"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "סלחו לי, אבל באיזה עולם סמ\"ר בן 21 נמצא שני מקומות לפני סגן ראש מוסד?",
+            "speaker": "עמית סגל (פרשן פוליטי)",
+            "source": "ice.co.il",
+            "date": "2026-09-06",
+            "url": "https://www.ice.co.il/local-news/news/article/1128806"
+          }
+        },
+        "notes": "סגן ראש המוסד לשעבר וח\"כ מכהן; ראיונות ישנים יותר (2022-2024) הושמטו בכוונה בהתאם לכלל חלון הזמן המועדף."
+      },
+      {
+        "position": 13,
+        "name": "אמיר סטרוגו",
+        "declared": {
+          "ideology_vs_pragmatism": 5,
+          "stability_vs_opposition": 3
+        },
+        "actual": {},
+        "confidence": {
+          "ideology_vs_pragmatism": 0.4,
+          "stability_vs_opposition": 0.3
+        },
+        "sources": {
+          "ideology_vs_pragmatism": "Srugim, ראיון רדיו עם שרון גל, 2.8.2026 — נכונות לשיתוף פעולה קואליציוני עם הדמוקרטים",
+          "stability_vs_opposition": "Srugim, 2.8.2026 — מיקוד ב\"הצעדת המדינה קדימה\" ולא בתקיפת מתחרים"
+        },
+        "notes": "לוחם מילואים ומייסד \"סיירת בנט\"; רוב הכיסוי התקשורתי ביוגרפי, ורק ראיון רדיו אחד סיפק בסיס לציון עמדות."
       }
     ]
   },
@@ -2349,6 +2871,93 @@
           }
         },
         "notes": "מסמכי העמדה שלו (התוכנית המכרעת, חוק וצדק) הם המקור המשמעותי ביותר, לא ראיונות אקראיים. צירים ללא עדות אישית: יוקר מחיה, חינוך, בריאות, רווחה, סביבה, תחבורה, דיור, פרט מול מדינה, שוויון מול שוק חופשי, מסורת מול ליברליזם, ניסיון מול התחדשות."
+      },
+      {
+        "position": 2,
+        "name": "משה פייגלין",
+        "declared": {
+          "security": 6.8,
+          "settlement": 7,
+          "ideology_vs_pragmatism": 2
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.5,
+          "settlement": 0.45,
+          "ideology_vs_pragmatism": 0.4
+        },
+        "sources": {
+          "security": "Walla, 3.9.2026 — התנגדות לעסקת החטופים והצעה למצור מוחלט; מקורות מ-5.2025 על עזה",
+          "settlement": "ציטוט \"צריך לכבוש את עזה וליישבה\" (5.2025, ביטחון מתון — מקור בעל זווית פוליטית)",
+          "ideology_vs_pragmatism": "Srugim, 15.9.2026 — \"אינני חוזר בי מאף אחת מעמדותיי\" מול עתירת פסילה"
+        },
+        "notes": "הצטרף לרשימה במסגרת בלוק טכני עם סמוטריץ' (1.9.2026), אחרי שהיה יו\"ר מפלגת \"זהות\"; עתירת פסילה תלויה ועומדת נכון ל-17.9.2026."
+      },
+      {
+        "position": 3,
+        "name": "אורית סטרוק",
+        "declared": {
+          "settlement": 7,
+          "security": 6.3
+        },
+        "actual": {},
+        "confidence": {
+          "settlement": 0.55,
+          "security": 0.35
+        },
+        "sources": {
+          "settlement": "inn.co.il, 13.7.2026 — קריאה להרחבת התיישבות לשטחי B ו-A, \"1.3 מיליון דונם פנויים\"",
+          "security": "inn.co.il 13.7.2026 (התקדמות ביטחונית-התיישבותית) + מקור חלקי מ-2024 (ביטחון מופחת)"
+        },
+        "notes": "זכתה במקום הראשון בפריימריז הפנימיים (26.7.2026) לפני שדחק אותה הסכם הבלוק הטכני עם פייגלין למקום 3."
+      },
+      {
+        "position": 4,
+        "name": "שמחה רוטמן",
+        "declared": {
+          "rule_of_law": 1.2,
+          "authority_vs_checks": 6.7,
+          "religion_state": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.6,
+          "authority_vs_checks": 0.55,
+          "religion_state": 0.3
+        },
+        "sources": {
+          "rule_of_law": "inn.co.il, 15.9.2026 — תוכנית לצמצום ביקורת שיפוטית; הארץ 10.2.2026 — פרשת הקלטת היועמ\"ש של ועדתו",
+          "authority_vs_checks": "inn.co.il, 15.9.2026 — \"דיפ-סטייט של פקידים ושופטים\"; צמצום זכות עמידה",
+          "religion_state": "דיון ועדת חוקה, 10.6.2025 — הכרה באי-שוויון בבתי דין רבניים תוך תמיכה בהרחבת סמכותם"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "זה כמו שולחן שרוצים לתקן ושבמקום לקצר את ארבע הרגליים שלו, פשוט מורידים רגל אחת. השולחן נופל",
+            "speaker": "ד\"ר גור בליי (היועמ\"ש של ועדת החוקה, חוק ומשפט)",
+            "source": "ynet / הארץ",
+            "date": "2025-11",
+            "url": "https://www.ynet.co.il/news/article/sje9duazgg"
+          }
+        },
+        "notes": "זכה במקום השני בפריימריז (26.7.2026) לפני שדחק אותו הסכם הבלוק הטכני עם פייגלין למקום 4; יו\"ר ועדת החוקה, חוק ומשפט."
+      },
+      {
+        "position": 5,
+        "name": "ד\"ר צביקה מור",
+        "declared": {
+          "security": 6.5,
+          "rule_of_law": 3
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.5,
+          "rule_of_law": 0.3
+        },
+        "sources": {
+          "security": "Srugim, 15.10.2025 — נאום תודה מבילינסון: \"יש להשמיד את חמאס\", התנגדות לעסקאות מדורגות",
+          "rule_of_law": "mida.org.il, 7.7.2026 — תמיכה כללית ברפורמה משפטית, איזון במינויים לעליון"
+        },
+        "notes": "אביו של החטוף איתן מור ויו\"ר \"פורום תקווה\"; נכנס לפוליטיקה רק ב-2026, ללא זהות מפלגתית קודמת."
       }
     ]
   },
@@ -2505,6 +3114,156 @@
           }
         },
         "notes": "ריאיון פודקאסט \"אוקטובר 8\" מכיל לשון קיצונית מאוד ושימש בעיקר לביסוס ציוני ביטחון/חירות/יחסי חוץ/התיישבות. 13 מתוך 21 צירים הושמטו בהיעדר עדות אישית מספקת."
+      },
+      {
+        "position": 2,
+        "name": "טלי גוטליב",
+        "declared": {
+          "rule_of_law": 1.3,
+          "authority_vs_checks": 6.7,
+          "ideology_vs_pragmatism": 2,
+          "stability_vs_opposition": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.5,
+          "ideology_vs_pragmatism": 0.4,
+          "stability_vs_opposition": 0.35
+        },
+        "sources": {
+          "rule_of_law": "דיון ועדת כנסת, 9.6.2026 — התקפה על היועמ\"שית בהרב-מיארה (\"את בזה לביטחון המדינה\")",
+          "authority_vs_checks": "אותה עדות + עימות עם מגישת 103FM, 17.9.2026",
+          "ideology_vs_pragmatism": "i24NEWS — תנאי סף נוקשה (15 מנדטים) לממשלת ימין",
+          "stability_vs_opposition": "דפוס עימותים פומביים חריפים תוך המשך פעילות במפלגה שלטונית"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "מנותקת והזויה, תתביישי",
+            "speaker": "סיון כהן (מגישת רדיו ופרשנית, ערוץ 12/103FM)",
+            "source": "אייס / מעריב",
+            "date": "2026-09-17",
+            "url": "https://www.ice.co.il/media/news/article/1130244"
+          }
+        },
+        "notes": "עברה מהליכוד לעוצמה יהודית בתחילת ספטמבר 2026; מתמודדת עם חשש להעמדה לדין בפרשת חשיפת זהות איש שב\"כ."
+      },
+      {
+        "position": 3,
+        "name": "יצחק וסרלאוף",
+        "declared": {
+          "religion_state": 4.5,
+          "rule_of_law": 3
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.3,
+          "rule_of_law": 0.3
+        },
+        "sources": {
+          "religion_state": "כיכר השבת, כ-17.12.2024 (מחוץ לחלון המועדף, ביטחון מופחת) — תמיכה בשילוב גיוס ולימוד תורה",
+          "rule_of_law": "כיכר השבת, כ-17.12.2024 (מחוץ לחלון המועדף) — \"אין אמון... ליועצת המשפטית\""
+        },
+        "notes": "שר הנגב, הגליל והחוסן הלאומי; לא אותר ציטוט אישי מהותי בתוך חלון הזמן המועדף (2025-2026) — פעילותו המתועדת בעיקרה אדמיניסטרטיבית-טקסית."
+      },
+      {
+        "position": 4,
+        "name": "עמיחי אליהו",
+        "declared": {
+          "settlement": 6.8,
+          "liberty_vs_security": 2,
+          "foreign_relations": 2,
+          "religion_state": 2.5,
+          "ideology_vs_pragmatism": 2.2
+        },
+        "actual": {},
+        "confidence": {
+          "settlement": 0.55,
+          "liberty_vs_security": 0.4,
+          "foreign_relations": 0.4,
+          "religion_state": 0.4,
+          "ideology_vs_pragmatism": 0.45
+        },
+        "sources": {
+          "settlement": "קול ברמה, 24.7.2025 — \"כל עזה תהיה יהודית\"",
+          "liberty_vs_security": "פאנל בחירות, 15.9.2026 — סירוב לגייס מפגיני קפלן ל\"קרבי\"",
+          "foreign_relations": "ynet, 10.6.2026 — רטוריקה תוקפנית כלפי איראן",
+          "religion_state": "emess.co.il, 23.4.2026 — תקיפת בנט כ\"נוכל מסוכן ליהדות\" סביב תחבורה בשבת",
+          "ideology_vs_pragmatism": "ynet, 10.6.2026 — שאיפה להוביל \"מחנה לאומי\" ולהפוך למפלגת השלטון"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "פיגוע ערכי ואסון הסברתי",
+            "speaker": "יאיר לפיד (יו\"ר האופוזיציה)",
+            "source": "ynet",
+            "date": "2025-07-24",
+            "url": "https://www.ynet.co.il/news/article/bycf1121pll"
+          }
+        },
+        "notes": "שר המורשת; אמירת \"פצצת אטום\" המפורסמת (נוב' 2023) הושמטה בכוונה כמחוץ לחלון הזמן."
+      },
+      {
+        "position": 5,
+        "name": "לימור סון הר-מלך",
+        "declared": {
+          "security": 6.5,
+          "rule_of_law": 2.3,
+          "settlement": 6.8,
+          "health": 1.5
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.5,
+          "rule_of_law": 0.4,
+          "settlement": 0.5,
+          "health": 0.45
+        },
+        "sources": {
+          "security": "ynet/קול ברמה, 10-11.2025 — יזמה חוק עונש מוות למחבלים",
+          "rule_of_law": "קידום חוק עונש מוות שנוי במחלוקת + מינוי ליו\"ר ועדת בריאות חרף אזהרות מקצועיות",
+          "settlement": "הובילה מאמץ לביטול חוק ההתנתקות והשבת ההתיישבות לצפון השומרון",
+          "health": "ynet, 12.2025 — התנגדות לחיסוני קורונה וקריאה לפרישת ישראל מ-WHO"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "יש לה היסטוריה של התבטאויות קיצוניות נגד גופי בריאות מוסמכים, זלזול במדע וברפואה והשמעת קונספירציות חסרות ביסוס",
+            "speaker": "פרופ' חגי לוין (יו\"ר איגוד רופאי בריאות הציבור בישראל)",
+            "source": "ynet",
+            "date": "2025-12",
+            "url": "https://www.ynet.co.il/health/article/bk9vdtbqze"
+          }
+        },
+        "notes": "ח\"כית וסגנית יו\"ר הכנסת; יוזמת חוק עונש מוות למחבלים שעבר קריאה טרומית."
+      },
+      {
+        "position": 6,
+        "name": "יצחק קרויזר",
+        "declared": {
+          "settlement": 6.8,
+          "liberty_vs_security": 2.3,
+          "ideology_vs_pragmatism": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "settlement": 0.5,
+          "liberty_vs_security": 0.45,
+          "ideology_vs_pragmatism": 0.35
+        },
+        "sources": {
+          "settlement": "ערוץ הכנסת, 5.5.2025 — \"רצועת עזה היא חלק ממדינת ישראל\"",
+          "liberty_vs_security": "מעריב, 28.10.2025 — תקיפת עיתונאים כמי ש\"עשו שירות לאויב\"",
+          "ideology_vs_pragmatism": "כיכר השבת, כ-8.2026 — נכונות לעימות חזיתי עם הליכוד למען יעד 15 מנדטים"
+        },
+        "notes": "יו\"ר סיעת עוצמה יהודית בכנסת ויו\"ר ועדת הפנים; רוב פעילותו המתועדת פרוצדורלית-פרלמנטרית."
+      },
+      {
+        "position": 7,
+        "name": "חנמאל דורפמן",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "ראש לשכתו לשעבר של בן גביר, ללא ניסיון נבחר קודם; התפטר מהתפקיד ב-15.7.2026 כדי להתמודד. מיקומו הריאלי (7) בא במקביל לפרישת ח\"כ מכהן (צביקה פוגל) שנדחק אחורה — מחלוקת פנימית על הרכב הרשימה. לא נמצא ציטוט אישי מדיניותי כלשהו, ולכן לא ניתן ציון בשום ציר."
       }
     ]
   },
@@ -2603,6 +3362,27 @@
     },
     "gaps": [],
     "candidates": [
+      {
+        "position": 1,
+        "name": "ד\"ר יוסף ג'בארין",
+        "declared": {
+          "stability_vs_opposition": 1.5,
+          "settlement": 2,
+          "ideology_vs_pragmatism": 4
+        },
+        "actual": {},
+        "confidence": {
+          "stability_vs_opposition": 0.55,
+          "settlement": 0.35,
+          "ideology_vs_pragmatism": 0.35
+        },
+        "sources": {
+          "stability_vs_opposition": "ynet (ריאיון עינב חלבי); דבר, 16.5.2026 — \"צו השעה הוא הפלת ממשלת נתניהו, בן גביר וסמוטריץ'\"",
+          "settlement": "inn.co.il, 29.7.2026 (פרפרזה, לא ציטוט ישיר מאומת מילה במילה)",
+          "ideology_vs_pragmatism": "ynet (ריאיון עינב חלבי) — סירוב עקרוני לקואליציית \"עליונות יהודית\" מול נכונות פרגמטית לשת\"פ \"למען שלום ושוויון\""
+        },
+        "notes": "נבחר ליו\"ר חד\"ש רק ב-16.5.2026; כיסוי תקשורתי מצומצם יחסית לכהונתו הקצרה. פריט settlement מבוסס על פרפרזה ולא ציטוט מדויק, ולכן בביטחון מופחת."
+      },
       {
         "position": 2,
         "name": "אחמד טיבי",
@@ -2814,6 +3594,88 @@
           }
         },
         "notes": "לא נמצא מאמר דעה/חיבור מדיניות ארוך-טווח חתום אישית שעמד ברף האימות. religion_state ו-settlement נבדקו אך לא נכללו כי המקור המרכזי (פוסט של עבאס עצמו) לא נפתח/אומת ישירות."
+      },
+      {
+        "position": 2,
+        "name": "יואב סגלוביץ'",
+        "declared": {
+          "ideology_vs_pragmatism": 6.5,
+          "security": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "ideology_vs_pragmatism": 0.55,
+          "security": 0.3
+        },
+        "sources": {
+          "ideology_vs_pragmatism": "הארץ/ynet, 31.8.2026 — מעבר מיש עתיד לרע\"ם, \"שיתוף פעולה על בסיס אמון... ומחויבות לפעולה משותפת\"",
+          "security": "N12/מאקו, 5-6.9.2026 — הגדרת חמאס כ\"ארגון טרור\" (בהקשר הגנה על ההצטרפות, ביטחון מופחת)"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "הם באמת אנשים שאין לי שום חשד לגבי כוונותיהם הטובות",
+            "speaker": "ח\"כ יאיר גולן (יו\"ר הדמוקרטים)",
+            "source": "רדיו א-נאס (מדווח בערוץ 7)",
+            "date": "2026-08-11",
+            "url": "https://www.inn.co.il/news/703762"
+          },
+          "negative": {
+            "quote": "אנחנו חלוקים עם סגלוביץ' ועם הציונים בכלל",
+            "speaker": "סאמי אבו שחאדה (יו\"ר בל\"ד)",
+            "source": "ערוץ 7",
+            "date": "2026-09-03",
+            "url": "https://www.inn.co.il/news/705583"
+          }
+        },
+        "notes": "לשעבר ח\"כ יש עתיד וניצב משטרה בדימוס; היהודי הראשון אי-פעם ברשימת רע\"ם, הצטרף סוף אוגוסט 2026 ודחק את שאר המועמדים מקום אחד אחורה. ציון ideology_vs_pragmatism ניתן לפי אותה קונבנציה שבה שימש הקובץ הקיים של עבאס (גבוה=פרגמטיות) — יש סתירה בין הגדרת הסולם המילולית ב-questions.json (גבוה=עקרונות) לבין הכיול בפועל, ראו הערה מפורטת בקובץ המחקר."
+      },
+      {
+        "position": 3,
+        "name": "וליד טאהא",
+        "declared": {
+          "settlement": 1.5,
+          "stability_vs_opposition": 3,
+          "tradition_vs_liberalism": 6
+        },
+        "actual": {},
+        "confidence": {
+          "settlement": 0.4,
+          "stability_vs_opposition": 0.3,
+          "tradition_vs_liberalism": 0.25
+        },
+        "sources": {
+          "settlement": "ערוץ 7, 4.9.2026 — תמיכה במדינה פלסטינית עצמאית שבירתה ירושלים",
+          "stability_vs_opposition": "ערוץ 7, 4.9.2026 — הצבעה נגד ממשלת נתניהו כ\"אחריות לאומית\"",
+          "tradition_vs_liberalism": "ice.co.il, 3.6.2021 (מחוץ לחלון המועדף, ביטחון מופחת משמעותית) — התנגדות לחקיקת זכויות להט\"ב"
+        },
+        "notes": "יו\"ר סיעת רע\"ם; ירד ממקום 2 (בפריימריז) למקום 3 בעקבות הצטרפות סגלוביץ'."
+      },
+      {
+        "position": 4,
+        "name": "וליד אלהוואשלה",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "ח\"כ מכהן (מ-2022), יו\"ר שדולת היישובים הבדואים הבלתי-מוכרים; למרות חיפוש נרחב לא אותר ציטוט ישיר מאומת מ-2025-2026, ולכן לא ניתן ציון בשום ציר. יש להיזהר מבלבול עם סלימאן אלהוואשלה (מנכ\"ל ארגון אזרחי, אדם אחר לגמרי)."
+      },
+      {
+        "position": 5,
+        "name": "אימאן ח'טיב-יאסין",
+        "declared": {
+          "welfare": 5.5,
+          "settlement": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "welfare": 0.35,
+          "settlement": 0.3
+        },
+        "sources": {
+          "welfare": "פרוטוקול ועדת הכנסת לקידום מעמד האישה, 21.1.2025 — קריאה לחיזוק אכיפה נגד אלימות במשפחה",
+          "settlement": "ויקיפדיה — הקמת שדולה פרלמנטרית \"נשים נגד הסיפוח\" (תאריך לא מאומת, ביטחון מופחת)"
+        },
+        "notes": "האישה המוסלמית-דתית הראשונה בכנסת; ירדה ממקום 4 (בפריימריז) למקום 5, האחרון הריאלי. פרשת \"לא שחטו תינוקות\" (11.2023) הושמטה בכוונה כמחוץ לחלון הזמן ולא כעמדת מדיניות."
       }
     ]
   },
@@ -2971,6 +3833,121 @@
         "notes": "כיסוי עיתונאי עשיר מהצפוי (שלושה ראיונות מדיניים ארוכים ב-2026) ומזכר INSS 2019 שכתב אישית (עם שותף) לפני כניסתו לפוליטיקה. ציטוט חיובי מגיע מבן-ברית פוליטי, לא ניטרלי. 11 מתוך 21 צירים הושמטו."
       },
       {
+        "position": 2,
+        "name": "יורם כהן",
+        "declared": {
+          "rule_of_law": 6,
+          "authority_vs_checks": 2.5,
+          "settlement": 4.5,
+          "stability_vs_opposition": 2,
+          "experience_vs_renewal": 6
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.55,
+          "authority_vs_checks": 0.5,
+          "settlement": 0.55,
+          "stability_vs_opposition": 0.55,
+          "experience_vs_renewal": 0.45
+        },
+        "sources": {
+          "rule_of_law": "N12, 9-10.5.2026 (\"מבקש שאני אפסול יריב פוליטי שלו\")",
+          "authority_vs_checks": "N12, 9-10.5.2026",
+          "settlement": "Haaretz, 5.9.2026 — תמיכה בהתיישבות חוקית מול קריאה לפנות מאחזים לא חוקיים",
+          "stability_vs_opposition": "Ynet 5.2026; N12 9-10.5.2026 (\"אם הממשלה הנוכחית תרכיב את הבאה, זה יהיה גרוע מאוד\")",
+          "experience_vs_renewal": "רקע ציבורי: ראש השב\"כ 2011-2016"
+        },
+        "notes": "לא אותר ציטוט חיצוני מאומת עליו מצד שלישי עצמאי."
+      },
+      {
+        "position": 3,
+        "name": "אורית פרקש-הכהן",
+        "declared": {
+          "rule_of_law": 6,
+          "authority_vs_checks": 2.5,
+          "economy": 5,
+          "experience_vs_renewal": 6.5,
+          "ideology_vs_pragmatism": 4
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.45,
+          "authority_vs_checks": 0.45,
+          "economy": 0.4,
+          "experience_vs_renewal": 0.55,
+          "ideology_vs_pragmatism": 0.4
+        },
+        "sources": {
+          "rule_of_law": "Ynet, 23.7.2023 — נאום מליאה נגד ביטול עילת הסבירות",
+          "authority_vs_checks": "Ynet, 23.7.2023",
+          "economy": "Hebrew Wikiquote — גיוון מקורות אנרגיה, הקשבה לאנשי מקצוע",
+          "experience_vs_renewal": "רקע ציבורי: מנכ\"לית חברת החשמל, שרה בשלוש תיקים 2020-2022",
+          "ideology_vs_pragmatism": "Hebrew Wikiquote (\"מפלגת שלטון... איש ביצוע בתחומו\")"
+        },
+        "notes": "הראיה המרכזית ל-rule_of_law/authority_vs_checks מ-2023 (מחוץ לחלון המועדף 2025-2026) אך עמדה אישית שלא נסתרה."
+      },
+      {
+        "position": 4,
+        "name": "עדי אלטשולר",
+        "declared": {
+          "education": 6,
+          "experience_vs_renewal": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "education": 0.45,
+          "experience_vs_renewal": 0.4
+        },
+        "sources": {
+          "education": "רקע: מייסדת \"כנפיים של קרמבו\" ו\"אינקלואו\", מועמדת המפלגה לשרת החינוך",
+          "experience_vs_renewal": "הודעת הצטרפות, ‏9.2026 (\"אנחנו לפני שינוי, רגע היסטורי\")"
+        },
+        "notes": "כניסה לפוליטיקה ימים בודדים לפני מועד רישום הרשימות; כיסוי תקשורתי כמעט כולו ביוגרפי."
+      },
+      {
+        "position": 5,
+        "name": "מתן כהנא",
+        "declared": {
+          "religion_state": 6,
+          "rule_of_law": 6,
+          "authority_vs_checks": 2.5,
+          "security": 5.5,
+          "stability_vs_opposition": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.6,
+          "rule_of_law": 0.5,
+          "authority_vs_checks": 0.5,
+          "security": 0.4,
+          "stability_vs_opposition": 0.45
+        },
+        "sources": {
+          "religion_state": "רקע שר שירותי דת 2021-2022 (פתיחת שוק הכשרות); inn.co.il — יעד גיוס 97%",
+          "rule_of_law": "Ynet — הגנה על מינויים שאושרו ע\"י בג\"ץ, התנגדות לפיטורי ראש שב\"כ",
+          "authority_vs_checks": "Ynet — אותה עדות",
+          "security": "Walla, 30.6.2026 — איזנקוט \"מימין לנתניהו בכל פרמטר\"",
+          "stability_vs_opposition": "Srugim 25.4.2026; Walla 30.6.2026 — עזיבת מחנה בנט להצטרפות לאיזנקוט"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "מתן אחי, בהצלחה!",
+            "speaker": "נפתלי בנט",
+            "source": "Srugim",
+            "date": "2026-04-25",
+            "url": "https://www.srugim.co.il/1302874-%D7%A0%D7%A4%D7%AA%D7%9C%D7%99-%D7%91%D7%A0%D7%98-%D7%AA%D7%92%D7%95%D7%91%D7%94-%D7%9C%D7%94%D7%95%D7%93%D7%A2%D7%94-%D7%A9%D7%9C-%D7%9E%D7%AA%D7%9F-%D7%9B%D7%94%D7%A0%D7%90"
+          },
+          "negative": {
+            "quote": "לא עשיתם כלום למענם",
+            "speaker": "ח\"כ מיכל וולדיגר (הציונות הדתית)",
+            "source": "Ynet",
+            "date": "2026",
+            "url": "https://www.ynet.co.il/news/article/h1wpeb7dfg"
+          }
+        },
+        "notes": "ציר settlement לא נוקד במכוון — הציטוט על חברון/ערפאת הוא ביקורת על נתניהו ולא הצהרת מדיניות אישית של כהנא."
+      },
+      {
         "position": 6,
         "name": "חילי טרופר",
         "declared": {
@@ -3021,6 +3998,339 @@
           }
         },
         "notes": "הרשימה המשותפת \"בית ציוני\" (טרופר+הנדל) התפרקה ב-6.9.2026. טרופר הצטרף לרשימת איזנקוט \"ישר!\" במקום שישי, לא כמועמד לראשות הממשלה. מוצג כאן כמועמד משנה, לא כמנהיג הרשימה."
+      },
+      {
+        "position": 7,
+        "name": "שאול מרידור",
+        "declared": {
+          "economy": 5,
+          "security": 5.5,
+          "stability_vs_opposition": 2,
+          "ideology_vs_pragmatism": 3.5,
+          "experience_vs_renewal": 5
+        },
+        "actual": {},
+        "confidence": {
+          "economy": 0.4,
+          "security": 0.4,
+          "stability_vs_opposition": 0.5,
+          "ideology_vs_pragmatism": 0.35,
+          "experience_vs_renewal": 0.4
+        },
+        "sources": {
+          "economy": "פודקאסט של נדב פרי, 10.12.2023 + Walla 2026 (\"שר האוצר הגרוע במקום המדינה\")",
+          "security": "Israel Hayom, 21.5.2026 (אימות מנוע חיפוש) — דחיית פתרון שתי המדינות",
+          "stability_vs_opposition": "N12, 10.5.2026; Walla 2026",
+          "ideology_vs_pragmatism": "ביקורת עקבית במונחים תקציביים-מקצועיים ולא אידיאולוגיים",
+          "experience_vs_renewal": "רקע ציבורי: ראש אגף תקציבים במשרד האוצר 2017-2020"
+        },
+        "notes": "ציטוט ה-Israel Hayom אומת רק דרך ציטוט מנוע חיפוש (WebFetch ישיר נכשל, HTTP 403) — סומן כדרגת אימות נמוכה יותר."
+      },
+      {
+        "position": 8,
+        "name": "תאיר איפרגן",
+        "declared": {
+          "experience_vs_renewal": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.4
+        },
+        "sources": {
+          "experience_vs_renewal": "רקע ציבורי: מנכ\"לית משרד העבודה 2021-2023, בכירה במשרד הכלכלה"
+        },
+        "notes": "כיסוי תקשורתי כמעט כולו ביוגרפי; לא אותר ציטוט אישי ישיר על כלכלה, דת ומדינה או תעסוקה למרות רקע עשיר בתחומים אלה."
+      },
+      {
+        "position": 9,
+        "name": "אושרת גני גונן",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "ראש המועצה האזורית דרום השרון; רק ציטוטים כלליים על \"מנהיגות ממלכתית, ישרה ומאחדת\" נמצאו — כלליים מדי לציון ציר ספציפי, ולכן לא ניתן ציון בשום ציר."
+      },
+      {
+        "position": 10,
+        "name": "שירה שפירא",
+        "declared": {
+          "stability_vs_opposition": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "stability_vs_opposition": "mako, 9.8.2026 — דרישה לקבל אחריות מ\"מי שהיה בעמדות הנהגה ב-7 באוקטובר\""
+        },
+        "notes": "אמו של הלוחם ענר שפירא ז\"ל; רוב הציטוטים אישיים-רגשיים או כלליים מדי (\"מדינה יהודית ודמוקרטית\") לציון צירים נוספים."
+      },
+      {
+        "position": 11,
+        "name": "ענבר הרוש גיטי",
+        "declared": {
+          "religion_state": 6.5,
+          "individual_vs_state": 2.5,
+          "security": 5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.6,
+          "individual_vs_state": 0.45,
+          "security": 0.35
+        },
+        "sources": {
+          "religion_state": "Srugim 26.5.2026; C14 9.7.2026 (\"צריך לפרק את האוטונומיה החרדית\")",
+          "individual_vs_state": "Srugim 26.5.2026; C14 9.7.2026 (\"צריך לחתוך את המתווכים\")",
+          "security": "Srugim 26.5.2026 — מיזוג חרדים ליחידות טכנולוגיות/מודיעין"
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "תקף בחריפות את התבטאויותיה על פירוק האוטונומיה החרדית",
+            "speaker": "ידידיה מאיר (קריין רדיו חרדי, קול חי)",
+            "source": "C14",
+            "date": "2026-07-09",
+            "url": "https://www.c14.co.il/article/1618707"
+          }
+        },
+        "notes": "מייסדת מסלולי שילוב חרדים ב-8200 ומחברת הצעת חוק \"שירות לכל\"; לא מדובר בציטוט מילולי מדויק מצד ידידיה מאיר, אלא תיאור מסוכם של המקור."
+      },
+      {
+        "position": 12,
+        "name": "אלעזר שטרן",
+        "declared": {
+          "religion_state": 5.5,
+          "authority_vs_checks": 3,
+          "stability_vs_opposition": 3,
+          "experience_vs_renewal": 1.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.5,
+          "authority_vs_checks": 0.4,
+          "stability_vs_opposition": 0.4,
+          "experience_vs_renewal": 0.55
+        },
+        "sources": {
+          "religion_state": "Kipa 14.3.2022; Ynet 4.9.2026 — דרישה שסייעתם החרדית (אייכלר) יעמדו באותם תנאים כמו מפלגות ערביות",
+          "authority_vs_checks": "Ynet 24.8.2026 — מדינה יהודית-דמוקרטית-ליברלית",
+          "stability_vs_opposition": "Ynet 24.8.2026 — עזיבת יש עתיד אחרי 11 שנה והתפטרות מהכנסת",
+          "experience_vs_renewal": "רקע: אלוף במיל׳, שר לשעבר, ח\"כ רב-קדנציות"
+        },
+        "externalViews": {
+          "positive": {
+            "quote": "חבר ושותף לדרך שהקדיש עשורים לביטחון ישראל ולשירות הציבורי",
+            "speaker": "גדי איזנקוט (יו\"ר המפלגה)",
+            "source": "Ynet (מסוכם, לא מילולי מדויק)",
+            "date": "2026-08-24",
+            "url": "https://www.ynet.co.il/news/article/hke00hpyvmg"
+          }
+        },
+        "notes": "ראיות 2022 על מדיניות גיור נשמרו כי הן עקביות עם עמדתו ב-2026 ולא נסתרו."
+      },
+      {
+        "position": 13,
+        "name": "כמיל אבו רוקן",
+        "declared": {
+          "experience_vs_renewal": 1.5
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.5
+        },
+        "sources": {
+          "experience_vs_renewal": "רקע: אלוף במיל׳, רכז שט\"ח לשעבר 2018-2021"
+        },
+        "notes": "קריירה ביטחונית עשירה בגדה ובעזה, אך לא אותר ציטוט אישי מאומת מ-2025-2026 על ביטחון או הסוגיה הפלסטינית; פריט ישן מ-Israel Hayom לא אומת בפייצ׳ר ישיר ולכן לא נוקד."
+      },
+      {
+        "position": 14,
+        "name": "דבורה שריפיאן בכר",
+        "declared": {
+          "experience_vs_renewal": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "experience_vs_renewal": "Ynet, הודעת הצטרפות (22 שנות קריירה ביטחונית, ללא ניסיון פוליטי)"
+        },
+        "notes": "22 שנות קריירה בשב\"כ ובמוסד אך ללא רקע פוליטי קודם; כיסוי תקשורתי מתמקד בביוגרפיה אישית (פליטת איראן)."
+      },
+      {
+        "position": 15,
+        "name": "אלקס ריף",
+        "declared": {
+          "experience_vs_renewal": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "experience_vs_renewal": "עמוד מועמדת באתר המפלגה; מעריב, הודעת הצטרפות"
+        },
+        "notes": "פעילה חברתית ומייסדת \"לובי המיליון\", ללא תפקיד פוליטי נבחר קודם; לא נמצא ציטוט אישי ממוקד על welfare/individual_vs_state."
+      },
+      {
+        "position": 16,
+        "name": "ענבר יחזקאלי",
+        "declared": {
+          "welfare": 6,
+          "health": 5.5,
+          "experience_vs_renewal": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "welfare": 0.5,
+          "health": 0.4,
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "welfare": "mako, 30.4.2026 (\"הנושאים החברתיים הוזנחו... הגיעה העת לבנות מחדש ולתקן\")",
+          "health": "Ynet activism, 10.6.2026 — מובילת תחום השיקום הפוסט-טראומטי במפלגה",
+          "experience_vs_renewal": "רקע ציבורי: ראש מטה מקצועי לשלושה שרי רווחה, ללא ניסיון נבחר"
+        },
+        "notes": "לא נמצא ציטוט מעבר לתחומי רווחה/פוסט-טראומה (ביטחון, כלכלה, דת ומדינה הושמטו)."
+      },
+      {
+        "position": 17,
+        "name": "רועי פולקמן",
+        "declared": {
+          "experience_vs_renewal": 6,
+          "cost_of_living": 5,
+          "economy": 5,
+          "authority_vs_checks": 3
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.55,
+          "cost_of_living": 0.3,
+          "economy": 0.3,
+          "authority_vs_checks": 0.3
+        },
+        "sources": {
+          "experience_vs_renewal": "רקע: ח\"כ ויו\"ר סיעת \"כולנו\" בכנסת ה-20 (2015-2019)",
+          "cost_of_living": "קריירה כח\"כ: חקיקה בדיור, שכירות הוגנת, דחיית משכנתאות (כנסת 20, מחוץ לחלון 2025-2026)",
+          "economy": "קריירה כח\"כ: רפורמות בנקאיות ותקינה, תמיכה בעסקים קטנים (כנסת 20, מחוץ לחלון 2025-2026)",
+          "authority_vs_checks": "קריירה כח\"כ: חיזוק עצמאות הכנסת, שירות המדינה והשידור הציבורי (כנסת 20, מחוץ לחלון 2025-2026)"
+        },
+        "notes": "רוב הראיות המדיניות מקורן בכהונתו הקודמת בכנסת (2015-2019) ולא בהצהרות עדכניות מ-2025-2026; מסומן בכל ציר רלוונטי."
+      },
+      {
+        "position": 18,
+        "name": "ישראל זרי",
+        "declared": {
+          "tradition_vs_liberalism": 1.5,
+          "experience_vs_renewal": 3
+        },
+        "actual": {},
+        "confidence": {
+          "tradition_vs_liberalism": 0.45,
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "tradition_vs_liberalism": "mako pride-news, 4.8.2026 — נבחר הציבור הגאה המוצהר הראשון ברמת גן",
+          "experience_vs_renewal": "רקע: חבר מועצת עיר וסגן ראש עיריית רמת גן מ-2018"
+        },
+        "notes": "סגן ראש עיריית רמת גן; לא אותר ציטוט על נושאים לאומיים מעבר לשלטון מקומי וזכויות הקהילה הגאה."
+      },
+      {
+        "position": 19,
+        "name": "טל אוחנה חכמון",
+        "declared": {
+          "welfare": 5.5,
+          "education": 5,
+          "experience_vs_renewal": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "welfare": 0.4,
+          "education": 0.35,
+          "experience_vs_renewal": 0.35
+        },
+        "sources": {
+          "welfare": "Ynet (\"אנשי הנגב ראויים ליהנות מאותן הזדמנויות... כמו בכל מקום אחר\")",
+          "education": "רקע: החזיקה בתיק החינוך כחברת/סגנית ראש מועצת ירוחם",
+          "experience_vs_renewal": "רקע: ראש מועצת ירוחם לשעבר (נבחרה 2018), ללא ניסיון פרלמנטרי"
+        },
+        "notes": "ראש מועצת ירוחם לשעבר; לא אותר ציטוט על ביטחון, דת ומדינה או יחסי חוץ."
+      },
+      {
+        "position": 20,
+        "name": "אליסף פרץ",
+        "declared": {
+          "rule_of_law": 5,
+          "experience_vs_renewal": 2.3
+        },
+        "actual": {},
+        "confidence": {
+          "rule_of_law": 0.35,
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "rule_of_law": "ערוץ 7, 8.7.2026 (\"יש אחריות לכל מי שהיה בממשלה ב-7 באוקטובר\")",
+          "experience_vs_renewal": "רקע: מנהל אגף חברה ונוער בעיריית ירושלים, ללא ניסיון פוליטי קודם"
+        },
+        "notes": "הצטרף במקור לרשימת טרופר-הנדל, ועבר ל\"ישר\" עם מיזוג טרופר-איזנקוט (8.2026); אחיהם של שני חללים."
+      },
+      {
+        "position": 21,
+        "name": "יפה טבג'ה",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "יזמית חברתית מיוצאי אתיופיה; הציטוט היחיד שאותר (\"להיאבק על דמותה של המדינה\") כללי מדי לניקוד ציר, ולכן לא ניתן ציון בשום ציר."
+      },
+      {
+        "position": 22,
+        "name": "ניר חג'בי",
+        "declared": {
+          "experience_vs_renewal": 2
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "experience_vs_renewal": "רקע: אלוף-משנה (מיל׳), 26 שנות קריירה צבאית, ללא ניסיון פוליטי"
+        },
+        "notes": "שכל את בנו יהונתן ז\"ל ב-7 באוקטובר; רוב הכיסוי התקשורתי ביוגרפי-אישי."
+      },
+      {
+        "position": 23,
+        "name": "רון ברקאי",
+        "declared": {
+          "experience_vs_renewal": 3.5
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.3
+        },
+        "sources": {
+          "experience_vs_renewal": "רקע: ראש מטה לשר לשעבר, מנכ\"ל \"מנהיגות אזרחית\" 2020-2024, ללא ניסיון נבחר"
+        },
+        "notes": "ראש מטה השטח של מפלגת \"ישר!\"; לא אותר ציטוט על עמדות מדיניות קונקרטיות."
+      },
+      {
+        "position": 24,
+        "name": "שי פישר",
+        "declared": {
+          "experience_vs_renewal": 1.5,
+          "welfare": 4.5
+        },
+        "actual": {},
+        "confidence": {
+          "experience_vs_renewal": 0.4,
+          "welfare": 0.3
+        },
+        "sources": {
+          "experience_vs_renewal": "רקע: בת 24, ללא ניסיון תעסוקתי או פוליטי מעבר לשירות צבאי-רפואי",
+          "welfare": "אתר המפלגה — קריאה לבנות \"עתיד של ביטחון, תעסוקה, חינוך והזדמנויות\" לצעירי הצפון"
+        },
+        "notes": "איבדה את סבתה ודודה בפגיעת טילים בכפר יובל; המושב הריאלי האחרון ברשימה."
       }
     ]
   }

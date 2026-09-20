@@ -248,7 +248,7 @@
     "weight": 2.0,
     "axes": [
       { "axis": "security",              "pole": "max" },
-      { "axis": "ideology_vs_pragmatism", "pole": "min" }
+      { "axis": "ideology_vs_pragmatism", "pole": "max" }
     ],
     "factions": {
       "likud": "against", "shas": "against", "yahadut_hatorah": "abstain",
@@ -591,7 +591,7 @@
     "weight": 1.5,
     "axes": [
       { "axis": "foreign_relations",     "pole": "max" },
-      { "axis": "ideology_vs_pragmatism", "pole": "min" },
+      { "axis": "ideology_vs_pragmatism", "pole": "max" },
       { "axis": "security",              "pole": "max" }
     ],
     "factions": {
