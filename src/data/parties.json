@@ -4333,5 +4333,147 @@
         "notes": "איבדה את סבתה ודודה בפגיעת טילים בכפר יובל; המושב הריאלי האחרון ברשימה."
       }
     ]
+  },
+  {
+    "id": "amcha_yisrael",
+    "name": "עמך ישראל",
+    "leader": "עופר וינטר",
+    "seats": 4,
+    "color": "#6D4C41",
+    "declared": {
+      "liberty_vs_security": 4,
+      "equality_vs_free_market": 4,
+      "authority_vs_checks": 4,
+      "individual_vs_state": 4,
+      "tradition_vs_liberalism": 4,
+      "security": 6.5,
+      "economy": 4,
+      "cost_of_living": 4,
+      "rule_of_law": 4,
+      "religion_state": 5,
+      "education": 4,
+      "health": 4,
+      "welfare": 4,
+      "environment": 4,
+      "settlement": 4,
+      "foreign_relations": 3.5,
+      "transport": 4,
+      "housing": 4,
+      "ideology_vs_pragmatism": 2.5,
+      "stability_vs_opposition": 4,
+      "experience_vs_renewal": 1.8
+    },
+    "actual": {
+      "liberty_vs_security": 4,
+      "equality_vs_free_market": 4,
+      "authority_vs_checks": 4,
+      "individual_vs_state": 4,
+      "tradition_vs_liberalism": 4,
+      "security": 6.5,
+      "economy": 4,
+      "cost_of_living": 4,
+      "rule_of_law": 4,
+      "religion_state": 5,
+      "education": 4,
+      "health": 4,
+      "welfare": 4,
+      "environment": 4,
+      "settlement": 4,
+      "foreign_relations": 3.5,
+      "transport": 4,
+      "housing": 4,
+      "ideology_vs_pragmatism": 2.5,
+      "stability_vs_opposition": 4,
+      "experience_vs_renewal": 1.8
+    },
+    "confidence": {
+      "liberty_vs_security": 0.25,
+      "equality_vs_free_market": 0.25,
+      "authority_vs_checks": 0.25,
+      "individual_vs_state": 0.25,
+      "tradition_vs_liberalism": 0.25,
+      "security": 0.5,
+      "economy": 0.25,
+      "cost_of_living": 0.25,
+      "rule_of_law": 0.25,
+      "religion_state": 0.35,
+      "education": 0.25,
+      "health": 0.25,
+      "welfare": 0.25,
+      "environment": 0.25,
+      "settlement": 0.25,
+      "foreign_relations": 0.4,
+      "transport": 0.25,
+      "housing": 0.25,
+      "ideology_vs_pragmatism": 0.45,
+      "stability_vs_opposition": 0.25,
+      "experience_vs_renewal": 0.55
+    },
+    "reliability": {
+      "promise_keeping": {
+        "score": null,
+        "confidence": 0.15
+      },
+      "consistency": {
+        "score": 0.5,
+        "confidence": 0.25
+      },
+      "coalition_flexibility": {
+        "score": 0.35,
+        "confidence": 0.35
+      },
+      "execution": {
+        "score": null,
+        "confidence": 0.15
+      }
+    },
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "עופר וינטר",
+        "declared": {
+          "security": 6.5,
+          "foreign_relations": 3.5,
+          "religion_state": 5,
+          "ideology_vs_pragmatism": 2.5,
+          "experience_vs_renewal": 1.8
+        },
+        "actual": {},
+        "confidence": {
+          "security": 0.5,
+          "foreign_relations": 0.4,
+          "religion_state": 0.35,
+          "ideology_vs_pragmatism": 0.45,
+          "experience_vs_renewal": 0.55
+        },
+        "sources": {
+          "security": "נאום השקת המפלגה, ynet + וואלה, 25.8.2026 — \"לעולם לא תהיה פה מדינת פלסטינית. הפיתרון בעזה הוא אחד - הגירה\"",
+          "foreign_relations": "אותו נאום השקה, 25.8.2026 — שלילת מדינה פלסטינית לחלוטין",
+          "religion_state": "ראיון מאקו לאחר הקמת המפלגה — \"אתה מסדיר את המעמד שלך מול מדינת ישראל, אתה מקבל זכויות מהמדינה. לא הסדרת, לא מקבל זכויות\"",
+          "ideology_vs_pragmatism": "ראיון מאקו — \"אני לא אעשה מעשה בנט, ישראל עברה טראומה\" + נאום השקה — \"לעולם לא תהיה פה מדינת פלסטינית\"",
+          "experience_vs_renewal": "נאום השקה (\"נבחרת חדשה, נקייה מפוליטיקאים\") + כותרת ערוץ 14 המצטטת אותו: \"הגיע זמן לאנשים חדשים\""
+        },
+        "externalViews": {
+          "negative": {
+            "quote": "קצין שמנסה לגרור אותנו למלחמת דת מהווה סיכון ביטחוני וערכי, ומקומו של איש כזה אינו בצה\"ל",
+            "speaker": "יורם כץ (מהנדס מחשבים, בוגר החוגים לפסיכולוגיה ופילוסופיה באוניברסיטה העברית)",
+            "source": "זמן ישראל",
+            "date": "2026-08-30",
+            "url": "https://www.zman.co.il/718830/"
+          }
+        },
+        "notes": "ראש הרשימה, אלוף-משנה (תת-אלוף) במיל', מפקד חטיבת גבעתי לשעבר, לחם ב-7.10.2023 בקרב על בארי. צירים שהושמטו במכוון (אין עדות אישית מאומתת): liberty_vs_security, equality_vs_free_market, authority_vs_checks, individual_vs_state, tradition_vs_liberalism, economy, cost_of_living, rule_of_law, education, health, welfare, environment, settlement, transport, housing, stability_vs_opposition — כולל settlement (רק עדות עקיפה דרך מועמד אחר ברשימה) ו-tradition_vs_liberalism (עדות סותרת: \"רשימה ישראלית\" עם רוב חילוני מול מכתב מפקד דתי-לאומי מ-2014, לא נפתר בניחוש). מקורות: docs/candidate-research/amcha_yisrael.md"
+      },
+      {
+        "position": 2,
+        "name": "יוסף חדאד",
+        "declared": {},
+        "actual": {},
+        "confidence": {},
+        "sources": {},
+        "notes": "ערבי-ישראלי נוצרי, פעיל הסברה פרו-ישראלי מוכר, מייסד-שותף ומנכ\"ל לשעבר (עד 8.2026) של עמותת \"ביחד - ערבים למען ערבים\". סירב להצעת נתניהו לעבור לליכוד. ציטוטים מאומתים (ערוץ 14, 10.9.2026): על הממשלה - \"הממשלה שלהם נכשלה קשות ושבלי אנשים חדשים שייכנסו אין לימין סיכוי\"; על נאמנות לרשימה - \"אנחנו רצים יחד אגרוף אחד\". אף ציטוט מאומת לא תורגם לציר קיים באפליקציה (ביקורת כללית/נאמנות אישית, לא עמדת מדיניות הניתנת לכיול 1-7) - לכן לא נוקד אף ציר, בהתאם לכלל אפס-בדיה. מתחת ל-MIN_CANDIDATE_AXES וזה תקין וצפוי. מקורות: docs/candidate-research/amcha_yisrael.md"
+      }
+    ]
   }
 ]
