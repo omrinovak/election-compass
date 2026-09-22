@@ -47,7 +47,7 @@
       "foreign_relations": 3,
       "transport": 3,
       "housing": 3.3,
-      "ideology_vs_pragmatism": 5,
+      "ideology_vs_pragmatism": 3,
       "stability_vs_opposition": 6.2,
       "experience_vs_renewal": 4.1
     },
@@ -834,7 +834,7 @@
       "foreign_relations": 5.1,
       "transport": 5.3,
       "housing": 5.6,
-      "ideology_vs_pragmatism": 4.2,
+      "ideology_vs_pragmatism": 6.2,
       "stability_vs_opposition": 3.9,
       "experience_vs_renewal": 2.4
     },
@@ -980,7 +980,7 @@
       "foreign_relations": 2.4,
       "transport": 2.7,
       "housing": 3.9,
-      "ideology_vs_pragmatism": 4.7,
+      "ideology_vs_pragmatism": 2.7,
       "stability_vs_opposition": 5.6,
       "experience_vs_renewal": 3.8
     },
@@ -1239,7 +1239,7 @@
     "id": "yahadut_hatorah",
     "name": "יהדות התורה",
     "leader": "יעקב אשר",
-    "seats": 8,
+    "seats": 7,
     "color": "#212121",
     "declared": {
       "liberty_vs_security": 3.5,
@@ -1283,7 +1283,7 @@
       "foreign_relations": 2.2,
       "transport": 2.4,
       "housing": 4.2,
-      "ideology_vs_pragmatism": 3.4,
+      "ideology_vs_pragmatism": 2.2,
       "stability_vs_opposition": 5.6,
       "experience_vs_renewal": 3.5
     },
@@ -1531,7 +1531,7 @@
       "foreign_relations": 4.5,
       "transport": 5.3,
       "housing": 5.6,
-      "ideology_vs_pragmatism": 3,
+      "ideology_vs_pragmatism": 5,
       "stability_vs_opposition": 2.7,
       "experience_vs_renewal": 2.4
     },
@@ -1873,7 +1873,7 @@
       "foreign_relations": 5.1,
       "transport": 6.2,
       "housing": 6.5,
-      "ideology_vs_pragmatism": 2.1,
+      "ideology_vs_pragmatism": 4.1,
       "stability_vs_opposition": 1.8,
       "experience_vs_renewal": 3.6
     },
@@ -2713,7 +2713,7 @@
     "id": "hazionyut_hadatit",
     "name": "הציונות הדתית",
     "leader": "בצלאל סמוטריץ'",
-    "seats": 5,
+    "seats": 6,
     "color": "#E65100",
     "declared": {
       "liberty_vs_security": 2,
@@ -2757,7 +2757,7 @@
       "foreign_relations": 2.4,
       "transport": 2.4,
       "housing": 3.3,
-      "ideology_vs_pragmatism": 3.8,
+      "ideology_vs_pragmatism": 1.8,
       "stability_vs_opposition": 5.9,
       "experience_vs_renewal": 4.4
     },
@@ -3009,7 +3009,7 @@
       "foreign_relations": 2.4,
       "transport": 2.7,
       "housing": 3.3,
-      "ideology_vs_pragmatism": 3.5,
+      "ideology_vs_pragmatism": 1.5,
       "stability_vs_opposition": 5,
       "experience_vs_renewal": 5.9
     },
@@ -3271,7 +3271,7 @@
     "id": "hadash_taal",
     "name": "הרשימה המשותפת",
     "leader": "יוסף ג'בארין",
-    "seats": 4,
+    "seats": 7,
     "color": "#C62828",
     "declared": {
       "liberty_vs_security": 6.5,
@@ -3315,7 +3315,7 @@
       "foreign_relations": 5.3,
       "transport": 6.2,
       "housing": 6.5,
-      "ideology_vs_pragmatism": 1.8,
+      "ideology_vs_pragmatism": 3.8,
       "stability_vs_opposition": 1.8,
       "experience_vs_renewal": 3
     },
@@ -3511,7 +3511,7 @@
       "foreign_relations": 5.4,
       "transport": 6.2,
       "housing": 6.5,
-      "ideology_vs_pragmatism": 4.5,
+      "ideology_vs_pragmatism": 5.9,
       "stability_vs_opposition": 3.6,
       "experience_vs_renewal": 3.6
     },
