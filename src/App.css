@@ -1503,6 +1503,12 @@
   text-transform: uppercase;
 }
 
+.about-subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .about-method-row {
   display: flex;
   gap: 10px;
@@ -1564,23 +1570,99 @@
   line-height: 1.5;
 }
 
-.about-disclaimer {
-  background: var(--surface-dim);
+.about-accordion {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 14px 16px;
-  gap: 10px !important;
+  overflow: hidden;
+  background: var(--surface-dim);
 }
 
-.about-disclaimer p {
-  font-size: 12px !important;
-  color: var(--text-muted) !important;
-  line-height: 1.65;
+.about-accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  font-family: inherit;
+  min-height: 44px;
 }
 
-.about-disclaimer .about-section-title {
-  font-size: 11px;
+.about-accordion-header:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.about-accordion-icon {
+  flex-shrink: 0;
+  display: flex;
+  color: var(--accent);
+}
+
+.about-accordion-title-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.about-accordion-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.about-accordion-subtitle {
+  font-size: 12px;
   color: var(--text-muted);
+}
+
+.about-accordion-chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: transform 200ms ease;
+}
+
+.about-accordion-chevron.open {
+  transform: rotate(180deg);
+}
+
+.about-accordion-body-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 250ms ease;
+}
+
+.about-accordion-body-wrap.open {
+  grid-template-rows: 1fr;
+}
+
+.about-accordion-body-inner {
+  overflow: hidden;
+}
+
+.about-accordion-body {
+  padding: 0 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-accordion-body p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-accordion-body-wrap,
+  .about-accordion-chevron {
+    transition: none;
+  }
 }
 
 .about-sources li::before {
