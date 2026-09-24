@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import type { PartyResult, CandidateResult, CandidateExternalView } from '../utils/matching';
-import { getAxisLabel, compareProfiles } from '../utils/matching';
+import { getAxisLabel, compareProfiles, AXIS_LABELS } from '../utils/matching';
 import type { CompareLinkPayload } from '../utils/compareLink';
 import { encodeCompareProfile } from '../utils/compareLink';
 import questionsData from '../data/questions.json';
@@ -23,10 +23,14 @@ const PARTY_EMOJI: Record<string, string> = {
   hadash_taal: '🔴',
   raam: '🟢',
   yisrael_yashar: '⭐',
-  beit_tzioni: '🎖️',
+  amcha_yisrael: '🪖',
 };
 
-const AXIS_DESC: Record<string, string> = {
+// Typed against AXIS_LABELS's own key set (not just Record<string, string>) so that adding,
+// removing, or renaming an axis in matching.ts is a compile error here instead of a silently
+// blank tooltip (AXIS_DESC[axis] || '') — this is the same class of drift that broke Admin.tsx's
+// axis list before it started importing AXIS_LABELS directly.
+const AXIS_DESC: Record<keyof typeof AXIS_LABELS, string> = {
   liberty_vs_security: 'האיזון בין סמכויות ביטחוניות לבין זכויות אזרח וחופש אישי',
   equality_vs_free_market: 'עד כמה המדינה מתערבת בכלכלה כדי לצמצם פערים בהכנסות ועושר',
   authority_vs_checks: 'כוח הממשלה המרכזית מול מנגנוני ביקורת ופיקוח כמו בית משפט ומבקר',

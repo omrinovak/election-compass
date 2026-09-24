@@ -1,6 +1,8 @@
 /**
- * Runs calcActualScores against anchor-votes.json and rewrites
- * the `actual` block in parties.json.
+ * Computes each party's `actual` axis scores from anchor-votes.json and rewrites
+ * the `actual` block in parties.json. This is the canonical, live implementation —
+ * there is no separate calcActualScores module; an earlier .ts file by that name
+ * duplicated this logic but was never actually run by anything and has been removed.
  *
  * Usage: node scripts/update-actual-scores.mjs
  */
@@ -15,16 +17,18 @@ const root = join(__dirname, '..');
 const parties = JSON.parse(readFileSync(join(root, 'src/data/parties.json'), 'utf8'));
 const votes   = JSON.parse(readFileSync(join(root, 'src/data/anchor-votes.json'), 'utf8'));
 
-const AXES = [
-  'liberty_vs_security', 'equality_vs_free_market', 'authority_vs_checks',
-  'individual_vs_state', 'tradition_vs_liberalism', 'security', 'economy',
-  'cost_of_living', 'rule_of_law', 'religion_state', 'education', 'health',
-  'welfare', 'environment', 'settlement', 'foreign_relations', 'transport',
-  'housing', 'ideology_vs_pragmatism', 'stability_vs_opposition',
-  'experience_vs_renewal',
-];
+// Derived from the data itself rather than hand-copied from matching.ts's AXIS_LABELS (a plain
+// .mjs script can't import that .ts module directly) — this way a new axis added to any party's
+// `declared` object is picked up automatically instead of silently skipped until someone
+// remembers to update a second, separate list. See .claude/agents/data-integrity-guardian.md.
+const AXES = [...new Set(parties.flatMap(p => Object.keys(p.declared ?? {})))];
+
+const VALID_POSITIONS = new Set(['for', 'against', 'abstain', 'absent']);
 
 function signalScore(position, pole) {
+  if (!VALID_POSITIONS.has(position)) {
+    throw new Error(`Unrecognized faction position "${position}" in anchor-votes.json (expected one of: ${[...VALID_POSITIONS].join(', ')})`);
+  }
   if (position === 'absent') return null;
   if (position === 'abstain') return { score: 4.0, wMult: 0.5 };
   const isFor = position === 'for';

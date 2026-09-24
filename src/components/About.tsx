@@ -3,6 +3,19 @@ import '../App.css';
 
 type SectionKey = 'methodology' | 'sources' | 'limits' | 'disclaimer';
 
+// Rendered as a list below AND counted in the accordion subtitle above it — deriving the count
+// from this array's length (instead of a separately hand-typed number) is what keeps the two in
+// sync; a hardcoded subtitle count next to a hand-edited list is exactly the class of bug that
+// went stale once already (see .claude/agents/data-integrity-guardian.md).
+const DATA_SOURCES = [
+  'מצעי המפלגות (אתרים רשמיים, 2025–2026)',
+  'הצבעות נבחרות מכנסת 25 — נמשכו ואומתו ישירות מ-API הכנסת הפתוח',
+  'מצעי המפלגות ועמדותיהן בכנסת ה-25 — ניתוח ידני ועיתונאי',
+  'דוחות מרכז המידע והמחקר של הכנסת',
+  'ניתוחי המכון הישראלי לדמוקרטיה',
+  'כתבות עיתונאיות מתועדות על מדיניות בפועל',
+];
+
 function ChevronIcon({ open }: { open: boolean }) {
   return (
     <svg
@@ -170,18 +183,12 @@ export default function About({ onClose }: { onClose: () => void }) {
             id="sources"
             icon={<DatabaseIcon />}
             title="מקורות הנתונים"
-            subtitle="7 מקורות, כולל API רשמי של הכנסת"
+            subtitle={`${DATA_SOURCES.length} מקורות, כולל API רשמי של הכנסת`}
             open={open.sources}
             onToggle={toggle}
           >
             <ul className="about-sources">
-              <li>מצעי המפלגות (אתרים רשמיים, 2025–2026)</li>
-              <li>הצבעות כנסות 20–24 — מאגר הכנסת הפתוח (API רשמי, ~22,000 הצבעות)</li>
-              <li>הצבעות נבחרות מכנסת 25 (עד יולי 2026) — נמשכו ואומתו ישירות מ-API הכנסת בזמן אמת</li>
-              <li>מצעי המפלגות ועמדותיהן בכנסת ה-25 — ניתוח ידני ועיתונאי</li>
-              <li>דוחות מרכז המידע והמחקר של הכנסת</li>
-              <li>ניתוחי המכון הישראלי לדמוקרטיה</li>
-              <li>כתבות עיתונאיות מתועדות על מדיניות בפועל</li>
+              {DATA_SOURCES.map((source) => <li key={source}>{source}</li>)}
             </ul>
           </AccordionSection>
 
@@ -195,7 +202,7 @@ export default function About({ onClose }: { onClose: () => void }) {
           >
             <ul className="about-sources">
               <li>הנתונים מבוססים על שיקול דעת — ויתכנו טעויות</li>
-              <li>מפלגות חדשות (ביחד, ישר, בית ציוני) מוערכות בחסר בשל היסטוריה מוגבלת</li>
+              <li>מפלגות חדשות (ביחד, ישר, עמך ישראל) מוערכות בחסר בשל היסטוריה מוגבלת</li>
               <li>הכלי אינו מחליף קריאה עצמאית של המצעים</li>
               <li>הבחירות לכנסת ה-26 נקבעו ל-27 באוקטובר 2026</li>
               <li>הנתונים עודכנו לאחרונה: ספטמבר 2026</li>

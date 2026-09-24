@@ -86,7 +86,7 @@ async function main() {
 
   for (const party of parties) {
     // Skip new parties not in Knesset 25 (pre-election parties)
-    const preElectionParties = ['beyahad', 'yisrael_yashar', 'hademokratim'];
+    const preElectionParties = ['beyahad', 'yisrael_yashar', 'hademokratim', 'amcha_yisrael'];
     if (preElectionParties.includes(party.id)) continue;
     if (!apiMappedIds.has(party.id)) {
       removedParties.push(party.name);

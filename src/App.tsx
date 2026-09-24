@@ -21,6 +21,8 @@ function readFriendProfileFromUrl(): CompareLinkPayload | null {
   return decodeCompareProfile(raw);
 }
 
+export type QuestionnaireAnswerMap = Map<string, { value: number; confidence: number }>;
+
 export default function App() {
   const [screen, setScreen] = useState<Screen>('welcome');
   const [answers, setAnswers] = useState<Answer[]>([]);
@@ -28,6 +30,16 @@ export default function App() {
   const [results, setResults] = useState<PartyResult[]>([]);
   const [axisProfile, setAxisProfile] = useState<Record<string, number>>({});
   const [friendProfile] = useState<CompareLinkPayload | null>(() => readFriendProfileFromUrl());
+
+  // In-progress questionnaire/priorities state lives here (not inside Questionnaire/Priorities'
+  // own useState) so it survives the unmount that happens when the user navigates Priorities ->
+  // back -> Questionnaire (App conditionally mounts one screen at a time by `screen`). Without
+  // this, going back silently discarded every answer — see .claude/agents/data-integrity-guardian.md.
+  const [questionnaireDraft, setQuestionnaireDraft] = useState<{ answers: QuestionnaireAnswerMap; index: number }>({
+    answers: new Map(),
+    index: 0,
+  });
+  const [prioritiesDraft, setPrioritiesDraft] = useState<Set<string>>(new Set());
 
   const handleQuestionnaireComplete = useCallback((a: Answer[]) => {
     setAnswers(a);
@@ -56,6 +68,8 @@ export default function App() {
     setAnswers([]);
     setPriorities([]);
     setResults([]);
+    setQuestionnaireDraft({ answers: new Map(), index: 0 });
+    setPrioritiesDraft(new Set());
     setScreen('welcome');
   }, []);
 
@@ -63,8 +77,22 @@ export default function App() {
     <>
       {screen === 'welcome' && <Welcome onStart={() => setScreen('tutorial')} onAdmin={() => setScreen('admin')} friendProfile={friendProfile} />}
       {screen === 'tutorial' && <TutorialOverlay onDone={() => setScreen('questionnaire')} />}
-      {screen === 'questionnaire' && <Questionnaire onComplete={handleQuestionnaireComplete} />}
-      {screen === 'priorities' && <Priorities onComplete={handlePrioritiesComplete} onBack={() => setScreen('questionnaire')} />}
+      {screen === 'questionnaire' && (
+        <Questionnaire
+          initialAnswers={questionnaireDraft.answers}
+          initialIndex={questionnaireDraft.index}
+          onStateChange={(a, index) => setQuestionnaireDraft({ answers: a, index })}
+          onComplete={handleQuestionnaireComplete}
+        />
+      )}
+      {screen === 'priorities' && (
+        <Priorities
+          initialSelected={prioritiesDraft}
+          onSelectedChange={setPrioritiesDraft}
+          onComplete={handlePrioritiesComplete}
+          onBack={() => setScreen('questionnaire')}
+        />
+      )}
       {screen === 'loading' && <Loading />}
       {screen === 'vote' && <VotePage onContinue={() => setScreen('results')} />}
       {screen === 'results' && (

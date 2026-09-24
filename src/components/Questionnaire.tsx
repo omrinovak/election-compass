@@ -1,6 +1,7 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import questionsData from '../data/questions.json';
 import type { Answer } from '../utils/matching';
+import type { QuestionnaireAnswerMap } from '../App';
 import '../App.css';
 
 interface Question {
@@ -28,18 +29,38 @@ const SwapIcon = () => (
   </svg>
 );
 
-export default function Questionnaire({ onComplete }: { onComplete: (answers: Answer[]) => void }) {
+export default function Questionnaire({
+  initialAnswers,
+  initialIndex,
+  onStateChange,
+  onComplete,
+}: {
+  initialAnswers: QuestionnaireAnswerMap;
+  initialIndex: number;
+  onStateChange: (answers: QuestionnaireAnswerMap, currentIndex: number) => void;
+  onComplete: (answers: Answer[]) => void;
+}) {
   const allQuestions = useMemo<Question[]>(() => [
     ...questionsData.values,
     ...questionsData.policy,
     ...questionsData.leadership,
   ], []);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState<Map<string, { value: number; confidence: number }>>(new Map());
-  const [selectedValue, setSelectedValue] = useState<number | null>(null);
+  // Seeded from App.tsx's draft on mount (undoing a previous back-navigation resumes exactly
+  // where the user left off) and synced back up on every change via the effect below, so this
+  // component can be safely unmounted (e.g. by going to Priorities and back) without losing data.
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [answers, setAnswers] = useState<QuestionnaireAnswerMap>(initialAnswers);
+  const [selectedValue, setSelectedValue] = useState<number | null>(
+    () => initialAnswers.get(allQuestions[initialIndex]?.id)?.value ?? null
+  );
   // 'example' = show real-life dilemma (default), 'abstract' = show principle
   const [mode, setMode] = useState<'example' | 'abstract'>('example');
+
+  useEffect(() => {
+    onStateChange(answers, currentIndex);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [answers, currentIndex]);
 
   const question = allQuestions[currentIndex];
   const total = allQuestions.length;
@@ -53,12 +74,38 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
   const mainText = (hasExample && mode === 'example') ? question.example! : question.text;
   const showToggle = hasExample;
 
+  // Shared by saveAndAdvance and goBack so an in-progress (clicked but not yet confirmed via
+  // "next") pick isn't silently discarded when the user presses back to peek at an earlier
+  // question instead — previously only saveAndAdvance persisted selectedValue into `answers`.
+  function commitSelection(): QuestionnaireAnswerMap {
+    if (selectedValue === null) return answers;
+    const updated = new Map(answers);
+    const confidence = selectedValue === 4 ? 0.3 : (selectedValue === 3 || selectedValue === 5) ? 0.6 : 1.0;
+    updated.set(question.id, { value: selectedValue, confidence });
+    setAnswers(updated);
+    return updated;
+  }
+
+  function finalize(finalMap: QuestionnaireAnswerMap) {
+    const finalAnswers: Answer[] = [];
+    for (const q of allQuestions) {
+      const a = finalMap.get(q.id);
+      if (a) {
+        finalAnswers.push({
+          questionId: q.id,
+          value: a.value,
+          confidence: a.confidence,
+          axes: q.axes,
+          layer: q.layer,
+        });
+      }
+    }
+    onComplete(finalAnswers);
+  }
+
   function saveAndAdvance() {
     if (displayValue !== null) {
-      const updated = new Map(answers);
-      const confidence = displayValue === 4 ? 0.3 : (displayValue === 3 || displayValue === 5) ? 0.6 : 1.0;
-      updated.set(question.id, { value: displayValue, confidence });
-      setAnswers(updated);
+      const updated = commitSelection();
 
       if (currentIndex < total - 1) {
         setCurrentIndex(currentIndex + 1);
@@ -66,20 +113,7 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
         setSelectedValue(nextExisting?.value ?? null);
         setMode('example');
       } else {
-        const finalAnswers: Answer[] = [];
-        for (const q of allQuestions) {
-          const a = updated.get(q.id);
-          if (a) {
-            finalAnswers.push({
-              questionId: q.id,
-              value: a.value,
-              confidence: a.confidence,
-              axes: q.axes,
-              layer: q.layer,
-            });
-          }
-        }
-        onComplete(finalAnswers);
+        finalize(updated);
       }
     }
   }
@@ -92,28 +126,16 @@ export default function Questionnaire({ onComplete }: { onComplete: (answers: An
       setSelectedValue(nextExisting?.value ?? null);
       setMode('example');
     } else {
-      const finalAnswers: Answer[] = [];
-      for (const q of allQuestions) {
-        const a = answers.get(q.id);
-        if (a) {
-          finalAnswers.push({
-            questionId: q.id,
-            value: a.value,
-            confidence: a.confidence,
-            axes: q.axes,
-            layer: q.layer,
-          });
-        }
-      }
-      onComplete(finalAnswers);
+      finalize(answers);
     }
   }
 
   function goBack() {
     if (currentIndex > 0) {
+      const updated = commitSelection();
       const prevIndex = currentIndex - 1;
       setCurrentIndex(prevIndex);
-      const prevExisting = answers.get(allQuestions[prevIndex].id);
+      const prevExisting = updated.get(allQuestions[prevIndex].id);
       setSelectedValue(prevExisting?.value ?? null);
       setMode('example');
     }

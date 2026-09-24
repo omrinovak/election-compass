@@ -5,13 +5,20 @@ import '../App.css';
 const MAX_PRIORITIES = 5;
 
 export default function Priorities({
+  initialSelected,
+  onSelectedChange,
   onComplete,
   onBack,
 }: {
+  initialSelected: Set<string>;
+  onSelectedChange: (selected: Set<string>) => void;
   onComplete: (priorities: string[]) => void;
   onBack: () => void;
 }) {
-  const [selected, setSelected] = useState<Set<string>>(new Set());
+  // Seeded from and synced back to App.tsx's draft, so re-entering this screen (e.g. after
+  // going back to Questionnaire to fix an earlier answer, then forward again) doesn't silently
+  // drop topics already picked — see .claude/agents/data-integrity-guardian.md.
+  const [selected, setSelected] = useState<Set<string>>(initialSelected);
 
   function toggle(id: string) {
     const next = new Set(selected);
@@ -21,6 +28,7 @@ export default function Priorities({
       next.add(id);
     }
     setSelected(next);
+    onSelectedChange(next);
   }
 
   return (

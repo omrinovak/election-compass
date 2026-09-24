@@ -1,8 +1,23 @@
 import { useState } from 'react';
 import partiesData from '../data/parties.json';
+import { AXIS_LABELS } from '../utils/matching';
 
 type PartyId = string;
 type AxisKey = string;
+
+// Raw shape of an entry in parties.json (hand-authored JSON, like the candidate entries
+// matching.ts defends against with `candidate.declared ?? {}`) — declared/actual/confidence are
+// optional here for the same reason, so a party missing one doesn't crash the whole panel.
+interface RawParty {
+  id: string;
+  name: string;
+  leader: string;
+  seats: number;
+  declared?: Record<string, number>;
+  actual?: Record<string, number>;
+  confidence?: Record<string, number>;
+  [key: string]: unknown;
+}
 
 interface EditState {
   partyId: PartyId;
@@ -10,32 +25,6 @@ interface EditState {
   field: 'declared' | 'actual' | 'confidence';
   currentValue: number;
 }
-
-const AXIS_LABELS: Record<string, string> = {
-  security_civil_liberties: 'ביטחון vs. חירויות אזרח',
-  state_religion: 'מדינה ודת',
-  economic_left_right: 'שמאל-ימין כלכלי',
-  welfare_state: 'מדינת רווחה',
-  judicial_power: 'כוח שיפוטי',
-  executive_oversight: 'פיקוח על הרשות המבצעת',
-  peace_process: 'תהליך השלום',
-  settlements: 'התנחלויות',
-  two_state_solution: 'פתרון שתי מדינות',
-  minority_rights: 'זכויות מיעוטים',
-  lgbtq_rights: 'זכויות להט"ב',
-  housing_urban: 'דיור ועיר',
-  environment_climate: 'סביבה ואקלים',
-  education_policy: 'מדיניות חינוך',
-  foreign_policy: 'מדיניות חוץ',
-  electoral_reform: 'רפורמה בבחירות',
-  anti_corruption: 'מאבק בשחיתות',
-  police_reform: 'רפורמת משטרה',
-  haredim_military: 'חרדים וצבא',
-  national_identity: 'זהות לאומית',
-  coalition_flexibility: 'גמישות קואליציונית',
-  consensus_vs_decisive: 'קונסנזוס vs. החלטיות',
-  transparency: 'שקיפות',
-};
 
 const PASSWORD = 'admin2024';
 
@@ -46,7 +35,12 @@ export default function Admin({ onClose }: { onClose: () => void }) {
   const [selectedParty, setSelectedParty] = useState<PartyId | null>(null);
   const [editState, setEditState] = useState<EditState | null>(null);
   const [editValue, setEditValue] = useState('');
-  const [parties, setParties] = useState<Record<string, any>>(partiesData as Record<string, any>);
+  // parties.json is an array (see src/utils/matching.ts), but every lookup below
+  // (parties[partyId]) assumes an id-keyed record — index it once on init instead of
+  // storing the array directly, or every party click crashes on `activeParty.name`.
+  const [parties, setParties] = useState<Record<string, RawParty>>(() =>
+    Object.fromEntries((partiesData as RawParty[]).map((p) => [p.id, p]))
+  );
   const [saved, setSaved] = useState(false);
 
   function handleLogin() {
@@ -60,7 +54,7 @@ export default function Admin({ onClose }: { onClose: () => void }) {
 
   function startEdit(partyId: PartyId, axis: AxisKey, field: 'declared' | 'actual' | 'confidence') {
     const party = parties[partyId];
-    const current = party[field][axis] ?? 0;
+    const current = (party[field] ?? {})[axis] ?? 0;
     setEditState({ partyId, axis, field, currentValue: current });
     setEditValue(String(current));
   }
@@ -87,7 +81,10 @@ export default function Admin({ onClose }: { onClose: () => void }) {
   }
 
   function exportJSON() {
-    const json = JSON.stringify(parties, null, 2);
+    // parties.json on disk is an array (see comment on the parties state above) — export
+    // must convert the id-keyed record back to an array, or replacing src/data/parties.json
+    // with this file breaks `import parties from '../data/parties.json'` in matching.ts.
+    const json = JSON.stringify(Object.values(parties), null, 2);
     const blob = new Blob([json], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -126,7 +123,7 @@ export default function Admin({ onClose }: { onClose: () => void }) {
     );
   }
 
-  const partyList = Object.values(parties) as any[];
+  const partyList = Object.values(parties);
   const activeParty = selectedParty ? parties[selectedParty] : null;
   const axes = Object.keys(AXIS_LABELS);
 
@@ -145,7 +142,7 @@ export default function Admin({ onClose }: { onClose: () => void }) {
       </div>
 
       <div style={{ padding: '16px 20px' }}>
-        {!selectedParty ? (
+        {!activeParty ? (
           <>
             <p style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 16 }}>בחר מפלגה לעריכה:</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -196,9 +193,9 @@ export default function Admin({ onClose }: { onClose: () => void }) {
                 </thead>
                 <tbody>
                   {axes.map(axis => {
-                    const declared = activeParty.declared[axis];
-                    const actual = activeParty.actual[axis];
-                    const confidence = activeParty.confidence[axis];
+                    const declared = activeParty.declared?.[axis];
+                    const actual = activeParty.actual?.[axis];
+                    const confidence = activeParty.confidence?.[axis];
                     const isLowConf = confidence !== undefined && confidence < 0.4;
 
                     return (
@@ -215,7 +212,7 @@ export default function Admin({ onClose }: { onClose: () => void }) {
                           isEditing={editState?.partyId === selectedParty && editState.axis === axis && editState.field === 'declared'}
                           editValue={editValue}
                           onEditValueChange={setEditValue}
-                          onStart={() => startEdit(selectedParty, axis, 'declared')}
+                          onStart={() => startEdit(activeParty.id, axis, 'declared')}
                           onApply={applyEdit}
                           onCancel={() => setEditState(null)}
                         />
@@ -224,7 +221,7 @@ export default function Admin({ onClose }: { onClose: () => void }) {
                           isEditing={editState?.partyId === selectedParty && editState.axis === axis && editState.field === 'actual'}
                           editValue={editValue}
                           onEditValueChange={setEditValue}
-                          onStart={() => startEdit(selectedParty, axis, 'actual')}
+                          onStart={() => startEdit(activeParty.id, axis, 'actual')}
                           onApply={applyEdit}
                           onCancel={() => setEditState(null)}
                         />
@@ -233,7 +230,7 @@ export default function Admin({ onClose }: { onClose: () => void }) {
                           isEditing={editState?.partyId === selectedParty && editState.axis === axis && editState.field === 'confidence'}
                           editValue={editValue}
                           onEditValueChange={setEditValue}
-                          onStart={() => startEdit(selectedParty, axis, 'confidence')}
+                          onStart={() => startEdit(activeParty.id, axis, 'confidence')}
                           onApply={applyEdit}
                           onCancel={() => setEditState(null)}
                           isConfidence

@@ -71,7 +71,11 @@ const PARTY_CANDIDATE_WEIGHT = 1 - PARTY_PLATFORM_WEIGHT;
 // candidate- and party-level scoring so the ratio can't drift out of sync between the two.
 const DECLARED_WEIGHT = 0.35;
 const ACTUAL_WEIGHT = 1 - DECLARED_WEIGHT;
-const AXIS_LABELS: Record<string, string> = {
+// Single source of truth for the axis keys used across parties.json, candidate JSON, and
+// questions.json. Import this rather than re-declaring axis names elsewhere (Admin.tsx once
+// had its own invented axis list that silently drifted from this one — see
+// .claude/agents/data-integrity-guardian.md).
+export const AXIS_LABELS: Record<string, string> = {
   liberty_vs_security: 'חירות מול ביטחון',
   equality_vs_free_market: 'שוויון מול שוק חופשי',
   authority_vs_checks: 'סמכות מול איזונים',
@@ -218,6 +222,42 @@ function computeMatch(
   };
 }
 
+interface MatchResult {
+  score: number;
+  axisScores: Record<string, number>;
+  included: string[];
+}
+
+// Blends a declared-vs-actual pair of computeMatch results the same way at both the party and
+// candidate level: 35/65 on axes where both sides have data, but 100% on whichever side has data
+// when only one does — blending 65% weight onto a missing data point would silently read as "0%
+// match" and crush the score. This used to be implemented twice (once here, once inline in
+// calculateResultsFromProfile) and only the candidate-level copy had this guard; keeping it in
+// one place is what stops party- and candidate-level scoring from drifting apart again. See
+// .claude/agents/data-integrity-guardian.md.
+function blendDeclaredActual(
+  declared: MatchResult,
+  actual: MatchResult
+): { score: number; axisScores: Record<string, number>; allIncluded: string[]; hasDeclaredData: boolean; hasActualData: boolean } {
+  const allIncluded = [...new Set([...declared.included, ...actual.included])];
+  const axisScores: Record<string, number> = {};
+  for (const axis of allIncluded) {
+    const hasD = axis in declared.axisScores;
+    const hasA = axis in actual.axisScores;
+    const dScore = declared.axisScores[axis] ?? 0;
+    const aScore = actual.axisScores[axis] ?? 0;
+    axisScores[axis] = hasD && hasA ? dScore * DECLARED_WEIGHT + aScore * ACTUAL_WEIGHT : hasD ? dScore : aScore;
+  }
+  const hasDeclaredData = declared.included.length > 0;
+  const hasActualData = actual.included.length > 0;
+  const score =
+    hasDeclaredData && hasActualData ? declared.score * DECLARED_WEIGHT + actual.score * ACTUAL_WEIGHT
+    : hasDeclaredData ? declared.score
+    : hasActualData ? actual.score
+    : 0;
+  return { score, axisScores, allIncluded, hasDeclaredData, hasActualData };
+}
+
 function computeCandidateResult(
   userProfile: Record<string, { value: number; weight: number; count: number }>,
   candidate: {
@@ -239,22 +279,16 @@ function computeCandidateResult(
 
   const declared = computeMatch(userProfile, declaredPositions, confidence, 'לא נמצא מקור לעמדת המועמד בנושא זה');
   const actual = computeMatch(userProfile, actualPositions, confidence, 'אין הצבעה אישית רלוונטית');
-  const allIncluded = [...new Set([...declared.included, ...actual.included])];
   const allUnavailable = declared.unavailable.filter((u) => actual.unavailable.some((a) => a.axis === u.axis));
 
-  // Personal vote records aren't collected for most candidates yet, so an axis frequently has
-  // ONLY a declared (interview/op-ed) score and no actual (voting-record) score at all. Blending
-  // that as 65% weight on a missing data point would silently read as "0% match" and crush the
-  // score — instead, an axis missing one side is scored 100% on whichever side is actually there.
+  const blended = blendDeclaredActual(declared, actual);
+
   const axisScores: CandidateResult['axisScores'] = {};
-  for (const axis of allIncluded) {
+  for (const axis of blended.allIncluded) {
     const hasD = axis in declared.axisScores;
     const hasA = axis in actual.axisScores;
-    const dScore = declared.axisScores[axis] ?? 0;
-    const aScore = actual.axisScores[axis] ?? 0;
-    const score = hasD && hasA ? dScore * DECLARED_WEIGHT + aScore * ACTUAL_WEIGHT : hasD ? dScore : aScore;
     axisScores[axis] = {
-      score,
+      score: blended.axisScores[axis],
       declared: hasD ? declaredPositions[axis] : null,
       actual: hasA ? actualPositions[axis] : null,
       userValue: userProfile[axis]?.value ?? 0,
@@ -262,13 +296,9 @@ function computeCandidateResult(
     };
   }
 
-  const hasDeclaredData = declared.included.length > 0;
-  const hasActualData = actual.included.length > 0;
-  const overallScore =
-    hasDeclaredData && hasActualData ? declared.score * DECLARED_WEIGHT + actual.score * ACTUAL_WEIGHT
-    : hasDeclaredData ? declared.score
-    : hasActualData ? actual.score
-    : 0;
+  const hasDeclaredData = blended.hasDeclaredData;
+  const hasActualData = blended.hasActualData;
+  const overallScore = blended.score;
 
   // Whether this candidate "has enough data" must be a property of how much they've actually
   // been researched — not of how many of THIS user's answered axes happen to overlap with that
@@ -284,7 +314,7 @@ function computeCandidateResult(
   }
   // Still require at least one axis that actually overlaps with this user's answers, so a
   // well-researched candidate never shows a hollow "0% match" when nothing overlapped.
-  const dataAvailable = researchedAxes.size >= MIN_CANDIDATE_AXES && allIncluded.length > 0;
+  const dataAvailable = researchedAxes.size >= MIN_CANDIDATE_AXES && blended.allIncluded.length > 0;
 
   return {
     position: candidate.position,
@@ -328,12 +358,16 @@ function calculateResultsFromProfile(userProfile: Record<string, { value: number
     const declared = computeMatch(userProfile, party.declared, party.confidence, 'ציר לא רלוונטי למפלגה');
     const actual = computeMatch(userProfile, party.actual, party.confidence, 'ציר לא רלוונטי למפלגה');
 
-    const allIncluded = [...new Set([...declared.included, ...actual.included])];
     const allUnavailable = declared.unavailable.filter(
       (u) => actual.unavailable.some((a) => a.axis === u.axis)
     );
 
-    const platformScore = declared.score * DECLARED_WEIGHT + actual.score * ACTUAL_WEIGHT;
+    // Same blendDeclaredActual helper computeCandidateResult uses, so an axis with a declared
+    // position but no actual-votes coverage yet (or vice versa) is scored on whichever side has
+    // data instead of having 65%/35% weight silently land on an unset value — see the helper's
+    // comment above computeCandidateResult.
+    const blended = blendDeclaredActual(declared, actual);
+    const platformScore = blended.score;
 
     const candidates = ((party.candidates ?? []) as Parameters<typeof computeCandidateResult>[1][])
       .map((c) => computeCandidateResult(userProfile, c))
@@ -346,16 +380,13 @@ function calculateResultsFromProfile(userProfile: Record<string, { value: number
         : platformScore;
 
     const axisScores: PartyResult['axisScores'] = {};
-    for (const axis of allIncluded) {
-      const dScore = declared.axisScores[axis] ?? 0;
-      const aScore = actual.axisScores[axis] ?? 0;
-      const combined = dScore * DECLARED_WEIGHT + aScore * ACTUAL_WEIGHT;
+    for (const axis of blended.allIncluded) {
       const partyConf = party.confidence[axis as keyof typeof party.confidence];
       let confLabel = 'available';
       if (partyConf < 0.75 && partyConf >= CONFIDENCE_THRESHOLD) confLabel = 'partial';
 
       axisScores[axis] = {
-        score: combined,
+        score: blended.axisScores[axis],
         partyDeclared: party.declared[axis as keyof typeof party.declared] as number,
         partyActual: party.actual[axis as keyof typeof party.actual] as number,
         userValue: userProfile[axis]?.value ?? 0,
@@ -375,7 +406,7 @@ function calculateResultsFromProfile(userProfile: Record<string, { value: number
       candidateScore: candidateAgg.score,
       hasCandidateData: candidateAgg.score !== null,
       axisScores,
-      includedAxes: allIncluded,
+      includedAxes: blended.allIncluded,
       unavailableAxes: allUnavailable,
       gaps: party.gaps as PartyResult['gaps'],
       reliability: party.reliability as PartyResult['reliability'],
