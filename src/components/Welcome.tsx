@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import About from './About';
+import ShareMenu from './ShareMenu';
 import type { CompareLinkPayload } from '../utils/compareLink';
 import '../App.css';
 
@@ -35,10 +36,12 @@ export default function Welcome({
   friendProfile?: CompareLinkPayload | null;
 }) {
   const [showAbout, setShowAbout] = useState(false);
+  const [showShareMenu, setShowShareMenu] = useState(false);
 
   return (
     <div className="screen screen-center">
       {showAbout && <About onClose={() => setShowAbout(false)} />}
+      {showShareMenu && <ShareMenu onClose={() => setShowShareMenu(false)} />}
 
       <div className="welcome-logo">
         <CompassIcon />
@@ -58,6 +61,10 @@ export default function Welcome({
         <ClockIcon />
         10–15 דקות
       </div>
+
+      <button className="welcome-share-btn" onClick={() => setShowShareMenu(true)}>
+        📤 שתפו את המצפן עם חברים
+      </button>
 
       <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 16, textAlign: 'center' }}>
         השאלון מנוסח בלשון זכר אך פונה לנשים וגברים כאחד

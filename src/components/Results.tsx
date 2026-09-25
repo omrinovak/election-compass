@@ -3,6 +3,7 @@ import type { PartyResult, CandidateResult, CandidateExternalView } from '../uti
 import { getAxisLabel, compareProfiles, AXIS_LABELS } from '../utils/matching';
 import type { CompareLinkPayload } from '../utils/compareLink';
 import { encodeCompareProfile } from '../utils/compareLink';
+import { QUESTIONNAIRE_URL } from '../utils/site';
 import questionsData from '../data/questions.json';
 import '../App.css';
 
@@ -53,8 +54,6 @@ const AXIS_DESC: Record<keyof typeof AXIS_LABELS, string> = {
   stability_vs_opposition: 'העדפה ליציבות שלטונית מול נכונות לאופוזיציה ולהחלפת ממשלה',
   experience_vs_renewal: 'ניסיון ממשלתי מול פנים חדשות ורעיונות חדשים',
 };
-
-const QUESTIONNAIRE_URL = 'https://matzpen-bchirot.vercel.app/';
 
 function trackShare(method: 'native' | 'whatsapp' | 'copy', top: PartyResult) {
   if (typeof window !== 'undefined' && (window as any).umami) {
