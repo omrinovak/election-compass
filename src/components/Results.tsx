@@ -1,8 +1,9 @@
 import { useState, useMemo, useEffect } from 'react';
-import type { PartyResult, CandidateResult, CandidateExternalView } from '../utils/matching';
+import type { PartyResult, CandidateResult, CandidateExternalView, WeightedUserProfile } from '../utils/matching';
 import { getAxisLabel, compareProfiles, AXIS_LABELS } from '../utils/matching';
 import type { CompareLinkPayload } from '../utils/compareLink';
 import { encodeCompareProfile } from '../utils/compareLink';
+import { encodeSavedResults } from '../utils/savedResultsLink';
 import { QUESTIONNAIRE_URL } from '../utils/site';
 import questionsData from '../data/questions.json';
 import '../App.css';
@@ -111,6 +112,109 @@ function ShareCard({ top }: { top: PartyResult }) {
         </div>
       )}
       {toast && <div className="share-toast">✓ הקישור הועתק ללוח</div>}
+    </div>
+  );
+}
+
+function EmailResultsBox({
+  results,
+  priorities,
+  weightedProfile,
+}: {
+  results: PartyResult[];
+  priorities: string[];
+  weightedProfile: WeightedUserProfile;
+}) {
+  const [email, setEmail] = useState('');
+  const [sent, setSent] = useState(false);
+  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  function handleSend() {
+    if (!isValidEmail) return;
+    const top = results[0];
+    const subject = 'התוצאות שלי ממצפן הבחירות';
+    const rankingLines = results
+      .slice(0, 5)
+      .map((r, i) => `${i + 1}. ${r.name} — ${pct(r.overallScore)} התאמה`);
+
+    // The saved-results link is the only way to recover the full per-axis / per-candidate detail,
+    // so it goes right after the ranking — not last — in case a very long candidate list below
+    // pushes the total past what some mail clients tolerate in a mailto: URL and something gets
+    // cut off; better that be the short candidate summary than the recovery link itself.
+    const savedLink = `${QUESTIONNAIRE_URL}?saved=${encodeSavedResults(weightedProfile, priorities)}`;
+
+    // Kept short (name+score only, capped) — a full per-axis breakdown for every candidate on a
+    // large list (some have 20+) would risk blowing past that same length limit. The full
+    // breakdown is still reachable via the saved link above. Gated on the *filtered* list being
+    // non-empty, not just `candidates.length`, since a party's full list can be published with
+    // every candidate still short of the personal-data threshold (dataAvailable === false).
+    const candidatesWithData = top.candidates.filter((c) => c.dataAvailable);
+    const CANDIDATE_LINES_CAP = 10;
+    const candidateLines = candidatesWithData.length > 0
+      ? [
+        '',
+        `מועמדי ${top.name} (התאמה אישית):`,
+        ...candidatesWithData
+          .slice(0, CANDIDATE_LINES_CAP)
+          .map((c) => `#${c.position} ${c.name} — ${pct(c.score)}`),
+        ...(candidatesWithData.length > CANDIDATE_LINES_CAP
+          ? [`+${candidatesWithData.length - CANDIDATE_LINES_CAP} נוספים — הרשימה המלאה בקישור למעלה`]
+          : []),
+      ]
+      : [];
+
+    const body = [
+      ...rankingLines,
+      '',
+      `לצפייה מלאה בתוצאות שלכם — כולל פירוט לכל נושא ולכל מועמד/ת ברשימת ${top.name}: ${savedLink}`,
+      ...candidateLines,
+      '',
+      `בדקו גם אתם: ${QUESTIONNAIRE_URL}`,
+      '',
+      'מצפן הבחירות הוא יוזמה עצמאית וללא מטרות רווח. הכתובת שלכם לא נשלחת ולא נשמרת באתר — המייל הזה נפתח ונשלח ישירות מתוכנת המייל שלכם.',
+    ].join('\n');
+    // encodeURIComponent alone would turn the address's `@` into `%40`, which RFC 6068 expects
+    // literal and which not every mail-handler reliably decodes back — but leaving it fully
+    // unescaped would let a stray `?`/`&`/`#` in the local part (still possible; the validation
+    // regex above allows it) prematurely start the URL's query/fragment and corrupt subject/body.
+    // Encoding normally and then restoring just `@` gets both: a structurally safe URL with a
+    // literal `@` in the address.
+    const encodedEmail = encodeURIComponent(email).replace(/%40/g, '@');
+    const mailtoUrl = `mailto:${encodedEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+    if (typeof window !== 'undefined' && (window as any).umami) {
+      (window as any).umami.track('email_results_clicked', { top_party: top.id });
+    }
+    setSent(true);
+    setTimeout(() => setSent(false), 4000);
+  }
+
+  return (
+    <div className="share-hero">
+      <p className="share-hero-text">רוצים לשמור את התוצאות? שלחו אותן לעצמכם במייל</p>
+      <div className="email-results-row">
+        <input
+          type="email"
+          inputMode="email"
+          className="email-results-input"
+          placeholder="הכתובת שלכם"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          onKeyDown={(e) => { if (e.key === 'Enter') handleSend(); }}
+        />
+        <button
+          className="btn btn-primary"
+          style={{ whiteSpace: 'nowrap' }}
+          onClick={handleSend}
+          disabled={!isValidEmail}
+        >
+          📧 שלח לי במייל
+        </button>
+      </div>
+      <p className="email-results-note">
+        הכתובת נשארת בדפדפן שלכם בלבד ונעלמת כשסוגרים את העמוד — האתר לא שולח, לא רואה ולא שומר אותה. מצפן הבחירות הוא יוזמה עצמאית וללא מטרות רווח.
+      </p>
+      {sent && <div className="share-toast">✓ נפתחה תוכנת המייל שלכם — נשאר רק לשלוח</div>}
     </div>
   );
 }
@@ -620,12 +724,14 @@ export default function Results({
   priorities,
   onRestart,
   axisProfile,
+  weightedProfile,
   friendProfile,
 }: {
   results: PartyResult[];
   priorities: string[];
   onRestart: () => void;
   axisProfile: Record<string, number>;
+  weightedProfile: WeightedUserProfile;
   friendProfile: CompareLinkPayload | null;
 }) {
   const [tab, setTab] = useState(0);
@@ -691,6 +797,7 @@ export default function Results({
         {top && !friendProfile && <CompareWithFriend top={top} axisProfile={axisProfile} />}
 
         {top && <ShareCard top={top} />}
+        <EmailResultsBox results={results} priorities={priorities} weightedProfile={weightedProfile} />
 
         <div className="tab-row">
           {['דירוג', 'פירוט', 'שקיפות'].map((label, i) => (

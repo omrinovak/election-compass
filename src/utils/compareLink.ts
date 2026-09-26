@@ -11,11 +11,11 @@ interface CompareLinkPayload {
 // before JSON.parse ever runs. Producing base64url here — instead of leaving callers to remember
 // encodeURIComponent() at every place they build a `?cmp=` link — makes the return value of this
 // function safe to interpolate into a URL directly, which is the actual invariant that matters.
-function toBase64Url(b64: string): string {
+export function toBase64Url(b64: string): string {
   return b64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
-function fromBase64Url(b64url: string): string {
+export function fromBase64Url(b64url: string): string {
   const b64 = b64url.replace(/-/g, '+').replace(/_/g, '/');
   const padded = b64 + '='.repeat((4 - (b64.length % 4)) % 4);
   return padded;

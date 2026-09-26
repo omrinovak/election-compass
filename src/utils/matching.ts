@@ -107,7 +107,7 @@ export function getAxisProfile(answers: Answer[], priorities: string[]): Record<
   return axisProfileFromUserProfile(buildUserProfile(answers, priorities));
 }
 
-function axisProfileFromUserProfile(profile: Record<string, { value: number; weight: number; count: number }>): Record<string, number> {
+export function axisProfileFromUserProfile(profile: WeightedUserProfile): Record<string, number> {
   const result: Record<string, number> = {};
   for (const axis of Object.keys(profile)) {
     if (profile[axis].count > 0) result[axis] = Math.round(profile[axis].value * 10) / 10;
@@ -120,11 +120,12 @@ function axisProfileFromUserProfile(profile: Record<string, { value: number; wei
 export function calculateResultsAndProfile(
   answers: Answer[],
   priorities: string[]
-): { results: PartyResult[]; axisProfile: Record<string, number> } {
+): { results: PartyResult[]; axisProfile: Record<string, number>; weightedProfile: WeightedUserProfile } {
   const userProfile = buildUserProfile(answers, priorities);
   return {
     results: calculateResultsFromProfile(userProfile),
     axisProfile: axisProfileFromUserProfile(userProfile),
+    weightedProfile: userProfile,
   };
 }
 
@@ -353,7 +354,12 @@ export function calculateResults(answers: Answer[], priorities: string[]): Party
   return calculateResultsFromProfile(buildUserProfile(answers, priorities));
 }
 
-function calculateResultsFromProfile(userProfile: Record<string, { value: number; weight: number; count: number }>): PartyResult[] {
+/** The aggregated per-axis shape `buildUserProfile` produces — exported so a saved/restored
+ * results link (see savedResultsLink.ts) can hand a reconstructed profile straight to
+ * `calculateResultsFromProfile` without needing the original raw answers. */
+export type WeightedUserProfile = Record<string, { value: number; weight: number; count: number }>;
+
+export function calculateResultsFromProfile(userProfile: WeightedUserProfile): PartyResult[] {
   const results: PartyResult[] = parties.map((party) => {
     const declared = computeMatch(userProfile, party.declared, party.confidence, 'ציר לא רלוונטי למפלגה');
     const actual = computeMatch(userProfile, party.actual, party.confidence, 'ציר לא רלוונטי למפלגה');

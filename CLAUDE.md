@@ -40,8 +40,10 @@ out, since none of the bugs this project has had actually failed `build` or `lin
 ## Project shape
 
 - Vite + React 19 + TypeScript SPA, no router — `src/App.tsx` switches screens by local state,
-  not URL. The only URL param in use is `?cmp=` for the "compare with friend" feature
-  (`src/utils/compareLink.ts`).
+  not URL. Two URL params are in use: `?cmp=` for the "compare with friend" feature
+  (`src/utils/compareLink.ts`) and `?saved=` for the "email me my results" restore-on-open link
+  (`src/utils/savedResultsLink.ts`), which reopens straight into the results screen from a
+  reconstructed per-axis profile instead of re-running the questionnaire.
 - Scoring logic lives entirely in `src/utils/matching.ts`. Party-level and candidate-level scoring
   share the `blendDeclaredActual` helper — don't reimplement the declared/actual blend inline
   elsewhere, that's exactly how it drifted apart before.
