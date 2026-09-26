@@ -17,6 +17,12 @@ export default function ShareMenu({ onClose }: { onClose: () => void }) {
   const canNativeShare = typeof navigator !== 'undefined' && !!navigator.share;
   const shareBody = `${SHARE_TEXT}\n${QUESTIONNAIRE_URL}`;
 
+  // When the native share button is shown, the per-platform buttons are a secondary fallback and
+  // get shrunk down together so a future addition/removal of one doesn't drift from its siblings.
+  function optionClass(variant: string): string {
+    return `share-menu-option share-menu-option-${variant}${canNativeShare ? ' share-menu-option-compact' : ''}`;
+  }
+
   function showToast(message: string) {
     setToast(message);
     setTimeout(() => setToast(null), 2600);
@@ -110,18 +116,24 @@ export default function ShareMenu({ onClose }: { onClose: () => void }) {
           <p className="share-menu-intro">כל שיתוף עוזר לעוד מישהו למצוא את המפלגה שמייצגת אותו</p>
 
           {canNativeShare && (
-            <button className="btn btn-primary share-menu-native" onClick={handleNativeShare}>
-              📤 שיתוף מהמכשיר
-            </button>
+            <>
+              <button className="btn btn-primary share-menu-native" onClick={handleNativeShare}>
+                📤 שיתוף מהמכשיר
+              </button>
+              <p className="share-menu-native-hint">
+                מומלץ — פותח את תפריט השיתוף של המכשיר, כולל שליחה ישירה בהודעה באינסטגרם או במסנג'ר
+              </p>
+              <p className="share-menu-divider">או שתפו ישירות ל:</p>
+            </>
           )}
 
-          <button className="share-menu-option share-menu-option-wa" onClick={handleWhatsApp}>
+          <button className={optionClass('wa')} onClick={handleWhatsApp}>
             💬 וואטסאפ
           </button>
-          <button className="share-menu-option share-menu-option-fb" onClick={handleFacebook}>
+          <button className={optionClass('fb')} onClick={handleFacebook}>
             📘 פייסבוק
           </button>
-          <button className="share-menu-option share-menu-option-ig" onClick={handleInstagram}>
+          <button className={optionClass('ig')} onClick={handleInstagram}>
             📸 אינסטגרם
           </button>
           <button className="share-menu-option share-menu-option-copy" onClick={handleCopy}>
