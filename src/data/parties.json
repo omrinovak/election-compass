@@ -4491,7 +4491,7 @@
       "security": 4,
       "economy": 4,
       "cost_of_living": 4,
-      "rule_of_law": 4,
+      "rule_of_law": 4.5,
       "religion_state": 6,
       "education": 4,
       "health": 4,
@@ -4514,7 +4514,7 @@
       "security": 4,
       "economy": 4,
       "cost_of_living": 4,
-      "rule_of_law": 4,
+      "rule_of_law": 4.5,
       "religion_state": 6,
       "education": 4,
       "health": 4,
@@ -4537,7 +4537,7 @@
       "security": 0.25,
       "economy": 0.25,
       "cost_of_living": 0.25,
-      "rule_of_law": 0.25,
+      "rule_of_law": 0.35,
       "religion_state": 0.5,
       "education": 0.25,
       "health": 0.25,
@@ -4595,20 +4595,23 @@
         "declared": {
           "religion_state": 6,
           "equality_vs_free_market": 3,
-          "ideology_vs_pragmatism": 5.5
+          "ideology_vs_pragmatism": 5.5,
+          "rule_of_law": 4.5
         },
         "actual": {},
         "confidence": {
           "religion_state": 0.5,
           "equality_vs_free_market": 0.4,
-          "ideology_vs_pragmatism": 0.45
+          "ideology_vs_pragmatism": 0.45,
+          "rule_of_law": 0.35
         },
         "sources": {
           "religion_state": "מעריב, \"תיק האוצר וחוק גיוס מלא: התנאים של זליכה לכניסה לקואליציה\" — \"חוק גיוס מלא לכולם, יהודים צריכים לשרת בצבא למעט גאוני תורה\" (היקף שצוין: כ-500–800 בלבד)",
           "equality_vs_free_market": "אותה כתבה — דרישה לבטל מכסות יבוא, לאסור מונופולים ולהגביר אכיפת חוקי תחרות כדרך להורדת יוקר המחיה, לא פיקוח מחירים ישיר",
-          "ideology_vs_pragmatism": "אותה כתבה — תנאי כניסה לקואליציה: תיק האוצר + חוק גיוס מלא, שיתוף פעולה עם כל מפלגה שתואמת זאת; \"לא בכיסו של אף אחד\""
+          "ideology_vs_pragmatism": "אותה כתבה — תנאי כניסה לקואליציה: תיק האוצר + חוק גיוס מלא, שיתוף פעולה עם כל מפלגה שתואמת זאת; \"לא בכיסו של אף אחד\"",
+          "rule_of_law": "אותה כתבה — \"יש צורך ברפורמה משמעותית במערכת המשפט\", לצד ביקורת מפורשת על הרפורמה המוצעת בפועל. הניקוד (4.5, מעט מעל האמצע) משקף את הניגוד עצמו כעמדה אמיתית ומודעת — לא ניחוש וגם לא השמטה: תומך בשינוי (לא מגן על הסטטוס-קוו המלא), אך דוחה את הגרסה הממשלתית המרחיקת-לכת (לא נוקט בעמדה הקיצונית של ביטול כוח הביקורת השיפוטית). ביטחון נמוך-בינוני (0.35) כי זו הסקה ממיצוב כפול, לא ציטוט בודד וחד-משמעי."
         },
-        "notes": "לשעבר החשב הכללי במשרד האוצר, פרופ' לחשבונאות/כלכלה/ניהול כספים (האקדמית אונו חיפה), ידוע כמבקר ציבורי ותיק של שחיתות וריכוזיות כלכלית. מספר שתיים ברשימה, לא ח\"כ מכהן. צירים שהושמטו (אין עדות אישית מאומתת, לא מנוחשים): liberty_vs_security, authority_vs_checks, individual_vs_state, tradition_vs_liberalism, security, economy, cost_of_living, rule_of_law, education, health, welfare, environment, settlement, foreign_relations, transport, housing, stability_vs_opposition, experience_vs_renewal — כולל rule_of_law (עדות סותרת/לא חד-משמעית: \"יש צורך ברפורמה משמעותית במערכת המשפט\" לצד ביקורת על הרפורמה המוצעת בפועל, לא ניתן לכייל ל-1–7 בלי ניחוש)."
+        "notes": "לשעבר החשב הכללי במשרד האוצר, פרופ' לחשבונאות/כלכלה/ניהול כספים (האקדמית אונו חיפה), ידוע כמבקר ציבורי ותיק של שחיתות וריכוזיות כלכלית. מספר שתיים ברשימה, לא ח\"כ מכהן. צירים שהושמטו (אין עדות אישית מאומתת, לא מנוחשים): liberty_vs_security, authority_vs_checks, individual_vs_state, tradition_vs_liberalism, security, economy, cost_of_living, education, health, welfare, environment, settlement, foreign_relations, transport, housing, stability_vs_opposition, experience_vs_renewal."
       }
     ]
   }
