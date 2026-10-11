@@ -167,7 +167,7 @@ export default function Welcome({
         borderTop: '1px solid var(--border)',
         width: '100%',
       }}>
-        <div>מבוסס על נתונים עד ספטמבר 2026 · הכלי אינו מחליף קריאה עצמאית של מצעי המפלגות</div>
+        <div>מבוסס על נתונים עד אוקטובר 2026 · הכלי אינו מחליף קריאה עצמאית של מצעי המפלגות</div>
         <div style={{ marginTop: 6 }}>
           נוצר על ידי{' '}
           <a

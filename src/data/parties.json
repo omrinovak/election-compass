@@ -4475,5 +4475,141 @@
         "notes": "ערבי-ישראלי נוצרי, פעיל הסברה פרו-ישראלי מוכר, מייסד-שותף ומנכ\"ל לשעבר (עד 8.2026) של עמותת \"ביחד - ערבים למען ערבים\". סירב להצעת נתניהו לעבור לליכוד. ציטוטים מאומתים (ערוץ 14, 10.9.2026): מצטט פוליטיקאי בכיר אנונימי בליכוד שאמר לו בשיחה פרטית \"שהוא יודע שהממשלה שלהם נכשלה קשות ושבלי אנשים חדשים שייכנסו אין לימין סיכוי בבחירות הבאות\" (תוקן בביקורת איכות 22.9.2026 — במקור יוחס בטעות לחדאד עצמו כעמדתו שלו, אך זהו ציטוט-בתוך-ציטוט); על נאמנות לרשימה, בקולו שלו - \"אנחנו רצים יחד אגרוף אחד\". אף ציטוט מאומת לא תורגם לציר קיים באפליקציה (ביקורת כללית/נאמנות אישית, לא עמדת מדיניות הניתנת לכיול 1-7) - לכן לא נוקד אף ציר, בהתאם לכלל אפס-בדיה. מתחת ל-MIN_CANDIDATE_AXES וזה תקין וצפוי. מקורות: docs/candidate-research/amcha_yisrael.md"
       }
     ]
+  },
+  {
+    "id": "miluimnikim_vehakalkalit",
+    "name": "המילואימניקים והכלכלית",
+    "leader": "יועז הנדל",
+    "seats": 4,
+    "color": "#607D8B",
+    "declared": {
+      "liberty_vs_security": 4,
+      "equality_vs_free_market": 3,
+      "authority_vs_checks": 2.5,
+      "individual_vs_state": 4,
+      "tradition_vs_liberalism": 4,
+      "security": 4,
+      "economy": 4,
+      "cost_of_living": 4,
+      "rule_of_law": 4,
+      "religion_state": 6,
+      "education": 4,
+      "health": 4,
+      "welfare": 4,
+      "environment": 4,
+      "settlement": 4,
+      "foreign_relations": 4,
+      "transport": 4,
+      "housing": 4,
+      "ideology_vs_pragmatism": 5.5,
+      "stability_vs_opposition": 2.5,
+      "experience_vs_renewal": 4
+    },
+    "actual": {
+      "liberty_vs_security": 4,
+      "equality_vs_free_market": 3,
+      "authority_vs_checks": 2.5,
+      "individual_vs_state": 4,
+      "tradition_vs_liberalism": 4,
+      "security": 4,
+      "economy": 4,
+      "cost_of_living": 4,
+      "rule_of_law": 4,
+      "religion_state": 6,
+      "education": 4,
+      "health": 4,
+      "welfare": 4,
+      "environment": 4,
+      "settlement": 4,
+      "foreign_relations": 4,
+      "transport": 4,
+      "housing": 4,
+      "ideology_vs_pragmatism": 5.5,
+      "stability_vs_opposition": 2.5,
+      "experience_vs_renewal": 4
+    },
+    "confidence": {
+      "liberty_vs_security": 0.25,
+      "equality_vs_free_market": 0.4,
+      "authority_vs_checks": 0.4,
+      "individual_vs_state": 0.25,
+      "tradition_vs_liberalism": 0.25,
+      "security": 0.25,
+      "economy": 0.25,
+      "cost_of_living": 0.25,
+      "rule_of_law": 0.25,
+      "religion_state": 0.5,
+      "education": 0.25,
+      "health": 0.25,
+      "welfare": 0.25,
+      "environment": 0.25,
+      "settlement": 0.25,
+      "foreign_relations": 0.25,
+      "transport": 0.25,
+      "housing": 0.25,
+      "ideology_vs_pragmatism": 0.45,
+      "stability_vs_opposition": 0.4,
+      "experience_vs_renewal": 0.25
+    },
+    "reliability": {
+      "promise_keeping": {
+        "score": null,
+        "confidence": 0.15
+      },
+      "consistency": {
+        "score": 0.5,
+        "confidence": 0.25
+      },
+      "coalition_flexibility": {
+        "score": 0.35,
+        "confidence": 0.35
+      },
+      "execution": {
+        "score": null,
+        "confidence": 0.15
+      }
+    },
+    "gaps": [],
+    "candidates": [
+      {
+        "position": 1,
+        "name": "יועז הנדל",
+        "declared": {
+          "authority_vs_checks": 2.5,
+          "stability_vs_opposition": 2.5
+        },
+        "actual": {},
+        "confidence": {
+          "authority_vs_checks": 0.4,
+          "stability_vs_opposition": 0.4
+        },
+        "sources": {
+          "authority_vs_checks": "רישום המפלגה אצל רשם המפלגות (מצוטט ב-IDI) — יעד מצע מוצהר: \"איזון בין רשויות השלטון, כולל רפורמה חוקתית\"; בתוספת ביקורתו החזורה על נתניהו על חוסר ממשל וענישה ל-7.10 (\"כשנתניהו מזהה אתגר אמיתי לעתיד ישראל הוא מתעלם ממנו\")",
+          "stability_vs_opposition": "מעריב, 7–8.10.2026, \"הערפל מתפזר: יועז הנדל החליט עם מי הוא ישב בממשלה\" + מעריב, \"תיק האוצר וחוק גיוס מלא: התנאים של זליכה לכניסה לקואליציה\" — תנאי מפורש: לא ייתן לנתניהו רוב להקמת ממשלה כל עוד הוא נשען על המפלגות החרדיות והערביות; יעד מוצהר: \"ממשלה ציונית. ללא מפלגות חרדיות וערביות\""
+        },
+        "notes": "ראש הרשימה, שר התקשורת לשעבר (ממשלת בנט-לפיד, 2021–2022), ראש המועצה לביטחון לאומי לשעבר (2019–2020), אלוף-משנה (מיל') ומייסד תנועת \"המילואימניקים\" (2025) בעקבות 7.10.2023. לאחר שחילי טרופר (שותפו ב\"בית ציוני\") עבר ל\"ישר\" ב-6.9.2026, הנדל איחד כוחות עם ירון זליכה (\"הכלכלית\") סביב 1.9.2026/תחילת ספטמבר. צירים שהושמטו (אין עדות אישית מאומתת, לא מנוחשים): liberty_vs_security, equality_vs_free_market, individual_vs_state, tradition_vs_liberalism, security, economy, cost_of_living, rule_of_law, religion_state, education, health, welfare, environment, settlement, foreign_relations, transport, housing, ideology_vs_pragmatism, experience_vs_renewal."
+      },
+      {
+        "position": 2,
+        "name": "ירון זליכה",
+        "declared": {
+          "religion_state": 6,
+          "equality_vs_free_market": 3,
+          "ideology_vs_pragmatism": 5.5
+        },
+        "actual": {},
+        "confidence": {
+          "religion_state": 0.5,
+          "equality_vs_free_market": 0.4,
+          "ideology_vs_pragmatism": 0.45
+        },
+        "sources": {
+          "religion_state": "מעריב, \"תיק האוצר וחוק גיוס מלא: התנאים של זליכה לכניסה לקואליציה\" — \"חוק גיוס מלא לכולם, יהודים צריכים לשרת בצבא למעט גאוני תורה\" (היקף שצוין: כ-500–800 בלבד)",
+          "equality_vs_free_market": "אותה כתבה — דרישה לבטל מכסות יבוא, לאסור מונופולים ולהגביר אכיפת חוקי תחרות כדרך להורדת יוקר המחיה, לא פיקוח מחירים ישיר",
+          "ideology_vs_pragmatism": "אותה כתבה — תנאי כניסה לקואליציה: תיק האוצר + חוק גיוס מלא, שיתוף פעולה עם כל מפלגה שתואמת זאת; \"לא בכיסו של אף אחד\""
+        },
+        "notes": "לשעבר החשב הכללי במשרד האוצר, פרופ' לחשבונאות/כלכלה/ניהול כספים (האקדמית אונו חיפה), ידוע כמבקר ציבורי ותיק של שחיתות וריכוזיות כלכלית. מספר שתיים ברשימה, לא ח\"כ מכהן. צירים שהושמטו (אין עדות אישית מאומתת, לא מנוחשים): liberty_vs_security, authority_vs_checks, individual_vs_state, tradition_vs_liberalism, security, economy, cost_of_living, rule_of_law, education, health, welfare, environment, settlement, foreign_relations, transport, housing, stability_vs_opposition, experience_vs_renewal — כולל rule_of_law (עדות סותרת/לא חד-משמעית: \"יש צורך ברפורמה משמעותית במערכת המשפט\" לצד ביקורת על הרפורמה המוצעת בפועל, לא ניתן לכייל ל-1–7 בלי ניחוש)."
+      }
+    ]
   }
 ]
